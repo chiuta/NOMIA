@@ -121,7 +121,7 @@
     </div>
     <div id="split-fbar"></div>
     <div id="split-scroll">
-      <div class="nhi-grid" id="split-nhi-grid" role="list"></div>
+      <div class="nhi-grid" id="split-nhi-grid"></div>
     </div>
   </div>
 
@@ -129,7 +129,7 @@
 <div id="grp-backdrop" onclick="closeAllGrpMenus()"></div>
 
 <!-- ═══ LEFT GROUP MENUS ═══ -->
-<div class="grp-menu" id="grp-nhi-menu" role="menu">
+<div class="grp-menu" id="grp-nhi-menu">
   <div class="grp-menu-ttl">🧬 NHI · EXPLORARE</div>
   <button class="gm-btn" onclick="closeGrpAndRun(toggleNHISheet)"><span class="gm-icon">🧬</span><span class="gm-lbl">Browser NHI</span></button>
   <button class="gm-btn" onclick="closeGrpAndRun(toggleStackedMode)" id="gm-stack"><span class="gm-icon">≡☰</span><span class="gm-lbl">Stacked: NHI + Log</span></button>
@@ -143,7 +143,7 @@
   <button class="gm-btn" onclick="closeGrpAndRun(togglePinNHI)"><span class="gm-icon">📌</span><span class="gm-lbl">Pin NHI curent</span></button>
 </div>
 
-<div class="grp-menu" id="grp-tri-menu" role="menu">
+<div class="grp-menu" id="grp-tri-menu">
   <div class="grp-menu-ttl">△ TRIADIC · VIZUALIZARE</div>
   <button class="gm-btn" onclick="closeGrpAndRun(toggleTriadicSheet)"><span class="gm-icon">△</span><span class="gm-lbl">Model triadic OM·IA·NHI</span></button>
   <button class="gm-btn" onclick="closeGrpAndRun(togglePresentationMode)"><span class="gm-icon">⊡</span><span class="gm-lbl">Mod prezentare</span><span class="gm-kbd">Alt+F</span></button>
@@ -153,7 +153,7 @@
   <button class="gm-btn" onclick="closeGrpAndRun(printNHIProfile)"><span class="gm-icon">🖨</span><span class="gm-lbl">Print profil NHI</span></button>
 </div>
 
-<div class="grp-menu" id="grp-stat-menu" role="menu">
+<div class="grp-menu" id="grp-stat-menu">
   <div class="grp-menu-ttl">📊 STATISTICI · PROGRES</div>
   <button class="gm-btn" onclick="closeGrpAndRun(toggleStatsSheet)"><span class="gm-icon">📊</span><span class="gm-lbl">Dashboard statistici</span></button>
   <button class="gm-btn" onclick="closeGrpAndRun(shareProgress)"><span class="gm-icon">🔗</span><span class="gm-lbl">Partajează progres</span></button>
@@ -163,10 +163,10 @@
   <button class="gm-btn" onclick="closeGrpAndRun(exportMonthlySnapshots)"><span class="gm-icon">📅</span><span class="gm-lbl">Export snapshots</span></button>
   <div class="gm-sep"></div>
   <button class="gm-btn" onclick="closeGrpAndRun(resetExploration)"><span class="gm-icon">🔄</span><span class="gm-lbl">Reset explorare</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(clearAllData)"><span class="gm-icon">⚠</span><span class="gm-lbl" style="color:rgba(255,100,80,.7)">Șterge toate datele</span></button>
+  <button class="gm-btn" onclick="closeGrpAndRun(clearAllData)"><span class="gm-icon">⚠</span><span class="gm-lbl gm-danger">Șterge toate datele</span></button>
 </div>
 
-<div class="grp-menu" id="grp-log-menu" role="menu">
+<div class="grp-menu" id="grp-log-menu">
   <div class="grp-menu-ttl">📋 LOG · FILTRE</div>
   <button class="gm-btn" onclick="closeGrpAndRun(clearLog)"><span class="gm-icon">✕</span><span class="gm-lbl">Șterge log</span></button>
   <button class="gm-btn" onclick="closeGrpAndRun(exportLog)"><span class="gm-icon">💾</span><span class="gm-lbl">Export log TXT</span><span class="gm-kbd">Alt+E</span></button>
@@ -180,7 +180,7 @@
 </div>
 
 <!-- ═══ RIGHT GROUP MENUS ═══ -->
-<div class="grp-menu" id="grp-detail-menu" role="menu">
+<div class="grp-menu" id="grp-detail-menu">
   <div class="grp-menu-ttl">📋 DETALII NHI</div>
   <button class="gm-btn" onclick="closeGrpAndRun(toggleDetailSheet)"><span class="gm-icon">📋</span><span class="gm-lbl">Panou detalii NHI</span></button>
   <button class="gm-btn" onclick="closeGrpAndRun(function(){if(selNHI)renderSimilarNHI(selNHI,'similar-nhi-mob')})"><span class="gm-icon">🔍</span><span class="gm-lbl">NHI similare</span></button>
@@ -192,7 +192,7 @@
   <button class="gm-btn" onclick="closeGrpAndRun(function(){var n=document.getElementById('np-search-input');if(n&&selNHI){n.value=selNHI.name||'';n.dispatchEvent(new Event('input'));}toggleNHISheet();closeAllGrpMenus();})"><span class="gm-icon">🔎</span><span class="gm-lbl">Caută în NHI browser</span></button>
 </div>
 
-<div class="grp-menu" id="grp-exp-menu" role="menu">
+<div class="grp-menu" id="grp-exp-menu">
   <div class="grp-menu-ttl">↓ EXPORT · PARTAJARE</div>
   <button class="gm-btn" onclick="closeGrpAndRun(exportLog)"><span class="gm-icon">📝</span><span class="gm-lbl">Export log TXT</span></button>
   <button class="gm-btn" onclick="closeGrpAndRun(exportNHINotesMarkdown)"><span class="gm-icon">📓</span><span class="gm-lbl">Export note NHI (MD)</span></button>
@@ -204,7 +204,7 @@
   <button class="gm-btn" onclick="closeGrpAndRun(shareNHI)"><span class="gm-icon">🌐</span><span class="gm-lbl">Partajează NHI curent</span></button>
 </div>
 
-<div class="grp-menu" id="grp-cmp-menu" role="menu">
+<div class="grp-menu" id="grp-cmp-menu">
   <div class="grp-menu-ttl">⚖ COMPARAȚIE · ANALIZĂ</div>
   <button class="gm-btn" onclick="closeGrpAndRun(function(){if(selNHI)addToCompare(selNHI.id);openCompare();})"><span class="gm-icon">➕</span><span class="gm-lbl">Adaugă NHI la comparație</span></button>
   <button class="gm-btn" onclick="closeGrpAndRun(openCompare)"><span class="gm-icon">⚖</span><span class="gm-lbl">Deschide comparație</span></button>
@@ -216,7 +216,7 @@
   <button class="gm-btn" onclick="closeGrpAndRun(shareComparison)"><span class="gm-icon">🔗</span><span class="gm-lbl">Partajează comparație</span></button>
 </div>
 
-<div class="grp-menu" id="grp-set-menu" role="menu">
+<div class="grp-menu" id="grp-set-menu">
   <div class="grp-menu-ttl">⚙ SETĂRI · AFIȘARE</div>
   <button class="gm-btn" onclick="closeGrpAndRun(toggleDarkMode)" id="gm-light"><span class="gm-icon" id="gm-theme-icon">🌙</span><span class="gm-lbl" id="gm-light-lbl">Mod întunecat</span></button>
 <button class="gm-btn" onclick="closeGrpAndRun(toggleNightMode)" id="gm-night"><span class="gm-icon">🌙</span><span class="gm-lbl">Mod noapte</span><span class="gm-kbd">Alt+N</span></button>
@@ -278,7 +278,7 @@ body.dark-mode {
   --bdr2:    rgba(80,130,255,.45);
   --txt:     rgba(225,235,255,.97);
   --txt2:    rgba(175,200,255,.8);
-  --txt3:    rgba(130,165,230,.6);
+  --txt3:    rgba(150,182,240,.88);
   --teal:    #00e0aa;
   --blue:    #5090ff;
   --violet:  #c070ff;
@@ -612,7 +612,7 @@ body.dark-mode .op-chip{background:rgba(14,28,62,.9);}
 }
 body.dark-mode .s-fbar button,body.dark-mode #fbar-mob button{background:rgba(14,28,62,.9);border-color:rgba(100,140,255,.25);color:rgba(200,220,255,.9);}
 body.dark-mode .s-fbar button.active,body.dark-mode #fbar-mob button.active{background:rgba(0,160,120,.2);border-color:var(--teal);color:var(--teal);}
-.fcat-cnt{opacity:.6;font-size:9px;font-weight:700;margin-left:2px;}
+.fcat-cnt{opacity:1;font-size:9px;font-weight:700;margin-left:2px;}
 /* NHI grid */
 .nhi-grid{
   display:grid;
@@ -677,7 +677,9 @@ body.dark-mode #nhi-inline-panel{background:rgba(6,14,40,.98);}
   background:#fff;border:2px solid #8098c8;color:#0a1628;
   font-size:9.5px;font-weight:600;white-space:nowrap;transition:all .13s;
 }
-#nhi-inline-fbar button.active{background:#e0f4ee;border-color:var(--teal);color:var(--teal);}
+#nhi-inline-fbar button.active{background:#e0f4ee;border-color:#005f4e;color:#003d30;}
+body.dark-mode #nhi-inline-fbar button,body.dark-mode #split-fbar button{background:rgba(14,28,62,.9);border-color:rgba(100,140,255,.25);color:rgba(200,220,255,.9);}
+body.dark-mode #nhi-inline-fbar button.active,body.dark-mode #split-fbar button.active{background:rgba(0,160,120,.2);border-color:var(--teal);color:var(--teal);}
 #nhi-inline-scroll{
   flex:1;overflow-x:auto;overflow-y:hidden;
   display:flex;align-items:stretch;padding:6px 8px;gap:6px;
@@ -697,6 +699,7 @@ body.dark-mode #nhi-inline-panel{background:rgba(6,14,40,.98);}
   cursor:pointer;transition:all .17s;text-align:center;position:relative;
 }
 .nhi-card-inline:hover{border-color:#6080c0;transform:translateY(-2px);}
+body.dark-mode .nhi-card-inline{background:rgba(14,28,62,.9);}
 .nhi-card-inline.active{background:rgba(0,95,78,.1);border-color:var(--teal);}
 .nci-icon{font-size:26px;line-height:1;}
 .nci-name{font-size:9.5px;font-weight:700;color:var(--txt);white-space:normal;overflow:visible;max-width:78px;line-height:1.25;display:block;}
@@ -713,7 +716,8 @@ body.dark-mode #split-nhi-panel{background:rgba(6,14,40,.98);}
 #split-search-input{width:100%;height:32px;border-radius:16px;box-sizing:border-box;background:var(--bg-inp);border:2px solid #6080c0;color:var(--txt);padding:0 10px;font-size:12px;outline:none;}
 #split-fbar{display:flex;flex-wrap:wrap;gap:4px 3px;padding:4px 10px 7px;overflow:visible;}
 #split-fbar button{flex-shrink:0;padding:3px 8px;border-radius:12px;min-height:26px;background:#fff;border:2px solid #8098c8;color:#0a1628;font-size:9.5px;font-weight:600;white-space:nowrap;transition:all .13s;}
-#split-fbar button.active{background:#e0f4ee;border-color:var(--teal);color:var(--teal);}
+#split-fbar button.active{background:#e0f4ee;border-color:#005f4e;color:#003d30;}
+#nhi-inline-fbar button span,#split-fbar button span{opacity:1!important;}
 #split-scroll{flex:1;overflow-y:auto;}
 #split-nhi-grid{grid-template-columns:repeat(auto-fill,minmax(92px,1fr));}
 
@@ -744,6 +748,8 @@ body.dark-mode .gm-btn{background:rgba(14,28,62,.9);border-color:rgba(100,140,25
 .gm-btn:hover{background:#e8f0ff;border-color:#0040aa;color:#001d7a;}
 body.dark-mode .gm-btn:hover{background:rgba(20,40,90,.95);border-color:var(--blue);color:#fff;}
 .gm-btn .gm-icon{font-size:18px;flex-shrink:0;width:24px;text-align:center;}
+.gm-btn .gm-danger{color:#b3261e;}
+body.dark-mode .gm-btn .gm-danger{color:#ff9a88;}
 .gm-btn .gm-lbl{flex:1;}
 .gm-btn .gm-kbd{font-size:9px;color:var(--txt3);font-family:Orbitron,monospace;}
 .gm-sep{height:2px;background:var(--bdr);margin:4px 0;border-radius:1px;}
@@ -792,7 +798,7 @@ body.dark-mode #whats-new-box{background:rgba(0,64,170,.12);border-color:var(--b
 body.dark-mode #whats-new-box>div{color:var(--blue);}
 body.dark-mode #whats-new-list{color:rgba(200,220,255,.9);}
 #undo-banner{display:none;position:fixed;bottom:calc(var(--bot)+10px+var(--sb));left:50%;transform:translateX(-50%);background:#fff4e0;border:2px solid #996600;border-radius:12px;padding:8px 16px;z-index:1900;font-size:11px;font-weight:700;color:#6a3a00;cursor:pointer;white-space:nowrap;}
-#first-use-banner{display:none;position:fixed;bottom:calc(var(--bot)+10px+var(--sb));left:50%;transform:translateX(-50%);background:#fff;border:2px solid var(--teal);border-radius:14px;padding:14px 18px;z-index:1800;max-width:min(440px,92vw);font-size:12px;color:var(--txt2);}
+#first-use-banner{display:none;position:fixed;bottom:calc(var(--bot)+10px+var(--sb));left:50%;transform:translateX(-50%);background:var(--bg-card);border:2px solid var(--teal);border-radius:14px;padding:14px 18px;z-index:1800;max-width:min(440px,92vw);font-size:12px;color:var(--txt2);}
 .tut-step{background:#e0f4ee;border:2px solid var(--teal);border-radius:9px;padding:4px 11px;font-size:11px;color:#003d30;font-weight:700;}
 #compare-panel{display:none;z-index:800;}
 :focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:6px;}
@@ -1216,7 +1222,8 @@ body.dark-mode .ll[data-type="warn"] {
       <button id="autoscroll-btn" onclick="toggleAutoScroll()" title="Auto-scroll">⇩</button>
     </div>
     <div id="step-progress"><div id="step-progress-bar"></div></div>
-    <div id="log" role="log" aria-live="polite"></div>
+    <div id="log-note" style="flex:0 0 auto;padding:2px 12px;font-size:9px;line-height:1.3;color:var(--txt2);border-bottom:1px solid var(--bdr)">Ficțiune / speculație · modele conceptuale, nu fapte verificate.</div>
+    <div id="log" role="log" aria-live="polite" tabindex="0" aria-label="Protocol log"></div>
   </main>
 
   <!-- ▶ RIGHT ─────────────────────────────── -->
@@ -1286,7 +1293,7 @@ body.dark-mode .ll[data-type="warn"] {
   </div>
   <div class="s-fbar" id="fbar-mob"></div>
   <div class="s-scroll">
-    <div class="nhi-grid" id="nhi-desk" role="list"></div>
+    <div class="nhi-grid" id="nhi-desk"></div>
     <div id="uap-desk" style="display:none;padding:6px"><div id="uap-desk-inner"></div></div>
   </div>
 </div>
@@ -1487,14 +1494,14 @@ body.dark-mode .ll[data-type="warn"] {
 <div id="first-use-banner">
   <button onclick="dismissTutorial()"
           style="float:right;background:none;border:none;color:var(--dim);cursor:pointer;font-size:15px">✕</button>
-  <div style="font-family:Orbitron,monospace;font-size:8.5px;color:rgba(0,224,170,.6);letter-spacing:.5px;margin-bottom:8px">BINE AI VENIT ÎN NOMIA</div>
+  <div style="font-family:Orbitron,monospace;font-size:8.5px;color:var(--teal);letter-spacing:.5px;margin-bottom:8px">BINE AI VENIT ÎN NOMIA</div>
   <div class="tut-steps">
     <button class="tut-step" onclick="dismissTutorial();toggleNHISheet()">① 🧬 Alege un NHI</button>
     <span class="tut-step">② Canal ↓</span>
     <span class="tut-step">③ ▶ REIA</span>
     <button class="tut-step" onclick="dismissTutorial();topMenuClick()">④ ⋮ Meniu</button>
   </div>
-  <div style="font-size:8.5px;color:var(--dim);margin-top:6px">Apasă ✕ sau Escape pentru a închide</div>
+  <div style="font-size:8.5px;color:var(--txt2);margin-top:6px">Apasă ✕ sau Escape pentru a închide</div>
 </div>
 
 <div id="pres-overlay" onclick="togglePresentationMode()" role="dialog" aria-label="Mod prezentare">
@@ -11684,7 +11691,7 @@ body:not(.dark-mode) .mfill{filter:brightness(.72) saturate(1.3);}
 .ch-btn span[style*="font-size:13px"]{margin-right:0!important;}
 .ch-btn.active{box-shadow:0 0 0 2px color-mix(in srgb,var(--blue) 25%,transparent);}
 body.dark-mode .ch-btn.active{color:var(--txt);}
-.ch-btn.unavail{opacity:.6;filter:grayscale(.8);border-style:dashed;}
+.ch-btn.unavail{opacity:.9;filter:grayscale(.8);border-style:dashed;}
 .ch-btn:focus-visible{outline:3px solid var(--blue);outline-offset:2px;}
 /* full variant (#ch-desk / #ch-mob) */
 #ch-desk,#ch-mob{display:flex;flex-direction:column;gap:8px;}
