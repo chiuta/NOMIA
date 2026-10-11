@@ -1,5 +1,10 @@
 # NOMIA — Om·IA·NHI
 
+**Live / demo:** https://chiuta.github.io/NOMIA/
+
+![NOMIA — captură de ecran / screenshot](screenshot.png)
+
+
 **Ficțiune / speculație (Fiction / speculation).** Aplicație conceptuală, companion al antologiei *Printre inteligențe* (2026). Protocoalele, scorurile și „sesiunile” sunt modele narative și conceptuale, nu fapte verificate.
 
 ## Ce este
