@@ -17,8 +17,8 @@ async def main():
       import time;t=time.time()
       await pg.goto('file://'+F); await pg.wait_for_timeout(2500)
       r=await pg.evaluate("""()=>({sw:document.documentElement.scrollWidth,cw:document.documentElement.clientWidth,
-        small:[...document.querySelectorAll('button,a,[onclick],input,select')].filter(e=>{const r=e.getBoundingClientRect();return r.width>0&&r.height>0&&(r.width<32||r.height<32)}).length,
-        tot:[...document.querySelectorAll('button,a,[onclick],input,select')].filter(e=>e.getBoundingClientRect().width>0).length,
+        small:[...document.querySelectorAll('button,a,[onclick],[data-onclick],input,select')].filter(e=>{const r=e.getBoundingClientRect();return r.width>0&&r.height>0&&(r.width<32||r.height<32)}).length,
+        tot:[...document.querySelectorAll('button,a,[onclick],[data-onclick],input,select')].filter(e=>e.getBoundingClientRect().width>0).length,
         over:[...document.querySelectorAll('body *')].filter(e=>{const r=e.getBoundingClientRect();return r.width>0&&r.right>innerWidth+2}).slice(0,8).map(e=>e.tagName+'#'+e.id+'.'+(e.className+'').slice(0,30)),
         fs:[...document.querySelectorAll('input,select,textarea')].filter(e=>e.getBoundingClientRect().width>0&&parseFloat(getComputedStyle(e).fontSize)<16).length})""")
       print(name,round(time.time()-t,1),'s',json.dumps(r,ensure_ascii=False)); print(' errs',errs[:5])

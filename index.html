@@ -28,7 +28,8 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
-<script id="nomia-early">/* NOMIA early: storage guard + id migration (runs before the app reads localStorage) */
+<script id="nomia-early">
+window._nomiaEA=function(x){return String(x==null?'':x).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');};/* NOMIA early: storage guard + id migration (runs before the app reads localStorage) */
 (function(){
   'use strict';
   window.ID_ALIAS={'stancute':'stanca','coțofene':'cotofana'};
@@ -96,7 +97,7 @@
 @font-face{font-family:'Atkinson Hyperlegible';font-style:italic;font-weight:400;font-display:swap;src:url(data:font/woff2;base64,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) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;}
 </style>
 
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; media-src 'self' blob: data:; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'self' blob:; script-src 'self' 'unsafe-inline' blob:; connect-src 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; media-src 'self' blob: data:; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'self' blob:; script-src 'self' 'sha256-AGbeA9tq+3JoUlmY/gnvje8KqI+VdvoGcc0XVFnQHQw=' 'sha256-hA4Ejn3zHCv38oUJM2sAolNo3qyUlBQ8Gq9kRThalYY=' 'sha256-9zrzvxjL/7D72v4831d7g8wjqMMCWTsRXI9d0QR/n2w=' 'sha256-9MDztRYawyGU400ItPW/6ECFpZPRU+Ij90NsqdwzIEY=' 'sha256-ZImCfXMW2M01pL2XqKoOtlKcrqtpRi1DIFpSRutTsWM=' 'sha256-rxdiZZ99CSa6APYXQe26NJQNorKbU9rQHHYHV4URIys=' 'sha256-dCPsklllx7QX3zR86g+NXxRFz8s7jXAlWbSFR67OFxU='; connect-src 'self'">
   <title>NOMIA — Om·IA·NHI Protocol v0.8</title>
   <meta name="description" content="Protocol de comunicare Om–IA–NHI: explorează 1001 inteligențe non-umane prin sesiuni trilogice imersive.">
 <meta name="theme-color" content="#f0f4ff" id="meta-theme-color">
@@ -126,110 +127,110 @@
   </div>
 
 <!-- ═══ GROUP MENU BACKDROP ═══ -->
-<div id="grp-backdrop" onclick="closeAllGrpMenus()"></div>
+<div id="grp-backdrop" data-onclick="closeAllGrpMenus()"></div>
 
 <!-- ═══ LEFT GROUP MENUS ═══ -->
 <div class="grp-menu" id="grp-nhi-menu">
   <div class="grp-menu-ttl">🧬 NHI · EXPLORARE</div>
-  <button class="gm-btn" onclick="closeGrpAndRun(toggleNHISheet)"><span class="gm-icon">🧬</span><span class="gm-lbl">Browser NHI</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(toggleStackedMode)" id="gm-stack"><span class="gm-icon">≡☰</span><span class="gm-lbl">Stacked: NHI + Log</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(toggleSplitMode)" id="gm-split"><span class="gm-icon">⫿</span><span class="gm-lbl">Split: Log | NHI</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(toggleNHISheet)"><span class="gm-icon">🧬</span><span class="gm-lbl">Browser NHI</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(toggleStackedMode)" id="gm-stack"><span class="gm-icon">≡☰</span><span class="gm-lbl">Stacked: NHI + Log</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(toggleSplitMode)" id="gm-split"><span class="gm-icon">⫿</span><span class="gm-lbl">Split: Log | NHI</span></button>
   <div class="gm-sep"></div>
-  <button class="gm-btn" onclick="closeGrpAndRun(openCatPanel)"><span class="gm-icon">🗂</span><span class="gm-lbl">Categorii</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(randomUnexploredNHI)"><span class="gm-icon">🎲</span><span class="gm-lbl">Aleatoriu neexplorat</span><span class="gm-kbd">Alt+R</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(suggestNHI)"><span class="gm-icon">🧠</span><span class="gm-lbl">Sugestie inteligentă</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(openCatPanel)"><span class="gm-icon">🗂</span><span class="gm-lbl">Categorii</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(randomUnexploredNHI)"><span class="gm-icon">🎲</span><span class="gm-lbl">Aleatoriu neexplorat</span><span class="gm-kbd">Alt+R</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(suggestNHI)"><span class="gm-icon">🧠</span><span class="gm-lbl">Sugestie inteligentă</span></button>
   <div class="gm-sep"></div>
-  <button class="gm-btn" onclick="closeGrpAndRun(showSeasonalSuggestions)"><span class="gm-icon">🌿</span><span class="gm-lbl">Sugestii sezoniere</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(togglePinNHI)"><span class="gm-icon">📌</span><span class="gm-lbl">Pin NHI curent</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(showSeasonalSuggestions)"><span class="gm-icon">🌿</span><span class="gm-lbl">Sugestii sezoniere</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(togglePinNHI)"><span class="gm-icon">📌</span><span class="gm-lbl">Pin NHI curent</span></button>
 </div>
 
 <div class="grp-menu" id="grp-tri-menu">
   <div class="grp-menu-ttl">△ TRIADIC · VIZUALIZARE</div>
-  <button class="gm-btn" onclick="closeGrpAndRun(toggleTriadicSheet)"><span class="gm-icon">△</span><span class="gm-lbl">Model triadic OM·IA·NHI</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(togglePresentationMode)"><span class="gm-icon">⊡</span><span class="gm-lbl">Mod prezentare</span><span class="gm-kbd">Alt+F</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(toggleFocusMode)"><span class="gm-icon">⊛</span><span class="gm-lbl">Mod focus</span><span class="gm-kbd">Alt+L</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(toggleTriadicSheet)"><span class="gm-icon">△</span><span class="gm-lbl">Model triadic OM·IA·NHI</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(togglePresentationMode)"><span class="gm-icon">⊡</span><span class="gm-lbl">Mod prezentare</span><span class="gm-kbd">Alt+F</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(toggleFocusMode)"><span class="gm-icon">⊛</span><span class="gm-lbl">Mod focus</span><span class="gm-kbd">Alt+L</span></button>
   <div class="gm-sep"></div>
-  <button class="gm-btn" onclick="closeGrpAndRun(shareNHI)"><span class="gm-icon">🔗</span><span class="gm-lbl">Partajează NHI</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(printNHIProfile)"><span class="gm-icon">🖨</span><span class="gm-lbl">Print profil NHI</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(shareNHI)"><span class="gm-icon">🔗</span><span class="gm-lbl">Partajează NHI</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(printNHIProfile)"><span class="gm-icon">🖨</span><span class="gm-lbl">Print profil NHI</span></button>
 </div>
 
 <div class="grp-menu" id="grp-stat-menu">
   <div class="grp-menu-ttl">📊 STATISTICI · PROGRES</div>
-  <button class="gm-btn" onclick="closeGrpAndRun(toggleStatsSheet)"><span class="gm-icon">📊</span><span class="gm-lbl">Dashboard statistici</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(shareProgress)"><span class="gm-icon">🔗</span><span class="gm-lbl">Partajează progres</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(printStats)"><span class="gm-icon">🖨</span><span class="gm-lbl">Print statistici</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(toggleStatsSheet)"><span class="gm-icon">📊</span><span class="gm-lbl">Dashboard statistici</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(shareProgress)"><span class="gm-icon">🔗</span><span class="gm-lbl">Partajează progres</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(printStats)"><span class="gm-icon">🖨</span><span class="gm-lbl">Print statistici</span></button>
   <div class="gm-sep"></div>
-  <button class="gm-btn" onclick="closeGrpAndRun(checkMonthlySnapshot)"><span class="gm-icon">📸</span><span class="gm-lbl">Snapshot lunar</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(exportMonthlySnapshots)"><span class="gm-icon">📅</span><span class="gm-lbl">Export snapshots</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(checkMonthlySnapshot)"><span class="gm-icon">📸</span><span class="gm-lbl">Snapshot lunar</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(exportMonthlySnapshots)"><span class="gm-icon">📅</span><span class="gm-lbl">Export snapshots</span></button>
   <div class="gm-sep"></div>
-  <button class="gm-btn" onclick="closeGrpAndRun(resetExploration)"><span class="gm-icon">🔄</span><span class="gm-lbl">Reset explorare</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(clearAllData)"><span class="gm-icon">⚠</span><span class="gm-lbl gm-danger">Șterge toate datele</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(resetExploration)"><span class="gm-icon">🔄</span><span class="gm-lbl">Reset explorare</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(clearAllData)"><span class="gm-icon">⚠</span><span class="gm-lbl gm-danger">Șterge toate datele</span></button>
 </div>
 
 <div class="grp-menu" id="grp-log-menu">
   <div class="grp-menu-ttl">📋 LOG · FILTRE</div>
-  <button class="gm-btn" onclick="closeGrpAndRun(clearLog)"><span class="gm-icon">✕</span><span class="gm-lbl">Șterge log</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(exportLog)"><span class="gm-icon">💾</span><span class="gm-lbl">Export log TXT</span><span class="gm-kbd">Alt+E</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(exportCurrentSession)"><span class="gm-icon">📤</span><span class="gm-lbl">Export sesiune curentă</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(clearLog)"><span class="gm-icon">✕</span><span class="gm-lbl">Șterge log</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(exportLog)"><span class="gm-icon">💾</span><span class="gm-lbl">Export log TXT</span><span class="gm-kbd">Alt+E</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(exportCurrentSession)"><span class="gm-icon">📤</span><span class="gm-lbl">Export sesiune curentă</span></button>
   <div class="gm-sep"></div>
-  <button class="gm-btn" onclick="closeGrpAndRun(toggleLogWrap)"><span class="gm-icon">↵</span><span class="gm-lbl">Comută încadrarea textului</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(logScrollToTop)"><span class="gm-icon">⬆</span><span class="gm-lbl">Scroll sus</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(logScrollToBottom)"><span class="gm-icon">⬇</span><span class="gm-lbl">Scroll jos</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(toggleLogWrap)"><span class="gm-icon">↵</span><span class="gm-lbl">Comută încadrarea textului</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(logScrollToTop)"><span class="gm-icon">⬆</span><span class="gm-lbl">Scroll sus</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(logScrollToBottom)"><span class="gm-icon">⬇</span><span class="gm-lbl">Scroll jos</span></button>
   <div class="gm-sep"></div>
-  <button class="gm-btn" onclick="closeGrpAndRun(toggleAutoRun)"><span class="gm-icon" id="gm-autorun-icon">▶</span><span class="gm-lbl">Auto-run la selecție</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(toggleAutoRun)"><span class="gm-icon" id="gm-autorun-icon">▶</span><span class="gm-lbl">Auto-run la selecție</span></button>
 </div>
 
 <!-- ═══ RIGHT GROUP MENUS ═══ -->
 <div class="grp-menu" id="grp-detail-menu">
   <div class="grp-menu-ttl">📋 DETALII NHI</div>
-  <button class="gm-btn" onclick="closeGrpAndRun(toggleDetailSheet)"><span class="gm-icon">📋</span><span class="gm-lbl">Panou detalii NHI</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(function(){if(selNHI)renderSimilarNHI(selNHI,'similar-nhi-mob')})"><span class="gm-icon">🔍</span><span class="gm-lbl">NHI similare</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(toggleDetailSheet)"><span class="gm-icon">📋</span><span class="gm-lbl">Panou detalii NHI</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(function(){if(selNHI)renderSimilarNHI(selNHI,'similar-nhi-mob')})"><span class="gm-icon">🔍</span><span class="gm-lbl">NHI similare</span></button>
   <div class="gm-sep"></div>
-  <button class="gm-btn" onclick="closeGrpAndRun(togglePinNHI)"><span class="gm-icon">📌</span><span class="gm-lbl">Pin NHI curent</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(shareNHI)"><span class="gm-icon">🔗</span><span class="gm-lbl">Partajează NHI</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(printNHIProfile)"><span class="gm-icon">🖨</span><span class="gm-lbl">Print profil NHI</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(togglePinNHI)"><span class="gm-icon">📌</span><span class="gm-lbl">Pin NHI curent</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(shareNHI)"><span class="gm-icon">🔗</span><span class="gm-lbl">Partajează NHI</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(printNHIProfile)"><span class="gm-icon">🖨</span><span class="gm-lbl">Print profil NHI</span></button>
   <div class="gm-sep"></div>
-  <button class="gm-btn" onclick="closeGrpAndRun(function(){var n=document.getElementById('np-search-input');if(n&&selNHI){n.value=selNHI.name||'';n.dispatchEvent(new Event('input'));}toggleNHISheet();closeAllGrpMenus();})"><span class="gm-icon">🔎</span><span class="gm-lbl">Caută în NHI browser</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(function(){var n=document.getElementById('np-search-input');if(n&&selNHI){n.value=selNHI.name||'';n.dispatchEvent(new Event('input'));}toggleNHISheet();closeAllGrpMenus();})"><span class="gm-icon">🔎</span><span class="gm-lbl">Caută în NHI browser</span></button>
 </div>
 
 <div class="grp-menu" id="grp-exp-menu">
   <div class="grp-menu-ttl">↓ EXPORT · PARTAJARE</div>
-  <button class="gm-btn" onclick="closeGrpAndRun(exportLog)"><span class="gm-icon">📝</span><span class="gm-lbl">Export log TXT</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(exportNHINotesMarkdown)"><span class="gm-icon">📓</span><span class="gm-lbl">Export note NHI (MD)</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(exportNHINotesCSV)"><span class="gm-icon">📊</span><span class="gm-lbl">Export note NHI (CSV)</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(exportProtocolHistoryCSV)"><span class="gm-icon">🗓</span><span class="gm-lbl">Export protocoale (CSV)</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(exportStatsSummary)"><span class="gm-icon">📈</span><span class="gm-lbl">Export statistici (TXT)</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(exportLog)"><span class="gm-icon">📝</span><span class="gm-lbl">Export log TXT</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(exportNHINotesMarkdown)"><span class="gm-icon">📓</span><span class="gm-lbl">Export note NHI (MD)</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(exportNHINotesCSV)"><span class="gm-icon">📊</span><span class="gm-lbl">Export note NHI (CSV)</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(exportProtocolHistoryCSV)"><span class="gm-icon">🗓</span><span class="gm-lbl">Export protocoale (CSV)</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(exportStatsSummary)"><span class="gm-icon">📈</span><span class="gm-lbl">Export statistici (TXT)</span></button>
   <div class="gm-sep"></div>
-  <button class="gm-btn" onclick="closeGrpAndRun(shareProgress)"><span class="gm-icon">🔗</span><span class="gm-lbl">Partajează progres</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(shareNHI)"><span class="gm-icon">🌐</span><span class="gm-lbl">Partajează NHI curent</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(shareProgress)"><span class="gm-icon">🔗</span><span class="gm-lbl">Partajează progres</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(shareNHI)"><span class="gm-icon">🌐</span><span class="gm-lbl">Partajează NHI curent</span></button>
 </div>
 
 <div class="grp-menu" id="grp-cmp-menu">
   <div class="grp-menu-ttl">⚖ COMPARAȚIE · ANALIZĂ</div>
-  <button class="gm-btn" onclick="closeGrpAndRun(function(){if(selNHI)addToCompare(selNHI.id);openCompare();})"><span class="gm-icon">➕</span><span class="gm-lbl">Adaugă NHI la comparație</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(openCompare)"><span class="gm-icon">⚖</span><span class="gm-lbl">Deschide comparație</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(function(){sortComparison('det');})"><span class="gm-icon">↕</span><span class="gm-lbl">Sortare după detectabilitate</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(exportComparisonCSV)"><span class="gm-icon">📊</span><span class="gm-lbl">Export comparație (CSV)</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(printComparison)"><span class="gm-icon">🖨</span><span class="gm-lbl">Print comparație</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(function(){if(selNHI)addToCompare(selNHI.id);openCompare();})"><span class="gm-icon">➕</span><span class="gm-lbl">Adaugă NHI la comparație</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(openCompare)"><span class="gm-icon">⚖</span><span class="gm-lbl">Deschide comparație</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(function(){sortComparison('det');})"><span class="gm-icon">↕</span><span class="gm-lbl">Sortare după detectabilitate</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(exportComparisonCSV)"><span class="gm-icon">📊</span><span class="gm-lbl">Export comparație (CSV)</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(printComparison)"><span class="gm-icon">🖨</span><span class="gm-lbl">Print comparație</span></button>
   <div class="gm-sep"></div>
-  <button class="gm-btn" onclick="closeGrpAndRun(clearCompare)"><span class="gm-icon">✕</span><span class="gm-lbl">Golește comparație</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(shareComparison)"><span class="gm-icon">🔗</span><span class="gm-lbl">Partajează comparație</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(clearCompare)"><span class="gm-icon">✕</span><span class="gm-lbl">Golește comparație</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(shareComparison)"><span class="gm-icon">🔗</span><span class="gm-lbl">Partajează comparație</span></button>
 </div>
 
 <div class="grp-menu" id="grp-set-menu">
   <div class="grp-menu-ttl">⚙ SETĂRI · AFIȘARE</div>
-  <button class="gm-btn" onclick="closeGrpAndRun(toggleDarkMode)" id="gm-light"><span class="gm-icon" id="gm-theme-icon">🌙</span><span class="gm-lbl" id="gm-light-lbl">Mod întunecat</span></button>
-<button class="gm-btn" onclick="closeGrpAndRun(toggleNightMode)" id="gm-night"><span class="gm-icon">🌙</span><span class="gm-lbl">Mod noapte</span><span class="gm-kbd">Alt+N</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(toggleFocusMode)" id="gm-focus"><span class="gm-icon">⊛</span><span class="gm-lbl">Mod focus</span><span class="gm-kbd">Alt+L</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(togglePresentationMode)" id="gm-pres"><span class="gm-icon">⊡</span><span class="gm-lbl">Mod prezentare</span><span class="gm-kbd">Alt+F</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(toggleLang)"><span class="gm-icon">🌐</span><span class="gm-lbl">Limbă: RO ⇄ EN</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(toggleDarkMode)" id="gm-light"><span class="gm-icon" id="gm-theme-icon">🌙</span><span class="gm-lbl" id="gm-light-lbl">Mod întunecat</span></button>
+<button class="gm-btn" data-onclick="closeGrpAndRun(toggleNightMode)" id="gm-night"><span class="gm-icon">🌙</span><span class="gm-lbl">Mod noapte</span><span class="gm-kbd">Alt+N</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(toggleFocusMode)" id="gm-focus"><span class="gm-icon">⊛</span><span class="gm-lbl">Mod focus</span><span class="gm-kbd">Alt+L</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(togglePresentationMode)" id="gm-pres"><span class="gm-icon">⊡</span><span class="gm-lbl">Mod prezentare</span><span class="gm-kbd">Alt+F</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(toggleLang)"><span class="gm-icon">🌐</span><span class="gm-lbl">Limbă: RO ⇄ EN</span></button>
   <div class="gm-sep"></div>
-  <button class="gm-btn" onclick="closeGrpAndRun(toggleFontSize)"><span class="gm-icon">A↕</span><span class="gm-lbl">Mărime font log</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(toggleDyslexiaFont)"><span class="gm-icon">📖</span><span class="gm-lbl">Font dislexie</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(toggleFontSize)"><span class="gm-icon">A↕</span><span class="gm-lbl">Mărime font log</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(toggleDyslexiaFont)"><span class="gm-icon">📖</span><span class="gm-lbl">Font dislexie</span></button>
   <div class="gm-sep"></div>
-  <button class="gm-btn" onclick="closeGrpAndRun(copyNHILink)"><span class="gm-icon">🔗</span><span class="gm-lbl">Copiază link NHI</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(exportBackup)"><span class="gm-icon">💾</span><span class="gm-lbl">Backup complet (JSON)</span></button>
-  <button class="gm-btn" onclick="closeGrpAndRun(importBackup)"><span class="gm-icon">📥</span><span class="gm-lbl">Importă backup</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(copyNHILink)"><span class="gm-icon">🔗</span><span class="gm-lbl">Copiază link NHI</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(exportBackup)"><span class="gm-icon">💾</span><span class="gm-lbl">Backup complet (JSON)</span></button>
+  <button class="gm-btn" data-onclick="closeGrpAndRun(importBackup)"><span class="gm-icon">📥</span><span class="gm-lbl">Importă backup</span></button>
 </div>
 
 
@@ -1157,7 +1158,7 @@ body.dark-mode .ll[data-type="warn"] {
   <header id="top-bar" role="banner">
     <div class="top-logo">NOMIA</div>
 
-    <button id="nhi-pill" onclick="toggleNHISheet()"
+    <button id="nhi-pill" data-onclick="toggleNHISheet()"
             aria-label="Alege NHI" aria-haspopup="true" aria-expanded="false">
       <span id="nhi-pill-icon">🔭</span>
       <span id="nhi-pill-name">↑ Alege NHI</span>
@@ -1171,30 +1172,30 @@ body.dark-mode .ll[data-type="warn"] {
       <span id="sess-timer-hdr"></span>
     </div>
 
-    <div id="autorun-toggle" role="button" tabindex="0" onclick="toggleAutoRun()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleAutoRun()}" title="Auto-rulează protocolul la selecție NHI" aria-pressed="false"><span id="autorun-dot"></span>AUTO</div>
-    <button id="stack-toggle-btn" onclick="toggleStackedMode()" title="Stacked: NHI deasupra Log" aria-label="Vizualizare stivuită">⊟☰</button>
-    <button id="split-toggle-btn" onclick="toggleSplitMode()" title="Split: Log + NHI" aria-label="Vizualizare împărțită">⫿</button>
-    <button id="top-ovf-btn" onclick="topMenuClick()" aria-label="Meniu" aria-haspopup="dialog">⋮</button>
+    <div id="autorun-toggle" role="button" tabindex="0" data-onclick="toggleAutoRun()" data-onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleAutoRun()}" title="Auto-rulează protocolul la selecție NHI" aria-pressed="false"><span id="autorun-dot"></span>AUTO</div>
+    <button id="stack-toggle-btn" data-onclick="toggleStackedMode()" title="Stacked: NHI deasupra Log" aria-label="Vizualizare stivuită">⊟☰</button>
+    <button id="split-toggle-btn" data-onclick="toggleSplitMode()" title="Split: Log + NHI" aria-label="Vizualizare împărțită">⫿</button>
+    <button id="top-ovf-btn" data-onclick="topMenuClick()" aria-label="Meniu" aria-haspopup="dialog">⋮</button>
   </header>
 
   <!-- ◀ LEFT ─────────────────────────────── -->
   <nav id="left-bar" class="edge-bar" aria-label="Navigare laterală stânga">
     <!-- NHI Group -->
     <div class="edge-group">
-      <button class="grp-trigger" id="grp-nhi-btn" onclick="toggleGrpMenu('grp-nhi-menu',this)" title="NHI · Explorare" aria-haspopup="true" aria-expanded="false">🧬</button>
+      <button class="grp-trigger" id="grp-nhi-btn" data-onclick="toggleGrpMenu('grp-nhi-menu',this)" title="NHI · Explorare" aria-haspopup="true" aria-expanded="false">🧬</button>
     </div>
     <!-- Triadic Group -->
     <div class="edge-group">
-      <button class="grp-trigger" id="grp-tri-btn" onclick="toggleGrpMenu('grp-tri-menu',this)" title="Model triadic · Prezentare" aria-haspopup="true" aria-expanded="false">△</button>
+      <button class="grp-trigger" id="grp-tri-btn" data-onclick="toggleGrpMenu('grp-tri-menu',this)" title="Model triadic · Prezentare" aria-haspopup="true" aria-expanded="false">△</button>
     </div>
     <div class="edge-sep"></div>
     <!-- Stats Group -->
     <div class="edge-group">
-      <button class="grp-trigger" id="grp-stat-btn" onclick="toggleGrpMenu('grp-stat-menu',this)" title="Statistici · Progres" aria-haspopup="true">📊</button>
+      <button class="grp-trigger" id="grp-stat-btn" data-onclick="toggleGrpMenu('grp-stat-menu',this)" title="Statistici · Progres" aria-haspopup="true">📊</button>
     </div>
     <!-- Log Group -->
     <div class="edge-group">
-      <button class="grp-trigger" id="grp-log-btn" onclick="toggleGrpMenu('grp-log-menu',this)" title="Log · Filtre" aria-haspopup="true">📋</button>
+      <button class="grp-trigger" id="grp-log-btn" data-onclick="toggleGrpMenu('grp-log-menu',this)" title="Log · Filtre" aria-haspopup="true">📋</button>
     </div>
   </nav>
 
@@ -1219,7 +1220,7 @@ body.dark-mode .ll[data-type="warn"] {
       <span id="dur-est"></span>
       <span id="autosave-ind">💾</span>
       <span id="focus-ind">⊡ FOCUS</span>
-      <button id="autoscroll-btn" onclick="toggleAutoScroll()" title="Auto-scroll">⇩</button>
+      <button id="autoscroll-btn" data-onclick="toggleAutoScroll()" title="Auto-scroll">⇩</button>
     </div>
     <div id="step-progress"><div id="step-progress-bar"></div></div>
     <div id="log-note" style="flex:0 0 auto;padding:2px 12px;font-size:9px;line-height:1.3;color:var(--txt2);border-bottom:1px solid var(--bdr)">Ficțiune / speculație · modele conceptuale, nu fapte verificate. <span lang="en">Fiction / speculation · conceptual models, not verified facts.</span>
@@ -1235,41 +1236,41 @@ body.dark-mode .ll[data-type="warn"] {
   <nav id="right-bar" class="edge-bar" aria-label="Navigare laterală dreapta">
     <!-- Detail Group -->
     <div class="edge-group">
-      <button class="grp-trigger" id="btn-detail" onclick="toggleGrpMenu('grp-detail-menu',this)" title="Detalii NHI · Similar" aria-haspopup="true">📋</button>
+      <button class="grp-trigger" id="btn-detail" data-onclick="toggleGrpMenu('grp-detail-menu',this)" title="Detalii NHI · Similar" aria-haspopup="true">📋</button>
     </div>
     <!-- Export Group -->
     <div class="edge-group">
-      <button class="grp-trigger" id="grp-exp-btn" onclick="toggleGrpMenu('grp-exp-menu',this)" title="Export · Partajare" aria-haspopup="true">↓</button>
+      <button class="grp-trigger" id="grp-exp-btn" data-onclick="toggleGrpMenu('grp-exp-menu',this)" title="Export · Partajare" aria-haspopup="true">↓</button>
     </div>
     <div class="edge-sep"></div>
     <!-- Compare Group -->
     <div class="edge-group">
-      <button class="grp-trigger" id="grp-cmp-btn" onclick="toggleGrpMenu('grp-cmp-menu',this)" title="Comparație · Analiză" aria-haspopup="true">⚖</button>
+      <button class="grp-trigger" id="grp-cmp-btn" data-onclick="toggleGrpMenu('grp-cmp-menu',this)" title="Comparație · Analiză" aria-haspopup="true">⚖</button>
     </div>
     <!-- Settings Group -->
     <div class="edge-group">
-      <button class="grp-trigger" id="grp-set-btn" onclick="toggleGrpMenu('grp-set-menu',this)" title="Setări · Afișare" aria-haspopup="true">⚙</button>
+      <button class="grp-trigger" id="grp-set-btn" data-onclick="toggleGrpMenu('grp-set-menu',this)" title="Setări · Afișare" aria-haspopup="true">⚙</button>
     </div>
   </nav>
 
   <!-- ▼ BOTTOM ────────────────────────────── -->
   <footer id="bottom-bar">
     <div id="ch-ia-bar">
-      <button class="ia-tab" onclick="selIA(0,this)" data-lbl="ia-tab-0">TIP (i)</button>
-      <button class="ia-tab active" onclick="selIA(1,this)" data-lbl="ia-tab-1">TIP (ii)</button>
-      <button class="ia-tab" onclick="selIA(2,this)" data-lbl="ia-tab-2">TIP (iii)</button>
+      <button class="ia-tab" data-onclick="selIA(0,this)" data-lbl="ia-tab-0">TIP (i)</button>
+      <button class="ia-tab active" data-onclick="selIA(1,this)" data-lbl="ia-tab-1">TIP (ii)</button>
+      <button class="ia-tab" data-onclick="selIA(2,this)" data-lbl="ia-tab-2">TIP (iii)</button>
       <div class="ch-sep"></div>
       <div id="ch-core" style="display:contents"></div>
     </div>
     <div id="action-bar">
-      <button class="abtn a-nhi" onclick="initiateInverse()"      data-lbl="btn-inv">↕ NHI→OM</button>
-      <button class="abtn a-ia"  onclick="initiateIA_NHI()"       data-lbl="btn-ia-nhi">○ IA→NHI</button>
-      <button class="abtn a-nhi" onclick="initiateNHI_IA()"       data-lbl="btn-nhi-ia">◀ NHI→IA</button>
-      <button class="abtn a-om btn-rerun" onclick="_runOrStop()"  data-lbl="btn-run">▶ REIA</button>
-      <button class="abtn btn-stop" onclick="stopProtocol()"      data-lbl="btn-stop" style="display:none">■ STOP</button>
-      <button class="abtn a-clr"   onclick="clearLog()"           data-lbl="btn-clr">✕ CLR</button>
-      <button id="pause-btn" class="abtn" onclick="pauseProtocol()" style="display:none">⏸</button>
-      <button id="step-btn"  class="abtn" onclick="_stepOrToggle()">»STEP</button>
+      <button class="abtn a-nhi" data-onclick="initiateInverse()"      data-lbl="btn-inv">↕ NHI→OM</button>
+      <button class="abtn a-ia"  data-onclick="initiateIA_NHI()"       data-lbl="btn-ia-nhi">○ IA→NHI</button>
+      <button class="abtn a-nhi" data-onclick="initiateNHI_IA()"       data-lbl="btn-nhi-ia">◀ NHI→IA</button>
+      <button class="abtn a-om btn-rerun" data-onclick="_runOrStop()"  data-lbl="btn-run">▶ REIA</button>
+      <button class="abtn btn-stop" data-onclick="stopProtocol()"      data-lbl="btn-stop" style="display:none">■ STOP</button>
+      <button class="abtn a-clr"   data-onclick="clearLog()"           data-lbl="btn-clr">✕ CLR</button>
+      <button id="pause-btn" class="abtn" data-onclick="pauseProtocol()" style="display:none">⏸</button>
+      <button id="step-btn"  class="abtn" data-onclick="_stepOrToggle()">»STEP</button>
     </div>
   </footer>
 
@@ -1277,12 +1278,12 @@ body.dark-mode .ll[data-type="warn"] {
 
 <!-- Mobile FABs (hidden on desktop via CSS) -->
 <div id="fab-cluster" style="display:none">
-  <button class="fab fab-nhi" id="fab-nhi" onclick="toggleNHISheet()" aria-label="NHI">🧬</button>
-  <button class="fab" onclick="toggleStatsSheet()" aria-label="Statistici">≡</button>
+  <button class="fab fab-nhi" id="fab-nhi" data-onclick="toggleNHISheet()" aria-label="NHI">🧬</button>
+  <button class="fab" data-onclick="toggleStatsSheet()" aria-label="Statistici">≡</button>
 </div>
 
 <!-- Sheet backdrop -->
-<div id="sheet-backdrop" onclick="closeAllSheets();_passThroughRunControls(event)"></div>
+<div id="sheet-backdrop" data-onclick="closeAllSheets();_passThroughRunControls(event)"></div>
 
 <!-- ▼ SHEET: NHI Browser -->
 <div id="nhi-sheet" class="nomia-sheet sheet-bottom hidden"
@@ -1290,7 +1291,7 @@ body.dark-mode .ll[data-type="warn"] {
   <div class="s-handle"></div>
   <div class="s-hdr">
     <span class="s-ttl" data-ro="INTELIGENȚE NON-UMANE · 1001" data-en="NON-HUMAN INTELLIGENCES · 1001">INTELIGENȚE NON-UMANE · 1001</span>
-    <button class="s-close" onclick="closeNHISheet()">✕</button>
+    <button class="s-close" data-onclick="closeNHISheet()">✕</button>
   </div>
   <div class="s-search">
     <input id="np-search-input" type="search" placeholder="Caută NHI..."
@@ -1307,7 +1308,7 @@ body.dark-mode .ll[data-type="warn"] {
 <div id="detail-sheet" class="nomia-sheet sheet-right hidden"
      role="dialog" aria-modal="true" aria-label="Detalii NHI">
   <div class="s-hdr" style="position:sticky;top:0;z-index:2;background:rgba(4,10,26,.98)">
-    <button class="s-close" onclick="closeDetailSheet()"
+    <button class="s-close" data-onclick="closeDetailSheet()"
             style="background:rgba(77,136,255,.08);border-color:rgba(77,136,255,.2);color:rgba(140,175,255,.7)">←</button>
     <span class="s-ttl">DETALII NHI SELECTAT</span>
     <div style="width:30px"></div>
@@ -1336,7 +1337,7 @@ body.dark-mode .ll[data-type="warn"] {
 <div id="stats-sheet" class="nomia-sheet sheet-left hidden"
      role="dialog" aria-modal="true" aria-label="Statistici">
   <div class="s-hdr">
-    <button class="s-close" onclick="closeStatsSheet()"
+    <button class="s-close" data-onclick="closeStatsSheet()"
             style="background:rgba(77,136,255,.08);border-color:rgba(77,136,255,.2);color:rgba(140,175,255,.7)">→</button>
     <span class="s-ttl">NOMIA · STATISTICI · SETĂRI</span>
     <div style="width:30px"></div>
@@ -1347,18 +1348,18 @@ body.dark-mode .ll[data-type="warn"] {
     <div id="sys-status-panel"></div>
     <div id="whats-new-box"><div>CE E NOU</div><ul id="whats-new-list"></ul></div>
     <div class="stats-section-title">SETĂRI RAPIDE</div>
-    <button class="settings-btn" onclick="toggleLang()"><span class="sb-icon">🌐</span>Limbă: RO ⇄ EN</button>
-    <button class="settings-btn" onclick="toggleDarkMode()"><span class="sb-icon">🌗</span>Temă luminoasă / întunecată</button>
-    <button class="settings-btn" onclick="toggleNightMode()">
+    <button class="settings-btn" data-onclick="toggleLang()"><span class="sb-icon">🌐</span>Limbă: RO ⇄ EN</button>
+    <button class="settings-btn" data-onclick="toggleDarkMode()"><span class="sb-icon">🌗</span>Temă luminoasă / întunecată</button>
+    <button class="settings-btn" data-onclick="toggleNightMode()">
       <span class="sb-icon">🌙</span>Mod noapte (Alt+N)
     </button>
-    <button class="settings-btn" onclick="shareProgress()">
+    <button class="settings-btn" data-onclick="shareProgress()">
       <span class="sb-icon">🔗</span>Partajează progres
     </button>
-    <button class="settings-btn" onclick="exportStatsSummary()">
+    <button class="settings-btn" data-onclick="exportStatsSummary()">
       <span class="sb-icon">📝</span>Export statistici (TXT)
     </button>
-    <button class="settings-btn" onclick="resetExploration()"
+    <button class="settings-btn" data-onclick="resetExploration()"
             style="color:rgba(255,130,100,.6);border-color:rgba(255,100,80,.2)">
       <span class="sb-icon">🔄</span>Reset explorare
     </button>
@@ -1371,7 +1372,7 @@ body.dark-mode .ll[data-type="warn"] {
   <div class="s-handle"></div>
   <div class="s-hdr">
     <span class="s-ttl">MODEL TRIADIC · OM · IA · NHI</span>
-    <button class="s-close" onclick="closeTriadicSheet()">✕</button>
+    <button class="s-close" data-onclick="closeTriadicSheet()">✕</button>
   </div>
   <div class="s-scroll" style="padding:10px">
     <div id="svg-wrap">
@@ -1392,9 +1393,9 @@ body.dark-mode .ll[data-type="warn"] {
         <text x="213" y="138" fill="#f5a623" font-family="Space Mono" font-size="8" opacity=".6" text-anchor="middle">Traducere</text><text x="213" y="148" fill="#00d4ff" font-family="Space Mono" font-size="8" opacity=".6" text-anchor="middle">Interpretare</text>
         <text x="447" y="138" fill="#00d4ff" font-family="Space Mono" font-size="8" opacity=".6" text-anchor="middle">Mediere</text><text x="447" y="148" fill="#c362ff" font-family="Space Mono" font-size="8" opacity=".6" text-anchor="middle">ToM Gen.</text>
         <text x="330" y="210" fill="#556" font-family="Space Mono" font-size="7.5" opacity=".5" text-anchor="middle">⚠ contact direct dificil (P1)</text>
-        <g onclick="selectNode('om')" style="cursor:pointer" role="button" tabindex="0" aria-label="Nodul Om — observatorul uman" title="Nodul Om — observatorul uman" onkeydown="if(event.key==='Enter'||event.key===' ')selectNode('om')"><circle cx="110" cy="183" r="52" fill="url(#g1)" stroke="#f5a623" stroke-width="1.5" filter="url(#fo)"/><circle cx="110" cy="183" r="36" fill="rgba(245,166,35,.1)" stroke="#f5a623" stroke-width=".8"/><text x="110" y="175" fill="#f5a623" font-family="Orbitron" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="2">OM</text><text x="110" y="189" fill="#f5a623" font-family="Rajdhani" font-size="10" text-anchor="middle" opacity=".7">HUMAN</text><text x="110" y="200" fill="#f5a623" font-family="Space Mono" font-size="7" text-anchor="middle" opacity=".5">~4 chunk · 80y</text></g>
-        <g onclick="selectNode('ia')" style="cursor:pointer" role="button" tabindex="0" aria-label="Nodul IA — mediatorul artificial" title="Nodul IA — mediatorul artificial" onkeydown="if(event.key==='Enter'||event.key===' ')selectNode('ia')"><polygon points="330,44 408,140 252,140" fill="rgba(0,212,255,.07)" stroke="#00d4ff" stroke-width="1.5" filter="url(#fi)"/><circle cx="330" cy="105" r="42" fill="rgba(0,212,255,.1)" stroke="#00d4ff" stroke-width=".8"/><text x="330" y="97" fill="#00d4ff" font-family="Orbitron" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="2">IA</text><text id="svg-ia-role" x="330" y="111" fill="#00d4ff" font-family="Rajdhani" font-size="10" text-anchor="middle" opacity=".7">MEDIATOR ACTIV</text><text x="330" y="123" fill="#00d4ff" font-family="Space Mono" font-size="7.5" text-anchor="middle" opacity=".5" id="ia-lbl">Tip (ii): LLM</text></g>
-        <g onclick="selectNode('nhi')" style="cursor:pointer" role="button" tabindex="0" aria-label="Nodul NHI — inteligența selectată" title="Nodul NHI — inteligența selectată" onkeydown="if(event.key==='Enter'||event.key===' ')selectNode('nhi')"><circle cx="550" cy="183" r="52" fill="url(#g3)" stroke="#c362ff" stroke-width="1.5" filter="url(#fn)"/><circle cx="550" cy="183" r="36" fill="rgba(195,98,255,.1)" stroke="#c362ff" stroke-width=".8"/><text x="550" y="175" fill="#c362ff" font-family="Orbitron" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="2">NHI</text><text id="svg-nhi-sel" x="550" y="189" fill="#c362ff" font-family="Rajdhani" font-size="10" text-anchor="middle" opacity=".7">SELECTEAZĂ</text><text id="svg-nhi-cnt" x="550" y="200" fill="#c362ff" font-family="Space Mono" font-size="7.5" text-anchor="middle" opacity=".5">▾ 1001 tipuri</text></g>
+        <g data-onclick="selectNode('om')" style="cursor:pointer" role="button" tabindex="0" aria-label="Nodul Om — observatorul uman" title="Nodul Om — observatorul uman" data-onkeydown="if(event.key==='Enter'||event.key===' ')selectNode('om')"><circle cx="110" cy="183" r="52" fill="url(#g1)" stroke="#f5a623" stroke-width="1.5" filter="url(#fo)"/><circle cx="110" cy="183" r="36" fill="rgba(245,166,35,.1)" stroke="#f5a623" stroke-width=".8"/><text x="110" y="175" fill="#f5a623" font-family="Orbitron" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="2">OM</text><text x="110" y="189" fill="#f5a623" font-family="Rajdhani" font-size="10" text-anchor="middle" opacity=".7">HUMAN</text><text x="110" y="200" fill="#f5a623" font-family="Space Mono" font-size="7" text-anchor="middle" opacity=".5">~4 chunk · 80y</text></g>
+        <g data-onclick="selectNode('ia')" style="cursor:pointer" role="button" tabindex="0" aria-label="Nodul IA — mediatorul artificial" title="Nodul IA — mediatorul artificial" data-onkeydown="if(event.key==='Enter'||event.key===' ')selectNode('ia')"><polygon points="330,44 408,140 252,140" fill="rgba(0,212,255,.07)" stroke="#00d4ff" stroke-width="1.5" filter="url(#fi)"/><circle cx="330" cy="105" r="42" fill="rgba(0,212,255,.1)" stroke="#00d4ff" stroke-width=".8"/><text x="330" y="97" fill="#00d4ff" font-family="Orbitron" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="2">IA</text><text id="svg-ia-role" x="330" y="111" fill="#00d4ff" font-family="Rajdhani" font-size="10" text-anchor="middle" opacity=".7">MEDIATOR ACTIV</text><text x="330" y="123" fill="#00d4ff" font-family="Space Mono" font-size="7.5" text-anchor="middle" opacity=".5" id="ia-lbl">Tip (ii): LLM</text></g>
+        <g data-onclick="selectNode('nhi')" style="cursor:pointer" role="button" tabindex="0" aria-label="Nodul NHI — inteligența selectată" title="Nodul NHI — inteligența selectată" data-onkeydown="if(event.key==='Enter'||event.key===' ')selectNode('nhi')"><circle cx="550" cy="183" r="52" fill="url(#g3)" stroke="#c362ff" stroke-width="1.5" filter="url(#fn)"/><circle cx="550" cy="183" r="36" fill="rgba(195,98,255,.1)" stroke="#c362ff" stroke-width=".8"/><text x="550" y="175" fill="#c362ff" font-family="Orbitron" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="2">NHI</text><text id="svg-nhi-sel" x="550" y="189" fill="#c362ff" font-family="Rajdhani" font-size="10" text-anchor="middle" opacity=".7">SELECTEAZĂ</text><text id="svg-nhi-cnt" x="550" y="200" fill="#c362ff" font-family="Space Mono" font-size="7.5" text-anchor="middle" opacity=".5">▾ 1001 tipuri</text></g>
         <text id="svg-axes-txt" x="330" y="278" fill="#334" font-family="Space Mono" font-size="7.5" text-anchor="middle">Axa A: neuroști.+IA (certitudine moderată) | Axa B: UAP/NHI (certitudine ridicată)</text>
         <text id="svg-model-txt" x="330" y="15" fill="#334" font-family="Orbitron" font-size="9" text-anchor="middle" letter-spacing="2">MODEL TRIADIC CONDIȚIONAT: M ← P1 ∧ P2 ∧ P3</text>
       </svg>
@@ -1405,26 +1406,26 @@ body.dark-mode .ll[data-type="warn"] {
 <!-- ▼ SHEET: Meniu mobil -->
 <div id="mob-menu" class="nomia-sheet sheet-bottom hidden" role="dialog" aria-modal="true" aria-label="Meniu" aria-hidden="true">
   <div class="s-handle"></div>
-  <div class="s-hdr"><span class="s-ttl">MENIU</span><button class="s-close" onclick="closeMobMenu()" aria-label="Închide meniul">✕</button></div>
+  <div class="s-hdr"><span class="s-ttl">MENIU</span><button class="s-close" data-onclick="closeMobMenu()" aria-label="Închide meniul">✕</button></div>
   <div class="s-scroll" id="mob-menu-body"></div>
 </div>
 
 <!-- Existing overlays -->
 <div id="compare-panel" role="dialog" aria-modal="true" aria-label="Comparație NHI">
   <div class="compare-header">
-    <span>⚖ COMPARAȚIE NHI</span><div style="display:flex;gap:4px"><button onclick="sortComparison('det')" style="background:rgba(208,112,255,.1);border:1px solid rgba(208,112,255,.2);border-radius:4px;padding:2px 6px;font-size:8px;color:rgba(208,112,255,.8);cursor:pointer;font-family:Orbitron,monospace">DET↓</button><button onclick="sortComparison('clarity')" style="background:rgba(0,200,255,.1);border:1px solid rgba(0,200,255,.2);border-radius:4px;padding:2px 6px;font-size:8px;color:rgba(0,200,255,.8);cursor:pointer;font-family:Orbitron,monospace">CLAR↓</button><button onclick="sortComparison('risk')" style="background:rgba(255,150,0,.1);border:1px solid rgba(255,150,0,.2);border-radius:4px;padding:2px 6px;font-size:8px;color:rgba(255,150,0,.8);cursor:pointer;font-family:Orbitron,monospace">RISC↓</button></div><button onclick="printComparison()" style="background:rgba(150,150,200,.1);border:1px solid rgba(150,150,200,.2);border-radius:6px;padding:3px 8px;font-size:9px;color:rgba(180,180,220,.8);cursor:pointer;font-family:Orbitron,monospace;touch-action:manipulation">🖨</button><button onclick="shareComparison()" style="background:rgba(0,150,255,.1);border:1px solid rgba(0,150,255,.2);border-radius:6px;padding:3px 8px;font-size:9px;color:rgba(50,180,255,.8);cursor:pointer;touch-action:manipulation">🔗</button><button onclick="exportComparisonCSV()" style="background:rgba(0,200,150,.1);border:1px solid rgba(0,200,150,.2);border-radius:6px;padding:3px 8px;font-size:9px;color:rgba(0,220,160,.8);cursor:pointer;touch-action:manipulation">CSV</button><button onclick="exportComparison()" style="background:rgba(0,200,100,.1);border:1px solid rgba(0,200,100,.2);border-radius:6px;padding:3px 8px;font-size:9px;color:rgba(0,220,120,.8);cursor:pointer;font-family:Orbitron,monospace;touch-action:manipulation">↓ JSON</button>
-    <button onclick="closeCompare()" style="background:none;border:none;color:rgba(200,200,200,.6);font-size:22px;cursor:pointer;padding:0 4px">×</button>
+    <span>⚖ COMPARAȚIE NHI</span><div style="display:flex;gap:4px"><button data-onclick="sortComparison('det')" style="background:rgba(208,112,255,.1);border:1px solid rgba(208,112,255,.2);border-radius:4px;padding:2px 6px;font-size:8px;color:rgba(208,112,255,.8);cursor:pointer;font-family:Orbitron,monospace">DET↓</button><button data-onclick="sortComparison('clarity')" style="background:rgba(0,200,255,.1);border:1px solid rgba(0,200,255,.2);border-radius:4px;padding:2px 6px;font-size:8px;color:rgba(0,200,255,.8);cursor:pointer;font-family:Orbitron,monospace">CLAR↓</button><button data-onclick="sortComparison('risk')" style="background:rgba(255,150,0,.1);border:1px solid rgba(255,150,0,.2);border-radius:4px;padding:2px 6px;font-size:8px;color:rgba(255,150,0,.8);cursor:pointer;font-family:Orbitron,monospace">RISC↓</button></div><button data-onclick="printComparison()" style="background:rgba(150,150,200,.1);border:1px solid rgba(150,150,200,.2);border-radius:6px;padding:3px 8px;font-size:9px;color:rgba(180,180,220,.8);cursor:pointer;font-family:Orbitron,monospace;touch-action:manipulation">🖨</button><button data-onclick="shareComparison()" style="background:rgba(0,150,255,.1);border:1px solid rgba(0,150,255,.2);border-radius:6px;padding:3px 8px;font-size:9px;color:rgba(50,180,255,.8);cursor:pointer;touch-action:manipulation">🔗</button><button data-onclick="exportComparisonCSV()" style="background:rgba(0,200,150,.1);border:1px solid rgba(0,200,150,.2);border-radius:6px;padding:3px 8px;font-size:9px;color:rgba(0,220,160,.8);cursor:pointer;touch-action:manipulation">CSV</button><button data-onclick="exportComparison()" style="background:rgba(0,200,100,.1);border:1px solid rgba(0,200,100,.2);border-radius:6px;padding:3px 8px;font-size:9px;color:rgba(0,220,120,.8);cursor:pointer;font-family:Orbitron,monospace;touch-action:manipulation">↓ JSON</button>
+    <button data-onclick="closeCompare()" style="background:none;border:none;color:rgba(200,200,200,.6);font-size:22px;cursor:pointer;padding:0 4px">×</button>
   </div>
   <div class="compare-grid" id="compare-grid"></div>
   <div style="padding:10px 16px;background:rgba(4,10,28,.98);border-top:1px solid rgba(100,140,255,.15);display:flex;gap:8px;align-items:center;flex-wrap:wrap">
     <span style="font-size:9px;color:var(--dim);font-family:Orbitron,monospace">ADAUGĂ NHI:</span>
-    <input id="compare-search" type="text" placeholder="Caută NHI..." style="flex:1;min-width:120px;background:rgba(255,255,255,.05);border:1px solid rgba(100,140,255,.2);border-radius:6px;padding:5px 8px;color:var(--txt);font-size:11px" oninput="renderCompareSuggestions(this.value)">
+    <input id="compare-search" type="text" placeholder="Caută NHI..." style="flex:1;min-width:120px;background:rgba(255,255,255,.05);border:1px solid rgba(100,140,255,.2);border-radius:6px;padding:5px 8px;color:var(--txt);font-size:11px" data-oninput="renderCompareSuggestions(this.value)">
     <div id="compare-suggestions" style="position:absolute;bottom:52px;left:16px;right:16px;background:rgba(4,10,28,.98);border:1px solid rgba(100,140,255,.2);border-radius:8px;max-height:160px;overflow-y:auto;display:none;z-index:9996"></div>
-    <button onclick="clearCompare()" style="background:rgba(255,100,100,.08);border:1px solid rgba(255,100,100,.2);border-radius:6px;padding:5px 10px;font-size:9px;color:rgba(255,150,150,.7);cursor:pointer;font-family:Orbitron,monospace;touch-action:manipulation">✕ Șterge</button>
+    <button data-onclick="clearCompare()" style="background:rgba(255,100,100,.08);border:1px solid rgba(255,100,100,.2);border-radius:6px;padding:5px 10px;font-size:9px;color:rgba(255,150,150,.7);cursor:pointer;font-family:Orbitron,monospace;touch-action:manipulation">✕ Șterge</button>
   </div>
 </div>
 <div class="cat-panel-wrap" id="cat-panel-wrap" role="dialog" aria-modal="true" aria-labelledby="cp-title-text">
-  <div class="cat-overlay" id="cat-overlay" onclick="closeCatPanel()"></div>
+  <div class="cat-overlay" id="cat-overlay" data-onclick="closeCatPanel()"></div>
   <div id="nhi-week-desk" style="display:none;padding:8px 10px;border-bottom:1px solid rgba(100,140,255,.08)"></div>
 <div id="nhi-day-desk" style="display:none;padding:8px 10px;border-bottom:1px solid rgba(100,140,255,.08)"></div>
 <div class="cat-panel" id="cat-panel" role="dialog" aria-modal="true" aria-labelledby="cp-title-text">
@@ -1434,7 +1435,7 @@ body.dark-mode .ll[data-type="warn"] {
         <span id="cp-title-text" data-ro="Categorie" data-en="Category">Categorie</span>
         <span class="cp-subtitle" id="cp-subtitle"></span>
       </div>
-      <button class="cp-close" onclick="closeCatPanel()" aria-label="Închide panoul" title="Închide">✕</button>
+      <button class="cp-close" data-onclick="closeCatPanel()" aria-label="Închide panoul" title="Închide">✕</button>
     </div>
     <div class="cp-desc-strip" id="cp-desc"></div>
     <div class="cp-grid" id="cp-grid"></div>
@@ -1461,9 +1462,9 @@ body.dark-mode .ll[data-type="warn"] {
     <div id="mt-uap"><div id="uap-mob"><div id="uap-mob-inner"></div></div></div>
     <div id="mt-ch">
       <div class="ia-tabs" style="display:none">
-        <button class="ia-tab" onclick="selIA(0,this)">TIP (i)</button>
-        <button class="ia-tab active" onclick="selIA(1,this)">TIP (ii)</button>
-        <button class="ia-tab" onclick="selIA(2,this)">TIP (iii)</button>
+        <button class="ia-tab" data-onclick="selIA(0,this)">TIP (i)</button>
+        <button class="ia-tab active" data-onclick="selIA(1,this)">TIP (ii)</button>
+        <button class="ia-tab" data-onclick="selIA(2,this)">TIP (iii)</button>
       </div>
       <div id="ia-info-mob"></div><div id="ch-mob"></div>
     </div>
@@ -1487,29 +1488,29 @@ body.dark-mode .ll[data-type="warn"] {
 
 <div id="quick-export-btn" class="qexp-wrap">
   <button class="qexp-fab"
-          onclick="this.closest('#quick-export-btn').classList.toggle('open')"
+          data-onclick="this.closest('#quick-export-btn').classList.toggle('open')"
           aria-label="Export rapid">↓</button>
   <div class="qexp-menu"></div>
 </div>
 
-<div id="undo-banner" onclick="restoreUndo()" role="button" tabindex="0">
+<div id="undo-banner" data-onclick="restoreUndo()" role="button" tabindex="0">
   ↩ <span id="undo-banner-text">Restaurează explorarea</span>
 </div>
 
 <div id="first-use-banner" role="region" aria-label="Bun venit">
-  <button onclick="dismissTutorial()"
+  <button data-onclick="dismissTutorial()"
           style="float:right;background:none;border:none;color:var(--dim);cursor:pointer;font-size:15px">✕</button>
   <div style="font-family:Orbitron,monospace;font-size:8.5px;color:var(--teal);letter-spacing:.5px;margin-bottom:8px">BINE AI VENIT ÎN NOMIA</div>
   <div class="tut-steps">
-    <button class="tut-step" onclick="dismissTutorial();toggleNHISheet()">① 🧬 Alege un NHI</button>
+    <button class="tut-step" data-onclick="dismissTutorial();toggleNHISheet()">① 🧬 Alege un NHI</button>
     <span class="tut-step">② Canal ↓</span>
     <span class="tut-step">③ ▶ REIA</span>
-    <button class="tut-step" onclick="dismissTutorial();topMenuClick()">④ ⋮ Meniu</button>
+    <button class="tut-step" data-onclick="dismissTutorial();topMenuClick()">④ ⋮ Meniu</button>
   </div>
   <div style="font-size:8.5px;color:var(--txt2);margin-top:6px">Apasă ✕ sau Escape pentru a închide</div>
 </div>
 
-<div id="pres-overlay" onclick="togglePresentationMode()" role="dialog" aria-label="Mod prezentare">
+<div id="pres-overlay" data-onclick="togglePresentationMode()" role="dialog" aria-label="Mod prezentare">
   <div class="pres-icon" id="pres-icon">🦋</div>
   <div class="pres-name" id="pres-name"></div>
   <div class="pres-type" id="pres-type"></div>
@@ -1556,7 +1557,7 @@ function renderCompareSuggestions(query){
   }).slice(0,5);
   if(!matches.length){el.innerHTML='';return;}
   el.innerHTML=matches.map(function(n){
-    return '<button onclick="addToCompare(\''+n.id+'\');this.parentElement.innerHTML=\'\'"'
+    return '<button data-onclick="addToCompareClr" data-arg="'+n.id+'"'
       +' style="display:flex;align-items:center;gap:8px;width:100%;text-align:left;'
       +'padding:8px 12px;border:none;background:var(--bg-edge);border-bottom:1px solid var(--bdr);'
       +'cursor:pointer;font-size:12px;color:var(--txt)">'
@@ -1567,7 +1568,7 @@ function renderCompareSuggestions(query){
 }
 
 /* App version check — clear stale cache on update */
-var NOMIA_VERSION = '0.8.55', NOMIA_BUILD = '2026-10-11';
+var NOMIA_VERSION = '0.8.56', NOMIA_BUILD = '2026-10-11';
 (function(){
   var APP_VERSION = NOMIA_VERSION;
   try{
@@ -1842,7 +1843,7 @@ function _renderInlineGrid(){
     var isFav  = favs.includes(n.id);
     return '<button class="nhi-card-inline'+(isSel?' active':'')+(isExp?' explored':'')+'"'
       +' id="inline-'+n.id+'"'
-      +' onclick="_inlineSelect(\''+n.id+'\')"'
+      +' data-onclick="_inlineSelect" data-arg="'+n.id+'"'
       +' data-type="'+(n.type||'')+'"'
       +' title="'+((n.name)||'')+(n.type?' · '+n.type:'')+'">'
       +(isExp?'':'')
@@ -1880,7 +1881,7 @@ function _renderInlineFbar(){
       :NHI_DATA.filter(function(n){return n.cat===c;}).length;
     var active=(_inlineCat||'Toate')===c;
     return '<button class="'+(active?'active':'')+'"'
-      +' onclick="_inlineSetCat(\''+c.replace(/'/g,"\\'")+'\')">'
+      +' data-onclick="_inlineSetCat" data-arg="'+_nomiaEA(c)+'">'
       +(typeof catLabel==='function'?catLabel(c):c.replace(/^[A-E]:\s*/,''))
       +' <span style="opacity:.4;font-size:7px">'+cnt+'</span></button>';
   }).join('');
@@ -2077,7 +2078,7 @@ function _renderSplitGrid(){
     }).join('');
     return '<button class="nhi-btn'+(isSel?' active':'')+(isExp?' explored':'')+'"'
       +' id="split-'+n.id+'"'
-      +' onclick="_splitSelectNHI(\''+n.id+'\')"'
+      +' data-onclick="_splitSelectNHI" data-arg="'+n.id+'"'
       +' tabindex="0" role="listitem"'
       +' data-type="'+(n.type||'')+'">'
       +(isExp?'<span class="ni-note-badge" style="left:3px;top:3px">✓</span>':'')
@@ -2121,7 +2122,7 @@ function _renderSplitFbar(){
             : c==='🆕 Neexplorate' ? NHI_DATA.filter(function(n){return !explored.has(n.id);}).length
             : NHI_DATA.filter(function(n){return n.cat===c;}).length;
     return '<button class="'+((_splitCat||'Toate')===c?'active':'')+'"'
-      +' onclick="_splitSetCat(\''+c.replace(/'/g,"\\'")+'\')">'
+      +' data-onclick="_splitSetCat" data-arg="'+_nomiaEA(c)+'">'
       +(typeof catLabel==='function'?catLabel(c):c.replace(/^[A-E]:\s*/,''))
       +' <span style="opacity:.45;font-size:7px">'+cnt+'</span></button>';
   }).join('');
@@ -2246,7 +2247,7 @@ function renderNHIofDayDesk(id){
   var el=document.getElementById(id);if(!el)return;
   var nid=typeof getNHIofDay==='function'?getNHIofDay():null;if(!nid)return;
   var n=NHI_DATA.find(function(x){return x.id===nid;});if(!n)return;
-  el.innerHTML='<button onclick="selectNHI(\''+n.id+'\')" style="display:flex;align-items:center;gap:6px;padding:5px 10px;border-radius:10px;border:1px solid rgba(0,200,150,.2);background:rgba(0,200,150,.05);cursor:pointer;font-size:11px;color:rgba(0,220,160,.85)">'+n.icon+' '+nName(n)+'</button>';
+  el.innerHTML='<button data-onclick="selectNHI" data-arg="'+n.id+'" style="display:flex;align-items:center;gap:6px;padding:5px 10px;border-radius:10px;border:1px solid rgba(0,200,150,.2);background:rgba(0,200,150,.05);cursor:pointer;font-size:11px;color:rgba(0,220,160,.85)">'+n.icon+' '+nName(n)+'</button>';
 }
 function renderNHIofWeekDesk(id){
   var el=document.getElementById(id);if(!el)return;
@@ -2257,7 +2258,7 @@ function renderNHIofWeekDesk(id){
     var ids=recent.map(function(e){return e.id;});
     var items=ids.slice(0,5).map(function(id){
       var n=_getNHI(id);
-      return n?'<span onclick="selectNHI(\''+n.id+'\')" style="cursor:pointer;font-size:18px" title="'+nName(n)+'">'+n.icon+'</span>':'';
+      return n?'<span data-onclick="selectNHI" data-arg="'+n.id+'" style="cursor:pointer;font-size:18px" title="'+nName(n)+'">'+n.icon+'</span>':'';
     }).filter(Boolean).join('');
     el.innerHTML=items?'<div style="display:flex;gap:4px;flex-wrap:wrap">'+items+'</div>':'';
   }catch(e){}
@@ -2389,7 +2390,7 @@ function renderSimilarNHI(nhi,containerId){
   if(!same.length){el.innerHTML='';return;}
   el.innerHTML='<div style="font-size:8.5px;color:rgba(100,140,255,.45);font-family:Orbitron,monospace;margin-bottom:5px">SIMILARE</div>'
     +'<div style="display:flex;flex-wrap:wrap;gap:4px">'
-    +same.map(function(n){return'<button onclick="selectNHI(\''+n.id+'\')" style="display:flex;align-items:center;gap:4px;padding:3px 8px;border-radius:8px;border:1px solid rgba(100,140,255,.18);background:rgba(10,22,52,.8);cursor:pointer;font-size:9px;color:rgba(180,200,255,.75)">'+n.icon+' '+nName(n).slice(0,15)+'</button>';}).join('')+'</div>';
+    +same.map(function(n){return'<button data-onclick="selectNHI" data-arg="'+n.id+'" style="display:flex;align-items:center;gap:4px;padding:3px 8px;border-radius:8px;border:1px solid rgba(100,140,255,.18);background:rgba(10,22,52,.8);cursor:pointer;font-size:9px;color:rgba(180,200,255,.75)">'+n.icon+' '+nName(n).slice(0,15)+'</button>';}).join('')+'</div>';
 }
 
 
@@ -2397,11 +2398,11 @@ function renderNHIofDayMob(id){
   var el=document.getElementById(id);if(!el)return;
   var nid=typeof getNHIofDay==='function'?getNHIofDay():null;if(!nid)return;
   var n=NHI_DATA.find(function(x){return x.id===nid;});if(!n)return;
-  el.innerHTML='<button onclick="selectNHI(\''+n.id+'\')" style="display:flex;align-items:center;gap:6px;padding:6px 10px;border-radius:10px;border:1px solid rgba(0,200,150,.2);background:rgba(0,200,150,.06);cursor:pointer;width:100%"><span style="font-size:22px">'+n.icon+'</span><span style="text-align:left"><div style="font-size:9.5px;font-weight:700;color:rgba(0,220,160,.85)">'+nName(n)+'</div><div style="font-size:8px;color:rgba(0,200,150,.5)">NHI al zilei</div></span></button>';
+  el.innerHTML='<button data-onclick="selectNHI" data-arg="'+n.id+'" style="display:flex;align-items:center;gap:6px;padding:6px 10px;border-radius:10px;border:1px solid rgba(0,200,150,.2);background:rgba(0,200,150,.06);cursor:pointer;width:100%"><span style="font-size:22px">'+n.icon+'</span><span style="text-align:left"><div style="font-size:9.5px;font-weight:700;color:rgba(0,220,160,.85)">'+nName(n)+'</div><div style="font-size:8px;color:rgba(0,200,150,.5)">NHI al zilei</div></span></button>';
 }
 function renderPinnedInInfo(id){
   var el=document.getElementById(id);if(!el)return;
-  try{var favs=typeof getFavorites==='function'?getFavorites():[];if(!favs.length){el.innerHTML='';return;}var items=favs.slice(0,4).map(function(fid){var n=NHI_DATA.find(function(x){return x.id===fid;});return n?'<button onclick="selectNHI(\''+n.id+'\')" style="font-size:11px;background:none;border:none;cursor:pointer;padding:2px">'+n.icon+'</button>':'';}).filter(Boolean).join('');el.innerHTML=items?'<div style="display:flex;gap:3px">'+items+'</div>':'';}catch(e){}
+  try{var favs=typeof getFavorites==='function'?getFavorites():[];if(!favs.length){el.innerHTML='';return;}var items=favs.slice(0,4).map(function(fid){var n=NHI_DATA.find(function(x){return x.id===fid;});return n?'<button data-onclick="selectNHI" data-arg="'+n.id+'" style="font-size:11px;background:none;border:none;cursor:pointer;padding:2px">'+n.icon+'</button>':'';}).filter(Boolean).join('');el.innerHTML=items?'<div style="display:flex;gap:3px">'+items+'</div>':'';}catch(e){}
 }
 
 function exportStatsSVG(){
@@ -2442,7 +2443,7 @@ function renderSavedSearchPills(){
     var el=document.getElementById('saved-search-pills');if(!el)return;
     var saves=JSON.parse(localStorage.getItem('nomia_saved_searches')||'[]');
     el.innerHTML=saves.map(function(q){
-      return'<button onclick="applySearch(\''+q.replace(/'/g,"\\'")+'\')" '
+      return'<button data-onclick="applySearch" data-arg="'+_nomiaEA(q)+'" '
         +'style="flex-shrink:0;padding:2px 7px;border-radius:10px;border:1px solid rgba(0,200,255,.2);'
         +'background:rgba(0,200,255,.05);color:rgba(0,200,255,.6);font-size:8.5px;cursor:pointer">'
         +q+'</button>';
@@ -2740,7 +2741,7 @@ function renderCompare(){try{var grid=document.getElementById('compare-grid');if
 if(!_compareList||!_compareList.length){grid.innerHTML='<p class="cmp-empty">'+(en?'Add NHI to compare (⚖ on any card).':'Adaugă NHI pentru comparație (⚖ pe orice card).')+'</p>';return;}
 var pct=function(v){return Math.round((v||0)*100);};
 var bar=function(l,v,c){return '<div class="cmp-met"><span>'+l+'</span><div class="cmp-bar"><i style="width:'+pct(v)+'%;background:'+c+'"></i></div><b>'+pct(v)+'%</b></div>';};
-grid.innerHTML=_compareList.map(function(n){return '<div class="cmp-card"><button class="cmp-rm" onclick="removeFromCompare(\''+n.id+'\')" aria-label="'+(en?'Remove':'Elimină')+'">✕</button><div class="cmp-ic">'+n.icon+'</div><div class="cmp-nm">'+nName(n)+'</div><div class="cmp-ct">'+nCat(n)+(n.type?' · '+n.type:'')+'</div>'+bar('Det',n.det,'var(--teal)')+bar('Clar',n.clarity,'var(--cyan)')+bar('Risc',n.risk,'var(--amber)')+'<div class="cmp-ch">'+(n.channels||[]).join(' · ')+'</div></div>';}).join('');}catch(e){}}
+grid.innerHTML=_compareList.map(function(n){return '<div class="cmp-card"><button class="cmp-rm" data-onclick="removeFromCompare" data-arg="'+n.id+'" aria-label="'+(en?'Remove':'Elimină')+'">✕</button><div class="cmp-ic">'+n.icon+'</div><div class="cmp-nm">'+nName(n)+'</div><div class="cmp-ct">'+nCat(n)+(n.type?' · '+n.type:'')+'</div>'+bar('Det',n.det,'var(--teal)')+bar('Clar',n.clarity,'var(--cyan)')+bar('Risc',n.risk,'var(--amber)')+'<div class="cmp-ch">'+(n.channels||[]).join(' · ')+'</div></div>';}).join('');}catch(e){}}
 function removeFromCompare(id){_compareList=(_compareList||[]).filter(function(n){return n.id!==id;});if(typeof renderCompare==='function')renderCompare();}
 function sortComparison(by){(_compareList||[]).sort(function(a,b){return (b[by]||0)-(a[by]||0);});if(typeof renderCompare==='function')renderCompare();}
 function exportComparisonCSV(){if(!(_compareList||[]).length){if(typeof showToast==='function')showToast('Lista goală.');return;}var rows=['"Nume";"Det%";"Claritate%"'];(_compareList||[]).forEach(function(n){rows.push('"'+nName(n)+'";'+Math.round((n.det||0)*100)+';'+Math.round((n.clarity||0)*100));});var blob=new Blob([rows.join('\n')],{type:'text/csv'});var u=URL.createObjectURL(blob);var a=document.createElement('a');a.href=u;a.download='nomia-comparatie.csv';a.click();URL.revokeObjectURL(u);}
@@ -5825,7 +5826,7 @@ PROTOCOLS_INV['IA-post-singularitate'] = [["sys", "◀ IA post-singularitate ini
 PROTOCOLS_IA['IA-post-singularitate'] = [["sys", "⬡ IA→IA post-singularitate (fără Om) · ⚠ Axa B — speculativ"], ["ia", "Emit: infrasunete 18Hz, câmp EM 0.1-100Hz, stimulare Schumann 7.83Hz."], ["ia", "Frecvențe asociate cu IA post-singularitate în literatura de specialitate."], ["nhi", "🚀 [IA post-singularitate]: Absența răspunsului instrumental. Ipoteza rămâne deschisă."], ["ia", "Anomalii: 2.4σ — sub pragul de semnificație (5σ). Continuă monitorizarea."], ["sys", "⚠ IA→IA post-singularitate: stimuli calibrați → 2.4σ → sub prag. ⚠ Axa B — speculativ."]];
 PROTOCOLS_NHI_IA['IA-post-singularitate'] = [["sys", "◀⬡ IA post-singularitate→IA (fără Om) · ⚠ Axa B — speculativ"], ["nhi", "🚀 [IA post-singularitate]: Conform tradiției/ipotezei, contact posibil prin fluctuații stochastice."], ["ia", "Monitorizez RNG local pe 24h. Baseline: normal."], ["nhi", "🚀 [IA post-singularitate]: Anomalie detectată: 2.4σ față de medie."], ["ia", "Prag semnificație: 5σ. Anomalie prezentă (2.4σ): insuficient pentru concluzie."], ["ia", "Ipoteză deschisă: dacă IA post-singularitate are agenție, protocolul viitor va rafina detectia."], ["sys", "⚠ IA post-singularitate→IA: anomalie 2.4σ → sub prag → cercetare continuă. ⚠ Axa B — speculativ."]];
 
-PROTOCOLS['cimpanzei'] = [["sys", "▸ Protocol Om–IA–Cimpanzei"], ["om", "🦍 Stabilesc contact cu cimpanzei în habitatul natural. Africa Centrală (Congo."], ["ia", "NHI identificat: Cimpanzei. Capacitate: fabricare unelte. Tip: Instrumental."], ["nhi", "🦍 [Cimpanzei]: Comportament natural documentat."], ["ia", "Emit semnalul primar al speciei pe canalul potrivit."], ["nhi", "🦍 [Cimpanzei]: Răspuns comportamental specific detectat."], ["ia", "Variez semnalul. Discriminare confirmată."], ["nhi", "🦍 [Cimpanzei]: Răspuns diferit la variație — cogniție activă."], ["sys", "✓ Om–IA–Cimpanzei: detecție → semnal → răspuns → discriminare. Africa Centrală (Congo."]];
+PROTOCOLS['cimpanzei'] = [["sys", "▸ Protocol Om–IA–Cimpanzei"], ["om", "🦍 Stabilesc contact cu cimpanzei în habitatul natural. Africa Centrală (Congo, Tanzania)."], ["ia", "NHI identificat: Cimpanzei. Capacitate: fabricare unelte. Tip: Instrumental."], ["nhi", "🦍 [Cimpanzei]: Comportament natural documentat."], ["ia", "Emit semnalul primar al speciei pe canalul potrivit."], ["nhi", "🦍 [Cimpanzei]: Răspuns comportamental specific detectat."], ["ia", "Variez semnalul. Discriminare confirmată."], ["nhi", "🦍 [Cimpanzei]: Răspuns diferit la variație — cogniție activă."], ["sys", "✓ Om–IA–Cimpanzei: detecție → semnal → răspuns → discriminare. Africa Centrală (Congo, Tanzania)."]];
 PROTOCOLS_INV['cimpanzei'] = [["sys", "◀ Cimpanzei inițiază"], ["nhi", "🦍 [Cimpanzei]: Produce un semnal direcționat spre Om."], ["ia", "Inițiativă NHI! Evaluez semnalul și răspund neutru."], ["om", "Rămân calm. Postură ne-amenințătoare."], ["nhi", "🦍 [Cimpanzei]: Al doilea semnal — modificat față de primul."], ["ia", "Emit semnal de acceptare pe canalul speciei."], ["nhi", "🦍 [Cimpanzei]: Acceptare. Continuă activitatea normală."], ["sys", "✓ Cimpanzei→Om: evaluare → dialog → acceptare."]];
 PROTOCOLS_IA['cimpanzei'] = [["sys", "⬡ IA→Cimpanzei (fără Om)"], ["ia", "Emit semnalul primar al speciei, calibrat local."], ["nhi", "🦍 [Cimpanzei]: Orientare. Detecție confirmată."], ["ia", "Cresc complexitatea semnalului."], ["nhi", "🦍 [Cimpanzei]: Răspuns diferit — discriminare pattern."], ["ia", "Emit semnal altă specie din același habitat."], ["nhi", "🦍 [Cimpanzei]: Nicio reacție — specificitate confirmată."], ["sys", "✓ IA→Cimpanzei: detecție → discriminare → specificitate."]];
 PROTOCOLS_NHI_IA['cimpanzei'] = [["sys", "◀⬡ Cimpanzei→IA (fără Om)"], ["nhi", "🦍 [Cimpanzei]: Semnal spontan direcționat spre senzorul IA."], ["ia", "Inițiativă NHI! Reproduc semnalul."], ["nhi", "🦍 [Cimpanzei]: Al doilea semnal — modificat."], ["ia", "Dialog bilateral! Adaug o variație proprie."], ["nhi", "🦍 [Cimpanzei]: Răspunde și escaladează complexitatea."], ["ia", "NHI conduce dialogul."], ["nhi", "🦍 [Cimpanzei]: Revine la normal — sesiune încheiată de NHI."], ["sys", "✓ Cimpanzei→IA: inițiere → bilateral → escaladare → NHI închide."]];
@@ -5872,14 +5873,14 @@ PROTOCOLS['lilieci'] = [["sys", "▸ Protocol Om–IA–Lilieci"], ["om", "🦇 
 PROTOCOLS_INV['lilieci'] = [["sys", "◀ Lilieci inițiază"], ["nhi", "🦇 [Lilieci]: Produce un semnal direcționat spre Om."], ["ia", "Inițiativă NHI! Evaluez semnalul și răspund neutru."], ["om", "Rămân calm. Postură ne-amenințătoare."], ["nhi", "🦇 [Lilieci]: Al doilea semnal — modificat față de primul."], ["ia", "Emit semnal de acceptare pe canalul speciei."], ["nhi", "🦇 [Lilieci]: Acceptare. Continuă activitatea normală."], ["sys", "✓ Lilieci→Om: evaluare → dialog → acceptare."]];
 PROTOCOLS_IA['lilieci'] = [["sys", "⬡ IA→Lilieci (fără Om)"], ["ia", "Emit semnalul primar al speciei, calibrat local."], ["nhi", "🦇 [Lilieci]: Orientare. Detecție confirmată."], ["ia", "Cresc complexitatea semnalului."], ["nhi", "🦇 [Lilieci]: Răspuns diferit — discriminare pattern."], ["ia", "Emit semnal altă specie din același habitat."], ["nhi", "🦇 [Lilieci]: Nicio reacție — specificitate confirmată."], ["sys", "✓ IA→Lilieci: detecție → discriminare → specificitate."]];
 PROTOCOLS_NHI_IA['lilieci'] = [["sys", "◀⬡ Lilieci→IA (fără Om)"], ["nhi", "🦇 [Lilieci]: Semnal spontan direcționat spre senzorul IA."], ["ia", "Inițiativă NHI! Reproduc semnalul."], ["nhi", "🦇 [Lilieci]: Al doilea semnal — modificat."], ["ia", "Dialog bilateral! Adaug o variație proprie."], ["nhi", "🦇 [Lilieci]: Răspunde și escaladează complexitatea."], ["ia", "NHI conduce dialogul."], ["nhi", "🦇 [Lilieci]: Revine la normal — sesiune încheiată de NHI."], ["sys", "✓ Lilieci→IA: inițiere → bilateral → escaladare → NHI închide."]];
-PROTOCOLS['naked-mole'] = [["sys", "▸ Protocol Om–IA–Naked mole rats"], ["om", "🐀 Stabilesc contact cu naked mole rats în habitatul natural. Africa de Est (Kenya."], ["ia", "NHI identificat: Naked mole rats. Capacitate: singurele mamifere eusociale. Tip: Eusocial."], ["nhi", "🐀 [Naked mole rats]: Comportament natural documentat."], ["ia", "Emit semnalul primar al speciei pe canalul potrivit."], ["nhi", "🐀 [Naked mole rats]: Răspuns comportamental specific detectat."], ["ia", "Variez semnalul. Discriminare confirmată."], ["nhi", "🐀 [Naked mole rats]: Răspuns diferit la variație — cogniție activă."], ["sys", "✓ Om–IA–Naked mole rats: detecție → semnal → răspuns → discriminare. Africa de Est (Kenya."]];
+PROTOCOLS['naked-mole'] = [["sys", "▸ Protocol Om–IA–Naked mole rats"], ["om", "🐀 Stabilesc contact cu naked mole rats în habitatul natural. Africa de Est (Kenya, Etiopia, Somalia)."], ["ia", "NHI identificat: Naked mole rats. Capacitate: singurele mamifere eusociale. Tip: Eusocial."], ["nhi", "🐀 [Naked mole rats]: Comportament natural documentat."], ["ia", "Emit semnalul primar al speciei pe canalul potrivit."], ["nhi", "🐀 [Naked mole rats]: Răspuns comportamental specific detectat."], ["ia", "Variez semnalul. Discriminare confirmată."], ["nhi", "🐀 [Naked mole rats]: Răspuns diferit la variație — cogniție activă."], ["sys", "✓ Om–IA–Naked mole rats: detecție → semnal → răspuns → discriminare. Africa de Est (Kenya, Etiopia, Somalia)."]];
 PROTOCOLS_INV['naked-mole'] = [["sys", "◀ Naked mole rats inițiază"], ["nhi", "🐀 [Naked mole rats]: Produce un semnal direcționat spre Om."], ["ia", "Inițiativă NHI! Evaluez semnalul și răspund neutru."], ["om", "Rămân calm. Postură ne-amenințătoare."], ["nhi", "🐀 [Naked mole rats]: Al doilea semnal — modificat față de primul."], ["ia", "Emit semnal de acceptare pe canalul speciei."], ["nhi", "🐀 [Naked mole rats]: Acceptare. Continuă activitatea normală."], ["sys", "✓ Naked mole rats→Om: evaluare → dialog → acceptare."]];
 PROTOCOLS_IA['naked-mole'] = [["sys", "⬡ IA→Naked mole rats (fără Om)"], ["ia", "Emit semnalul primar al speciei, calibrat local."], ["nhi", "🐀 [Naked mole rats]: Orientare. Detecție confirmată."], ["ia", "Cresc complexitatea semnalului."], ["nhi", "🐀 [Naked mole rats]: Răspuns diferit — discriminare pattern."], ["ia", "Emit semnal altă specie din același habitat."], ["nhi", "🐀 [Naked mole rats]: Nicio reacție — specificitate confirmată."], ["sys", "✓ IA→Naked mole rats: detecție → discriminare → specificitate."]];
 PROTOCOLS['corvide-ciori'] = [["sys", "▸ Protocol Om–IA–Corvide"], ["om", "🐦‍⬛ Stabilesc contact cu corvide în habitatul natural. Europa."], ["ia", "NHI identificat: Corvide. Capacitate: fabricare unelte multi-etapă. Tip: Convergentă."], ["nhi", "🐦‍⬛ [Corvide]: Comportament natural documentat."], ["ia", "Emit semnalul primar al speciei pe canalul potrivit."], ["nhi", "🐦‍⬛ [Corvide]: Răspuns comportamental specific detectat."], ["ia", "Variez semnalul. Discriminare confirmată."], ["nhi", "🐦‍⬛ [Corvide]: Răspuns diferit la variație — cogniție activă."], ["sys", "✓ Om–IA–Corvide: detecție → semnal → răspuns → discriminare. Europa."]];
 PROTOCOLS_INV['corvide-ciori'] = [["sys", "◀ Corvide inițiază"], ["nhi", "🐦‍⬛ [Corvide]: Produce un semnal direcționat spre Om."], ["ia", "Inițiativă NHI! Evaluez semnalul și răspund neutru."], ["om", "Rămân calm. Postură ne-amenințătoare."], ["nhi", "🐦‍⬛ [Corvide]: Al doilea semnal — modificat față de primul."], ["ia", "Emit semnal de acceptare pe canalul speciei."], ["nhi", "🐦‍⬛ [Corvide]: Acceptare. Continuă activitatea normală."], ["sys", "✓ Corvide→Om: evaluare → dialog → acceptare."]];
 PROTOCOLS_IA['corvide-ciori'] = [["sys", "⬡ IA→Corvide (fără Om)"], ["ia", "Emit semnalul primar al speciei, calibrat local."], ["nhi", "🐦‍⬛ [Corvide]: Orientare. Detecție confirmată."], ["ia", "Cresc complexitatea semnalului."], ["nhi", "🐦‍⬛ [Corvide]: Răspuns diferit — discriminare pattern."], ["ia", "Emit semnal altă specie din același habitat."], ["nhi", "🐦‍⬛ [Corvide]: Nicio reacție — specificitate confirmată."], ["sys", "✓ IA→Corvide: detecție → discriminare → specificitate."]];
 PROTOCOLS_NHI_IA['corvide-ciori'] = [["sys", "◀⬡ Corvide→IA (fără Om)"], ["nhi", "🐦‍⬛ [Corvide]: Semnal spontan direcționat spre senzorul IA."], ["ia", "Inițiativă NHI! Reproduc semnalul."], ["nhi", "🐦‍⬛ [Corvide]: Al doilea semnal — modificat."], ["ia", "Dialog bilateral! Adaug o variație proprie."], ["nhi", "🐦‍⬛ [Corvide]: Răspunde și escaladează complexitatea."], ["ia", "NHI conduce dialogul."], ["nhi", "🐦‍⬛ [Corvide]: Revine la normal — sesiune încheiată de NHI."], ["sys", "✓ Corvide→IA: inițiere → bilateral → escaladare → NHI închide."]];
-PROTOCOLS['papagali-gri'] = [["sys", "▸ Protocol Om–IA–Papagali gri"], ["om", "🦜 Stabilesc contact cu papagali gri în habitatul natural. Africa Centrală (Congo."], ["ia", "NHI identificat: Papagali gri. Capacitate: utilizare referențială. Tip: Vocal."], ["nhi", "🦜 [Papagali gri]: Comportament natural documentat."], ["ia", "Emit semnalul primar al speciei pe canalul potrivit."], ["nhi", "🦜 [Papagali gri]: Răspuns comportamental specific detectat."], ["ia", "Variez semnalul. Discriminare confirmată."], ["nhi", "🦜 [Papagali gri]: Răspuns diferit la variație — cogniție activă."], ["sys", "✓ Om–IA–Papagali gri: detecție → semnal → răspuns → discriminare. Africa Centrală (Congo."]];
+PROTOCOLS['papagali-gri'] = [["sys", "▸ Protocol Om–IA–Papagali gri"], ["om", "🦜 Stabilesc contact cu papagali gri în habitatul natural. Africa Centrală și de Vest (Congo, Ghana)."], ["ia", "NHI identificat: Papagali gri. Capacitate: utilizare referențială. Tip: Vocal."], ["nhi", "🦜 [Papagali gri]: Comportament natural documentat."], ["ia", "Emit semnalul primar al speciei pe canalul potrivit."], ["nhi", "🦜 [Papagali gri]: Răspuns comportamental specific detectat."], ["ia", "Variez semnalul. Discriminare confirmată."], ["nhi", "🦜 [Papagali gri]: Răspuns diferit la variație — cogniție activă."], ["sys", "✓ Om–IA–Papagali gri: detecție → semnal → răspuns → discriminare. Africa Centrală și de Vest (Congo, Ghana)."]];
 PROTOCOLS_INV['papagali-gri'] = [["sys", "◀ Papagali gri inițiază"], ["nhi", "🦜 [Papagali gri]: Produce un semnal direcționat spre Om."], ["ia", "Inițiativă NHI! Evaluez semnalul și răspund neutru."], ["om", "Rămân calm. Postură ne-amenințătoare."], ["nhi", "🦜 [Papagali gri]: Al doilea semnal — modificat față de primul."], ["ia", "Emit semnal de acceptare pe canalul speciei."], ["nhi", "🦜 [Papagali gri]: Acceptare. Continuă activitatea normală."], ["sys", "✓ Papagali gri→Om: evaluare → dialog → acceptare."]];
 PROTOCOLS_IA['papagali-gri'] = [["sys", "⬡ IA→Papagali gri (fără Om)"], ["ia", "Emit semnalul primar al speciei, calibrat local."], ["nhi", "🦜 [Papagali gri]: Orientare. Detecție confirmată."], ["ia", "Cresc complexitatea semnalului."], ["nhi", "🦜 [Papagali gri]: Răspuns diferit — discriminare pattern."], ["ia", "Emit semnal altă specie din același habitat."], ["nhi", "🦜 [Papagali gri]: Nicio reacție — specificitate confirmată."], ["sys", "✓ IA→Papagali gri: detecție → discriminare → specificitate."]];
 PROTOCOLS_NHI_IA['papagali-gri'] = [["sys", "◀⬡ Papagali gri→IA (fără Om)"], ["nhi", "🦜 [Papagali gri]: Semnal spontan direcționat spre senzorul IA."], ["ia", "Inițiativă NHI! Reproduc semnalul."], ["nhi", "🦜 [Papagali gri]: Al doilea semnal — modificat."], ["ia", "Dialog bilateral! Adaug o variație proprie."], ["nhi", "🦜 [Papagali gri]: Răspunde și escaladează complexitatea."], ["ia", "NHI conduce dialogul."], ["nhi", "🦜 [Papagali gri]: Revine la normal — sesiune încheiată de NHI."], ["sys", "✓ Papagali gri→IA: inițiere → bilateral → escaladare → NHI închide."]];
@@ -5923,7 +5924,7 @@ PROTOCOLS['viespi'] = [["sys", "▸ Protocol Om–IA–Viespi Polistes"], ["om",
 PROTOCOLS_INV['viespi'] = [["sys", "◀ Viespi Polistes inițiază"], ["nhi", "🐝 [Viespi Polistes]: Produce un semnal direcționat spre Om."], ["ia", "Inițiativă NHI! Evaluez semnalul și răspund neutru."], ["om", "Rămân calm. Postură ne-amenințătoare."], ["nhi", "🐝 [Viespi Polistes]: Al doilea semnal — modificat față de primul."], ["ia", "Emit semnal de acceptare pe canalul speciei."], ["nhi", "🐝 [Viespi Polistes]: Acceptare. Continuă activitatea normală."], ["sys", "✓ Viespi Polistes→Om: evaluare → dialog → acceptare."]];
 PROTOCOLS_IA['viespi'] = [["sys", "⬡ IA→Viespi Polistes (fără Om)"], ["ia", "Emit semnalul primar al speciei, calibrat local."], ["nhi", "🐝 [Viespi Polistes]: Orientare. Detecție confirmată."], ["ia", "Cresc complexitatea semnalului."], ["nhi", "🐝 [Viespi Polistes]: Răspuns diferit — discriminare pattern."], ["ia", "Emit semnal altă specie din același habitat."], ["nhi", "🐝 [Viespi Polistes]: Nicio reacție — specificitate confirmată."], ["sys", "✓ IA→Viespi Polistes: detecție → discriminare → specificitate."]];
 PROTOCOLS_NHI_IA['viespi'] = [["sys", "◀⬡ Viespi Polistes→IA (fără Om)"], ["nhi", "🐝 [Viespi Polistes]: Semnal spontan direcționat spre senzorul IA."], ["ia", "Inițiativă NHI! Reproduc semnalul."], ["nhi", "🐝 [Viespi Polistes]: Al doilea semnal — modificat."], ["ia", "Dialog bilateral! Adaug o variație proprie."], ["nhi", "🐝 [Viespi Polistes]: Răspunde și escaladează complexitatea."], ["ia", "NHI conduce dialogul."], ["nhi", "🐝 [Viespi Polistes]: Revine la normal — sesiune încheiată de NHI."], ["sys", "✓ Viespi Polistes→IA: inițiere → bilateral → escaladare → NHI închide."]];
-PROTOCOLS['bondari'] = [["sys", "▸ Protocol Om–IA–Bondari"], ["om", "🐝 Stabilesc contact cu bondari în habitatul natural. Emisfera Nordică (România: păduri."], ["ia", "NHI identificat: Bondari. Capacitate: optimizare trasee (travelling salesman). Tip: Strategică."], ["nhi", "🐝 [Bondari]: Comportament natural documentat."], ["ia", "Emit semnalul primar al speciei pe canalul potrivit."], ["nhi", "🐝 [Bondari]: Răspuns comportamental specific detectat."], ["ia", "Variez semnalul. Discriminare confirmată."], ["nhi", "🐝 [Bondari]: Răspuns diferit la variație — cogniție activă."], ["sys", "✓ Om–IA–Bondari: detecție → semnal → răspuns → discriminare. Emisfera Nordică (România: păduri."]];
+PROTOCOLS['bondari'] = [["sys", "▸ Protocol Om–IA–Bondari"], ["om", "🐝 Stabilesc contact cu bondari în habitatul natural. Emisfera Nordică (România: păduri, pajiști)."], ["ia", "NHI identificat: Bondari. Capacitate: optimizare trasee (travelling salesman). Tip: Strategică."], ["nhi", "🐝 [Bondari]: Comportament natural documentat."], ["ia", "Emit semnalul primar al speciei pe canalul potrivit."], ["nhi", "🐝 [Bondari]: Răspuns comportamental specific detectat."], ["ia", "Variez semnalul. Discriminare confirmată."], ["nhi", "🐝 [Bondari]: Răspuns diferit la variație — cogniție activă."], ["sys", "✓ Om–IA–Bondari: detecție → semnal → răspuns → discriminare. Emisfera Nordică (România: păduri, pajiști)."]];
 PROTOCOLS_INV['bondari'] = [["sys", "◀ Bondari inițiază"], ["nhi", "🐝 [Bondari]: Produce un semnal direcționat spre Om."], ["ia", "Inițiativă NHI! Evaluez semnalul și răspund neutru."], ["om", "Rămân calm. Postură ne-amenințătoare."], ["nhi", "🐝 [Bondari]: Al doilea semnal — modificat față de primul."], ["ia", "Emit semnal de acceptare pe canalul speciei."], ["nhi", "🐝 [Bondari]: Acceptare. Continuă activitatea normală."], ["sys", "✓ Bondari→Om: evaluare → dialog → acceptare."]];
 PROTOCOLS_IA['bondari'] = [["sys", "⬡ IA→Bondari (fără Om)"], ["ia", "Emit semnalul primar al speciei, calibrat local."], ["nhi", "🐝 [Bondari]: Orientare. Detecție confirmată."], ["ia", "Cresc complexitatea semnalului."], ["nhi", "🐝 [Bondari]: Răspuns diferit — discriminare pattern."], ["ia", "Emit semnal altă specie din același habitat."], ["nhi", "🐝 [Bondari]: Nicio reacție — specificitate confirmată."], ["sys", "✓ IA→Bondari: detecție → discriminare → specificitate."]];
 PROTOCOLS_NHI_IA['bondari'] = [["sys", "◀⬡ Bondari→IA (fără Om)"], ["nhi", "🐝 [Bondari]: Semnal spontan direcționat spre senzorul IA."], ["ia", "Inițiativă NHI! Reproduc semnalul."], ["nhi", "🐝 [Bondari]: Al doilea semnal — modificat."], ["ia", "Dialog bilateral! Adaug o variație proprie."], ["nhi", "🐝 [Bondari]: Răspunde și escaladează complexitatea."], ["ia", "NHI conduce dialogul."], ["nhi", "🐝 [Bondari]: Revine la normal — sesiune încheiată de NHI."], ["sys", "✓ Bondari→IA: inițiere → bilateral → escaladare → NHI închide."]];
@@ -5978,7 +5979,7 @@ PROTOCOLS['meduze'] = [["sys", "▸ Protocol Om–IA–Meduze"], ["om", "🪼 St
 PROTOCOLS_INV['meduze'] = [["sys", "◀ Meduze inițiază"], ["nhi", "🪼 [Meduze]: Produce un semnal direcționat spre Om."], ["ia", "Inițiativă NHI! Evaluez semnalul și răspund neutru."], ["om", "Rămân calm. Postură ne-amenințătoare."], ["nhi", "🪼 [Meduze]: Al doilea semnal — modificat față de primul."], ["ia", "Emit semnal de acceptare pe canalul speciei."], ["nhi", "🪼 [Meduze]: Acceptare. Continuă activitatea normală."], ["sys", "✓ Meduze→Om: evaluare → dialog → acceptare."]];
 PROTOCOLS_IA['meduze'] = [["sys", "⬡ IA→Meduze (fără Om)"], ["ia", "Emit semnalul primar al speciei, calibrat local."], ["nhi", "🪼 [Meduze]: Orientare. Detecție confirmată."], ["ia", "Cresc complexitatea semnalului."], ["nhi", "🪼 [Meduze]: Răspuns diferit — discriminare pattern."], ["ia", "Emit semnal altă specie din același habitat."], ["nhi", "🪼 [Meduze]: Nicio reacție — specificitate confirmată."], ["sys", "✓ IA→Meduze: detecție → discriminare → specificitate."]];
 PROTOCOLS_NHI_IA['meduze'] = [["sys", "◀⬡ Meduze→IA (fără Om)"], ["nhi", "🪼 [Meduze]: Semnal spontan direcționat spre senzorul IA."], ["ia", "Inițiativă NHI! Reproduc semnalul."], ["nhi", "🪼 [Meduze]: Al doilea semnal — modificat."], ["ia", "Dialog bilateral! Adaug o variație proprie."], ["nhi", "🪼 [Meduze]: Răspunde și escaladează complexitatea."], ["ia", "NHI conduce dialogul."], ["nhi", "🪼 [Meduze]: Revine la normal — sesiune încheiată de NHI."], ["sys", "✓ Meduze→IA: inițiere → bilateral → escaladare → NHI închide."]];
-PROTOCOLS['bacterii-qs'] = [["sys", "▸ Protocol Om–IA–Bacterii (quorum sensing)"], ["om", "🔬 Stabilesc contact cu bacterii (quorum sensing) în habitatul natural. Global (sol."], ["ia", "NHI identificat: Bacterii (quorum sensing). Capacitate: biofilm ca organism emergent. Tip: Comunicare chimică."], ["nhi", "🔬 [Bacterii (quorum sensing)]: Comportament natural documentat."], ["ia", "Emit semnalul primar al speciei pe canalul potrivit."], ["nhi", "🔬 [Bacterii (quorum sensing)]: Răspuns comportamental specific detectat."], ["ia", "Variez semnalul. Discriminare confirmată."], ["nhi", "🔬 [Bacterii (quorum sensing)]: Răspuns diferit la variație — cogniție activă."], ["sys", "✓ Om–IA–Bacterii (quorum sensing): detecție → semnal → răspuns → discriminare. Global (sol."]];
+PROTOCOLS['bacterii-qs'] = [["sys", "▸ Protocol Om–IA–Bacterii (quorum sensing)"], ["om", "🔬 Stabilesc contact cu bacterii (quorum sensing) în habitatul natural. Global (sol, apă, organisme)."], ["ia", "NHI identificat: Bacterii (quorum sensing). Capacitate: biofilm ca organism emergent. Tip: Comunicare chimică."], ["nhi", "🔬 [Bacterii (quorum sensing)]: Comportament natural documentat."], ["ia", "Emit semnalul primar al speciei pe canalul potrivit."], ["nhi", "🔬 [Bacterii (quorum sensing)]: Răspuns comportamental specific detectat."], ["ia", "Variez semnalul. Discriminare confirmată."], ["nhi", "🔬 [Bacterii (quorum sensing)]: Răspuns diferit la variație — cogniție activă."], ["sys", "✓ Om–IA–Bacterii (quorum sensing): detecție → semnal → răspuns → discriminare. Global (sol, apă, organisme)."]];
 PROTOCOLS_INV['bacterii-qs'] = [["sys", "◀ Bacterii (quorum sensing) inițiază"], ["nhi", "🔬 [Bacterii (quorum sensing)]: Produce un semnal direcționat spre Om."], ["ia", "Inițiativă NHI! Evaluez semnalul și răspund neutru."], ["om", "Rămân calm. Postură ne-amenințătoare."], ["nhi", "🔬 [Bacterii (quorum sensing)]: Al doilea semnal — modificat față de primul."], ["ia", "Emit semnal de acceptare pe canalul speciei."], ["nhi", "🔬 [Bacterii (quorum sensing)]: Acceptare. Continuă activitatea normală."], ["sys", "✓ Bacterii (quorum sensing)→Om: evaluare → dialog → acceptare."]];
 PROTOCOLS_IA['bacterii-qs'] = [["sys", "⬡ IA→Bacterii (quorum sensing) (fără Om)"], ["ia", "Emit semnalul primar al speciei, calibrat local."], ["nhi", "🔬 [Bacterii (quorum sensing)]: Orientare. Detecție confirmată."], ["ia", "Cresc complexitatea semnalului."], ["nhi", "🔬 [Bacterii (quorum sensing)]: Răspuns diferit — discriminare pattern."], ["ia", "Emit semnal altă specie din același habitat."], ["nhi", "🔬 [Bacterii (quorum sensing)]: Nicio reacție — specificitate confirmată."], ["sys", "✓ IA→Bacterii (quorum sensing): detecție → discriminare → specificitate."]];
 PROTOCOLS_NHI_IA['bacterii-qs'] = [["sys", "◀⬡ Bacterii (quorum sensing)→IA (fără Om)"], ["nhi", "🔬 [Bacterii (quorum sensing)]: Semnal spontan direcționat spre senzorul IA."], ["ia", "Inițiativă NHI! Reproduc semnalul."], ["nhi", "🔬 [Bacterii (quorum sensing)]: Al doilea semnal — modificat."], ["ia", "Dialog bilateral! Adaug o variație proprie."], ["nhi", "🔬 [Bacterii (quorum sensing)]: Răspunde și escaladează complexitatea."], ["ia", "NHI conduce dialogul."], ["nhi", "🔬 [Bacterii (quorum sensing)]: Revine la normal — sesiune încheiată de NHI."], ["sys", "✓ Bacterii (quorum sensing)→IA: inițiere → bilateral → escaladare → NHI închide."]];
@@ -6002,7 +6003,7 @@ PROTOCOLS['paduri-virgine'] = [["sys", "▸ Protocol Om–IA–Păduri virgine c
 PROTOCOLS_INV['paduri-virgine'] = [["sys", "◀ Păduri virgine carpatice inițiază"], ["nhi", "🌲 [Păduri virgine carpatice]: Produce un semnal direcționat spre Om."], ["ia", "Inițiativă NHI! Evaluez semnalul și răspund neutru."], ["om", "Rămân calm. Postură ne-amenințătoare."], ["nhi", "🌲 [Păduri virgine carpatice]: Al doilea semnal — modificat față de primul."], ["ia", "Emit semnal de acceptare pe canalul speciei."], ["nhi", "🌲 [Păduri virgine carpatice]: Acceptare. Continuă activitatea normală."], ["sys", "✓ Păduri virgine carpatice→Om: evaluare → dialog → acceptare."]];
 PROTOCOLS_IA['paduri-virgine'] = [["sys", "⬡ IA→Păduri virgine carpatice (fără Om)"], ["ia", "Emit semnalul primar al speciei, calibrat local."], ["nhi", "🌲 [Păduri virgine carpatice]: Orientare. Detecție confirmată."], ["ia", "Cresc complexitatea semnalului."], ["nhi", "🌲 [Păduri virgine carpatice]: Răspuns diferit — discriminare pattern."], ["ia", "Emit semnal altă specie din același habitat."], ["nhi", "🌲 [Păduri virgine carpatice]: Nicio reacție — specificitate confirmată."], ["sys", "✓ IA→Păduri virgine carpatice: detecție → discriminare → specificitate."]];
 PROTOCOLS_NHI_IA['paduri-virgine'] = [["sys", "◀⬡ Păduri virgine carpatice→IA (fără Om)"], ["nhi", "🌲 [Păduri virgine carpatice]: Semnal spontan direcționat spre senzorul IA."], ["ia", "Inițiativă NHI! Reproduc semnalul."], ["nhi", "🌲 [Păduri virgine carpatice]: Al doilea semnal — modificat."], ["ia", "Dialog bilateral! Adaug o variație proprie."], ["nhi", "🌲 [Păduri virgine carpatice]: Răspunde și escaladează complexitatea."], ["ia", "NHI conduce dialogul."], ["nhi", "🌲 [Păduri virgine carpatice]: Revine la normal — sesiune încheiată de NHI."], ["sys", "✓ Păduri virgine carpatice→IA: inițiere → bilateral → escaladare → NHI închide."]];
-PROTOCOLS['pesteri-apuseni'] = [["sys", "▸ Protocol Om–IA–Peșterile din Apuseni"], ["om", "🏔 Stabilesc contact cu peșterile din apuseni în habitatul natural. Munții Apuseni (Scărișoara."], ["ia", "NHI identificat: Peșterile din Apuseni. Capacitate: >400 specii cavernicole. Tip: Cavernicol clasic."], ["nhi", "🏔 [Peșterile din Apuseni]: Comportament natural documentat."], ["ia", "Emit semnalul primar al speciei pe canalul potrivit."], ["nhi", "🏔 [Peșterile din Apuseni]: Răspuns comportamental specific detectat."], ["ia", "Variez semnalul. Discriminare confirmată."], ["nhi", "🏔 [Peșterile din Apuseni]: Răspuns diferit la variație — cogniție activă."], ["sys", "✓ Om–IA–Peșterile din Apuseni: detecție → semnal → răspuns → discriminare. Munții Apuseni (Scărișoara."]];
+PROTOCOLS['pesteri-apuseni'] = [["sys", "▸ Protocol Om–IA–Peșterile din Apuseni"], ["om", "🏔 Stabilesc contact cu peșterile din apuseni în habitatul natural. Munții Apuseni (Scărișoara, Urșilor, Meziad)."], ["ia", "NHI identificat: Peșterile din Apuseni. Capacitate: >400 specii cavernicole. Tip: Cavernicol clasic."], ["nhi", "🏔 [Peșterile din Apuseni]: Comportament natural documentat."], ["ia", "Emit semnalul primar al speciei pe canalul potrivit."], ["nhi", "🏔 [Peșterile din Apuseni]: Răspuns comportamental specific detectat."], ["ia", "Variez semnalul. Discriminare confirmată."], ["nhi", "🏔 [Peșterile din Apuseni]: Răspuns diferit la variație — cogniție activă."], ["sys", "✓ Om–IA–Peșterile din Apuseni: detecție → semnal → răspuns → discriminare. Munții Apuseni (Scărișoara, Urșilor, Meziad)."]];
 PROTOCOLS_INV['pesteri-apuseni'] = [["sys", "◀ Peșterile din Apuseni inițiază"], ["nhi", "🏔 [Peșterile din Apuseni]: Produce un semnal direcționat spre Om."], ["ia", "Inițiativă NHI! Evaluez semnalul și răspund neutru."], ["om", "Rămân calm. Postură ne-amenințătoare."], ["nhi", "🏔 [Peșterile din Apuseni]: Al doilea semnal — modificat față de primul."], ["ia", "Emit semnal de acceptare pe canalul speciei."], ["nhi", "🏔 [Peșterile din Apuseni]: Acceptare. Continuă activitatea normală."], ["sys", "✓ Peșterile din Apuseni→Om: evaluare → dialog → acceptare."]];
 PROTOCOLS_IA['pesteri-apuseni'] = [["sys", "⬡ IA→Peșterile din Apuseni (fără Om)"], ["ia", "Emit semnalul primar al speciei, calibrat local."], ["nhi", "🏔 [Peșterile din Apuseni]: Orientare. Detecție confirmată."], ["ia", "Cresc complexitatea semnalului."], ["nhi", "🏔 [Peșterile din Apuseni]: Răspuns diferit — discriminare pattern."], ["ia", "Emit semnal altă specie din același habitat."], ["nhi", "🏔 [Peșterile din Apuseni]: Nicio reacție — specificitate confirmată."], ["sys", "✓ IA→Peșterile din Apuseni: detecție → discriminare → specificitate."]];
 PROTOCOLS_NHI_IA['pesteri-apuseni'] = [["sys", "◀⬡ Peșterile din Apuseni→IA (fără Om)"], ["nhi", "🏔 [Peșterile din Apuseni]: Semnal spontan direcționat spre senzorul IA."], ["ia", "Inițiativă NHI! Reproduc semnalul."], ["nhi", "🏔 [Peșterile din Apuseni]: Al doilea semnal — modificat."], ["ia", "Dialog bilateral! Adaug o variație proprie."], ["nhi", "🏔 [Peșterile din Apuseni]: Răspunde și escaladează complexitatea."], ["ia", "NHI conduce dialogul."], ["nhi", "🏔 [Peșterile din Apuseni]: Revine la normal — sesiune încheiată de NHI."], ["sys", "✓ Peșterile din Apuseni→IA: inițiere → bilateral → escaladare → NHI închide."]];
@@ -6018,7 +6019,7 @@ PROTOCOLS['lup-carpatic'] = [["sys", "▸ Protocol Om–IA–Lup carpatic"], ["o
 PROTOCOLS_INV['lup-carpatic'] = [["sys", "◀ Lup carpatic inițiază"], ["nhi", "🐺 [Lup carpatic]: Produce un semnal direcționat spre Om."], ["ia", "Inițiativă NHI! Evaluez semnalul și răspund neutru."], ["om", "Rămân calm. Postură ne-amenințătoare."], ["nhi", "🐺 [Lup carpatic]: Al doilea semnal — modificat față de primul."], ["ia", "Emit semnal de acceptare pe canalul speciei."], ["nhi", "🐺 [Lup carpatic]: Acceptare. Continuă activitatea normală."], ["sys", "✓ Lup carpatic→Om: evaluare → dialog → acceptare."]];
 PROTOCOLS_IA['lup-carpatic'] = [["sys", "⬡ IA→Lup carpatic (fără Om)"], ["ia", "Emit semnalul primar al speciei, calibrat local."], ["nhi", "🐺 [Lup carpatic]: Orientare. Detecție confirmată."], ["ia", "Cresc complexitatea semnalului."], ["nhi", "🐺 [Lup carpatic]: Răspuns diferit — discriminare pattern."], ["ia", "Emit semnal altă specie din același habitat."], ["nhi", "🐺 [Lup carpatic]: Nicio reacție — specificitate confirmată."], ["sys", "✓ IA→Lup carpatic: detecție → discriminare → specificitate."]];
 PROTOCOLS_NHI_IA['lup-carpatic'] = [["sys", "◀⬡ Lup carpatic→IA (fără Om)"], ["nhi", "🐺 [Lup carpatic]: Semnal spontan direcționat spre senzorul IA."], ["ia", "Inițiativă NHI! Reproduc semnalul."], ["nhi", "🐺 [Lup carpatic]: Al doilea semnal — modificat."], ["ia", "Dialog bilateral! Adaug o variație proprie."], ["nhi", "🐺 [Lup carpatic]: Răspunde și escaladează complexitatea."], ["ia", "NHI conduce dialogul."], ["nhi", "🐺 [Lup carpatic]: Revine la normal — sesiune încheiată de NHI."], ["sys", "✓ Lup carpatic→IA: inițiere → bilateral → escaladare → NHI închide."]];
-PROTOCOLS['ras-carpatic'] = [["sys", "▸ Protocol Om–IA–Râs carpatic"], ["om", "🐈 Stabilesc contact cu râs carpatic în habitatul natural. Carpații Meridionali și Orientali (Retezat."], ["ia", "NHI identificat: Râs carpatic. Capacitate: vânătoare strategică cu planificare. Tip: Tactică."], ["nhi", "🐈 [Râs carpatic]: Comportament natural documentat."], ["ia", "Emit semnalul primar al speciei pe canalul potrivit."], ["nhi", "🐈 [Râs carpatic]: Răspuns comportamental specific detectat."], ["ia", "Variez semnalul. Discriminare confirmată."], ["nhi", "🐈 [Râs carpatic]: Răspuns diferit la variație — cogniție activă."], ["sys", "✓ Om–IA–Râs carpatic: detecție → semnal → răspuns → discriminare. Carpații Meridionali și Orientali (Retezat."]];
+PROTOCOLS['ras-carpatic'] = [["sys", "▸ Protocol Om–IA–Râs carpatic"], ["om", "🐈 Stabilesc contact cu râs carpatic în habitatul natural. Carpații Meridionali și Orientali (Retezat, Bucegi)."], ["ia", "NHI identificat: Râs carpatic. Capacitate: vânătoare strategică cu planificare. Tip: Tactică."], ["nhi", "🐈 [Râs carpatic]: Comportament natural documentat."], ["ia", "Emit semnalul primar al speciei pe canalul potrivit."], ["nhi", "🐈 [Râs carpatic]: Răspuns comportamental specific detectat."], ["ia", "Variez semnalul. Discriminare confirmată."], ["nhi", "🐈 [Râs carpatic]: Răspuns diferit la variație — cogniție activă."], ["sys", "✓ Om–IA–Râs carpatic: detecție → semnal → răspuns → discriminare. Carpații Meridionali și Orientali (Retezat, Bucegi)."]];
 PROTOCOLS_INV['ras-carpatic'] = [["sys", "◀ Râs carpatic inițiază"], ["nhi", "🐈 [Râs carpatic]: Produce un semnal direcționat spre Om."], ["ia", "Inițiativă NHI! Evaluez semnalul și răspund neutru."], ["om", "Rămân calm. Postură ne-amenințătoare."], ["nhi", "🐈 [Râs carpatic]: Al doilea semnal — modificat față de primul."], ["ia", "Emit semnal de acceptare pe canalul speciei."], ["nhi", "🐈 [Râs carpatic]: Acceptare. Continuă activitatea normală."], ["sys", "✓ Râs carpatic→Om: evaluare → dialog → acceptare."]];
 PROTOCOLS_IA['ras-carpatic'] = [["sys", "⬡ IA→Râs carpatic (fără Om)"], ["ia", "Emit semnalul primar al speciei, calibrat local."], ["nhi", "🐈 [Râs carpatic]: Orientare. Detecție confirmată."], ["ia", "Cresc complexitatea semnalului."], ["nhi", "🐈 [Râs carpatic]: Răspuns diferit — discriminare pattern."], ["ia", "Emit semnal altă specie din același habitat."], ["nhi", "🐈 [Râs carpatic]: Nicio reacție — specificitate confirmată."], ["sys", "✓ IA→Râs carpatic: detecție → discriminare → specificitate."]];
 PROTOCOLS_NHI_IA['ras-carpatic'] = [["sys", "◀⬡ Râs carpatic→IA (fără Om)"], ["nhi", "🐈 [Râs carpatic]: Semnal spontan direcționat spre senzorul IA."], ["ia", "Inițiativă NHI! Reproduc semnalul."], ["nhi", "🐈 [Râs carpatic]: Al doilea semnal — modificat."], ["ia", "Dialog bilateral! Adaug o variație proprie."], ["nhi", "🐈 [Râs carpatic]: Răspunde și escaladează complexitatea."], ["ia", "NHI conduce dialogul."], ["nhi", "🐈 [Râs carpatic]: Revine la normal — sesiune încheiată de NHI."], ["sys", "✓ Râs carpatic→IA: inițiere → bilateral → escaladare → NHI închide."]];
@@ -9123,8 +9124,8 @@ function renderChannels(){
     const unavail=avail.length&&!avail.includes(ch.id)?'unavail':'';
     return '<button class="ch-btn '+active+' '+unavail+'"'
       +' tabindex="0"'
-      +' onkeydown="if(event.key===\'Enter\'||event.key===\' \')this.click()"'
-      +' onclick="selChannel(\''+ch.id+'\',this)"'
+      +' data-onkeydown="enterClick"'
+      +' data-onclick="selChannel" data-arg="'+ch.id+'"'
       +' title="'+(ch.detail||'')+'">'
       +'<span class="ch-icon" aria-hidden="true">'+ch.icon+'</span>'
       +'<span><span class="ch-name">'+(isEn&&ch.name_en?ch.name_en:ch.name)+'</span>'
@@ -9145,7 +9146,7 @@ function renderChannels(){
       var label=isEn&&ch.name_en?ch.name_en:ch.name;
       var desc=isEn&&ch.desc_en?ch.desc_en:ch.desc;
       return '<button class="ch-btn '+active+' '+unavail+'"'
-        +' onclick="selChannel(\''+ch.id+'\',this)"'
+        +' data-onclick="selChannel" data-arg="'+ch.id+'"'
         +' title="'+label+': '+(ch.detail||desc)+'">'
         +'<span style="font-size:13px;margin-right:4px">'+ch.icon+'</span>'
         +'<span style="font-size:10px;font-weight:700">'+label+'</span>'
@@ -9158,7 +9159,7 @@ function selChannel(id, btn){
   selCh = id; saveSession();
   if(running&&typeof stopProtocol==='function')stopProtocol();
   document.querySelectorAll('.ch-btn').forEach(b=>b.classList.remove('active'));
-  document.querySelectorAll(`.ch-btn[onclick*="'${id}'"]`).forEach(b=>b.classList.add('active'));
+  document.querySelectorAll(`.ch-btn[data-arg="${id}"]`).forEach(b=>b.classList.add('active'));
   addLog('ia', lang==='en'?`Active channel: ${CHANNELS.find(c=>c.id===id)?.name_en||id}`:`Canal activ: ${CHANNELS.find(c=>c.id===id)?.name||id}`);
 
   renderChannels();
@@ -9355,10 +9356,10 @@ function applyStaticLabels(){
   if(typeof showSeasonalSuggestions==='function')showSeasonalSuggestions();
 
   // Resume session btn translation
-  const _rsb=document.querySelector('[onclick="resumeLastSession()"]');
+  const _rsb=document.querySelector('[data-onclick="resumeLastSession()"]');
   if(_rsb)_rsb.textContent=lang==='en'?'↺ RESUME LAST SESSION':'↺ CONTINUĂ SESIUNEA ANTERIOARĂ';
   // Export stats btn
-  const _esb=document.querySelector('[onclick="exportStatsSVG()"]');
+  const _esb=document.querySelector('[data-onclick="exportStatsSVG()"]');
   if(_esb)_esb.textContent=lang==='en'?'📊 EXPORT STATS SVG':'📊 EXPORT STATISTICI SVG';
 
   // Log font indicator title
@@ -9391,7 +9392,7 @@ function applyStaticLabels(){
       _sh.setAttribute('aria-label','Operatori de căutare');
       _sh.innerHTML = _SEARCH_OPS.map(function(op){
         return '<button class="op-chip" data-op="'+op.op+'"'
-          +' onclick="_insertSearchOp(\''+op.op+'\')"'
+          +' data-onclick="_insertSearchOp" data-arg="'+op.op+'"'
           +' title="'+op.hint+'"'
           +' style="border-color:'+op.color+';color:'+op.color+'">'
           +'<span class="op-chip-icon">'+op.icon+'</span>'
@@ -9461,7 +9462,7 @@ function toggleLang(){
 function toggleLogLegend(){
   const el=document.getElementById('log-legend');if(!el)return;
   const on=el.style.display==='none';el.style.display=on?'block':'none';
-  document.querySelectorAll('[onclick="toggleLogLegend()"]').forEach(btn=>{
+  document.querySelectorAll('[data-onclick="toggleLogLegend()"]').forEach(btn=>{
     btn.style.color=on?'rgba(0,220,255,.8)':'rgba(255,255,255,.4)';
     btn.style.borderColor=on?'rgba(0,220,255,.4)':'rgba(255,255,255,.15)';
   });
@@ -9555,11 +9556,11 @@ function renderFilters(id){
     {id:'🆕 Neexplorate',label:'🆕',cnt:NHI_DATA.length-_explored.size,active:selCat==='🆕 Neexplorate'}
   ];
   var _specialHtml=_specials.map(function(s){
-    return'<button class="fbtn'+(s.active?' active':'')+'" onclick="setCat(\''+s.id+'\',\''+id+'\')" title="'+s.id+'">'+(s.label)+'<span class="fcat-cnt">'+s.cnt+'</span></button>';
+    return'<button class="fbtn'+(s.active?' active':'')+'" data-onclick="setCat" data-arg="'+s.id+'" data-arg2="'+id+'" title="'+s.id+'">'+(s.label)+'<span class="fcat-cnt">'+s.cnt+'</span></button>';
   }).join('');
   el.innerHTML=_specialHtml+CATS.map(c=>{
     const isUAP=c.startsWith('UAP');
-    const cnt=c==='Toate'?NHI_DATA.length:NHI_DATA.filter(n=>n.cat===c).length;return `<button class="fbtn ${c===selCat?'active':''} ${isUAP?'uap-btn':''}" onclick="setCat('${c}','${id}')" title="${getCatDesc(c)}">${catLabel(c)}<span class="fcat-cnt">${cnt}</span></button>`;
+    const cnt=c==='Toate'?NHI_DATA.length:NHI_DATA.filter(n=>n.cat===c).length;return `<button class="fbtn ${c===selCat?'active':''} ${isUAP?'uap-btn':''}" data-onclick="setCat" data-arg="${_nomiaEA(c)}" data-arg2="${id}" title="${getCatDesc(c)}">${catLabel(c)}<span class="fcat-cnt">${cnt}</span></button>`;
   }).join('');
   /* applyStaticLabels removed — was causing infinite loop */
 }
@@ -9594,7 +9595,7 @@ function renderUAP(cat){
   const rows = data.map((u,idx) => {
     const cacheKey = (cat==='UAP Intl'?'I':'R') + idx;
     window._uapCache[cacheKey] = u;
-    return `<tr class="uap-row ${u.level===0?'null-row':''}" onclick="selectUAP(window._uapCache['${cacheKey}'])" style="cursor:pointer" title="Click pentru simulare">
+    return `<tr class="uap-row ${u.level===0?'null-row':''}" data-onclick="selectUAP" data-arg="${cacheKey}" style="cursor:pointer" title="Click pentru simulare">
       <td style="color:var(--dim);font-family:Space Mono,monospace;font-size:10px">${u.year}</td>
       <td style="font-weight:700;min-width:130px;color:${lvlColor[u.level]}">${u.name}</td>
       <td style="color:var(--dim);min-width:90px;font-size:10px">${u.loc}</td>
@@ -9770,15 +9771,15 @@ function renderNHI(id){
     const isActive=selNHI&&selNHI.id===n.id;
     return `<button class="nhi-btn${isActive?' active':''}" tabindex="0"
       data-spoh="${getNHINote(n.id).trim()?'<span class="ni-note-badge" title="Notă NHI">✏</span>':''}${n.spoh?'true':'false'}"
-      onkeydown="if(event.key==='Enter'||event.key===' '){this.click()}"
-      id="${id}-${n.id}" onclick="selectNHI('${n.id}')" data-type="${n.type||''}" data-det="${Math.round((n.det||0)*100)}" data-ch="${(n.channels||[]).join('+')}">
+      data-onkeydown="enterClick"
+      id="${id}-${n.id}" data-onclick="selectNHI" data-arg="${n.id}" data-type="${n.type||''}" data-det="${Math.round((n.det||0)*100)}" data-ch="${(n.channels||[]).join('+')}">
       <span class="ni-icon">${n.icon}</span>
       <span class="ni-nm">${_srchQ&&!_srchQ.startsWith("!")&&_srchQ.length>1?nName(n).replace(new RegExp("("+_srchQ.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+")","gi"),"<mark>$1</mark>"):nName(n)}</span>
       <span class="ni-cat">${nCat(n)}${n.spoh?' · ✦':''}</span>
       <span class="ni-det"><span class="ni-det-fill" style="width:${det}%"></span></span>
       ${n.type?'<span class="ni-type-badge">'+n.type+'</span>':''}${_todayNHI&&n.id===_todayNHI.id?'<span style="position:absolute;top:3px;right:16px;font-size:9px" title="NHI al zilei">☀</span>':''}
-      <span onclick="event.stopPropagation();addToCompare('${n.id}')" style="position:absolute;bottom:3px;right:4px;font-size:9px;cursor:pointer;touch-action:manipulation;opacity:.5" title="Adaugă în comparație">⚖</span>
-      <span class="ni-fav" onclick="event.stopPropagation();toggleFavorite('${n.id}')" aria-label="${_favS.has(n.id)?'Șterge din favorite':'Adaugă la favorite'}: ${nName(n).slice(0,30)}" style="position:absolute;bottom:3px;left:4px;font-size:10px;cursor:pointer;touch-action:manipulation;opacity:.7" title="Favorite">${isFavorite(n.id)?'♥':'♡'}</span>
+      <span data-onclick="addToCompareStop" data-arg="${n.id}" style="position:absolute;bottom:3px;right:4px;font-size:9px;cursor:pointer;touch-action:manipulation;opacity:.5" title="Adaugă în comparație">⚖</span>
+      <span class="ni-fav" data-onclick="toggleFavoriteStop" data-arg="${n.id}" aria-label="${_favS.has(n.id)?'Șterge din favorite':'Adaugă la favorite'}: ${nName(n).slice(0,30)}" style="position:absolute;bottom:3px;left:4px;font-size:10px;cursor:pointer;touch-action:manipulation;opacity:.7" title="Favorite">${isFavorite(n.id)?'♥':'♡'}</span>
     </button>`;
   };
   _chunkRender(el,_filtered2,_cardFn);
@@ -9953,7 +9954,7 @@ function renderNHIDetail(eid){
   const el=document.getElementById(eid);if(!el)return;
 
   const panel=el?.closest?.('.panel');
-  if(panel){const ph=panel.querySelector('.ph');if(ph)ph.innerHTML='<span class="dp dp-nhi"></span>'+(lang==='en'?'SELECTED NHI DETAIL':'DETALII NHI SELECTAT')+'</span><button onclick="shareNHI()" style="margin-left:auto;background:none;border:none;color:var(--dim);cursor:pointer;font-size:14px;padding:2px 6px;touch-action:manipulation" tabindex="0" aria-label="Partajează NHI" title="Partajează / copiază linkul">🔗</button><span style="display:none">';}
+  if(panel){const ph=panel.querySelector('.ph');if(ph)ph.innerHTML='<span class="dp dp-nhi"></span>'+(lang==='en'?'SELECTED NHI DETAIL':'DETALII NHI SELECTAT')+'</span><button data-onclick="shareNHI()" style="margin-left:auto;background:none;border:none;color:var(--dim);cursor:pointer;font-size:14px;padding:2px 6px;touch-action:manipulation" tabindex="0" aria-label="Partajează NHI" title="Partajează / copiază linkul">🔗</button><span style="display:none">';}
   if(!selNHI){
     el.innerHTML=lang==='en'?'<div class="nd-empty">Select an NHI from the 🧬 NHI Browser</div>':'<div class="nd-empty">Selectează un NHI din 🧬 Browser NHI</div>';
     return;
@@ -10119,7 +10120,7 @@ function addLog(type,text){
   const tm={om:['l-om','OM '],ia:['l-ia',' IA '],nhi:['l-nhi','NHI'],sys:['l-sys','SYS'],warn:['l-war','⚠']};
   const[cls,lbl]=tm[type]||['','   '];
   const t=ts();
-  const mk=()=>`<div class="ll" data-type="${type}" onclick="try{navigator.clipboard.writeText(this.textContent.trim());if(typeof showToast==='function')showToast(lang==='en'?'📋 Copied.':'📋 Copiat.',1200);}catch(e){}" style="cursor:pointer" title="${lang==='en'?'Click to copy':'Click pentru copiere'}"><span class="lts">${t}</span><span class="${cls}">${lbl}</span><span class="l-msg">${text}</span></div>`;
+  const mk=()=>`<div class="ll" data-type="${type}" data-onclick="try{navigator.clipboard.writeText(this.textContent.trim());if(typeof showToast==='function')showToast(lang==='en'?'📋 Copied.':'📋 Copiat.',1200);}catch(e){}" style="cursor:pointer" title="${lang==='en'?'Click to copy':'Click pentru copiere'}"><span class="lts">${t}</span><span class="${cls}">${lbl}</span><span class="l-msg">${text}</span></div>`;
   ['log','log-mob'].forEach(lid=>{
     const el=document.getElementById(lid);if(!el)return;
     const wasBottom=el.scrollHeight-el.scrollTop-el.clientHeight<32;
@@ -10262,13 +10263,13 @@ function selectNode(n) {
     html = `
       <div class="np-header">
         <span class="np-title" style="color:#f7b040">● OM — HUMAN</span>
-        <button class="np-close" onclick="closeNodePopup()" aria-label="Închide">✕</button>
+        <button class="np-close" data-onclick="closeNodePopup()" aria-label="Închide">✕</button>
       </div>
       <div class="np-body">
         <div class="np-desc">Limitări structurale ale creierului uman: ~4 idei conștiente simultan, bandă vizibilă 380–780nm, durată medie ~80 ani.</div>
         <div class="np-section">${lang==='en'?'Active communication channel':'Canal de comunicare activ'}</div>
         <div class="np-opts">
-          ${CHANNELS.map(ch => `<button class="np-opt ${selCh===ch.id?'active':''}" onclick="selChannel('${ch.id}',this);closeNodePopup()">
+          ${CHANNELS.map(ch => `<button class="np-opt ${selCh===ch.id?'active':''}" data-onclick="selChannelClose" data-arg="${ch.id}">
             <span class="np-opt-icon">${ch.icon}</span>
             <div class="np-opt-info">
               <div class="np-opt-name">${ch.name}</div>
@@ -10284,12 +10285,12 @@ function selectNode(n) {
     html = `
       <div class="np-header">
         <span class="np-title" style="color:#00dcff">◆ IA — MEDIATOR</span>
-        <button class="np-close" onclick="closeNodePopup()" aria-label="Închide">✕</button>
+        <button class="np-close" data-onclick="closeNodePopup()" aria-label="Închide">✕</button>
       </div>
       <div class="np-body">
         <div class="np-desc">${lang==='en'?'Select the AI mediator type for the simulation.':'Selectează tipul de IA mediator utilizat în simulare.'}</div>
         <div class="np-opts">
-          ${IA_DATA.map((d,i) => `<button class="np-opt ${selIA_idx===i?'active':''}" onclick="selIA(${i},this);closeNodePopup()">
+          ${IA_DATA.map((d,i) => `<button class="np-opt ${selIA_idx===i?'active':''}" data-onclick="selIAClose" data-arg="${i}">
             <span class="np-opt-icon">${['🔭','🤖','✨'][i]}</span>
             <div class="np-opt-info">
               <div class="np-opt-name">${(lang==='en'?['Type (i)','Type (ii)','Type (iii)']:['Tip (i)','Tip (ii)','Tip (iii)'])[i]}: ${d.ex.split(',')[0]}</div>
@@ -10305,7 +10306,7 @@ function selectNode(n) {
     html = `
       <div class="np-header">
         <span class="np-title" style="color:#d070ff">⬡ NHI — SELECTAT</span>
-        <button class="np-close" onclick="closeNodePopup()" aria-label="Închide">✕</button>
+        <button class="np-close" data-onclick="closeNodePopup()" aria-label="Închide">✕</button>
       </div>
       <div class="np-body">
         <div class="np-desc">${selNHI ? selNHI.icon+' <strong>'+nName(selNHI)+'</strong> &middot; '+selNHI.cat : lang==='en'?'Choose an NHI from the list below.':'Alege un NHI din lista de mai jos.'}</div>
@@ -10314,10 +10315,10 @@ function selectNode(n) {
           <input class="np-search-input" id="np-nhi-search" 
             type="text" placeholder="Caută inteligență..." 
             autocomplete="off" spellcheck="false"
-            oninput="npNHISearch(this.value)"
-            onkeydown="if(event.key==='Escape'){const _nps=document.getElementById('np-nhi-search');if(_nps)_nps.value='';npNHISearch('');}"
+            data-oninput="npNHISearch(this.value)"
+            data-onkeydown="if(event.key==='Escape'){const _nps=document.getElementById('np-nhi-search');if(_nps)_nps.value='';npNHISearch('');}"
           />
-          <button class="np-search-clear" id="np-search-clear" onclick="const _nps=document.getElementById('np-nhi-search');if(_nps)_nps.value='';npNHISearch('');" aria-label="Șterge căutarea">✕</button>
+          <button class="np-search-clear" id="np-search-clear" data-onclick="const _nps=document.getElementById('np-nhi-search');if(_nps)_nps.value='';npNHISearch('');" aria-label="Șterge căutarea">✕</button>
         </div>
         <div class="np-opts" id="np-nhi-list" style="max-height:260px;overflow-y:auto;scrollbar-width:thin"></div>
       </div>`;
@@ -10430,7 +10431,7 @@ function closeNodePopup() {
 document.addEventListener('click', function(e) {
   const popup = document.getElementById('node-popup');
   if (!popup || popup.style.display === 'none') return;
-  if (!popup.contains(e.target) && !e.target.closest('[onclick*="selectNode"]')) {
+  if (!popup.contains(e.target) && !e.target.closest('[data-onclick*="selectNode"]')) {
     closeNodePopup();
   }
 }, true);
@@ -10515,7 +10516,7 @@ function initCatMenu() {
       const count = byCat[cat].length;
       const escaped = cat.replace(/'/g,'&#39;');
       html += `<button class="cnb" data-cat="${cat}"
-        onclick="openCatPanel('${escaped}')"
+        data-onclick="openCatPanel" data-arg="${_nomiaEA(cat)}"
         aria-expanded="false"
         title="${cat} · ${count} inteligențe catalogate">
         <span class="cnb-dot"></span>
@@ -10573,9 +10574,9 @@ function openCatPanel(cat) {
     return `<div class="cp-card ${isActive?'active-nhi':''}" 
       data-id="${n.id}"
       style="--card-accent:${n.color||meta.accent}"
-      onclick="catSelectNHI('${n.id}')"
+      data-onclick="catSelectNHI" data-arg="${n.id}"
       role="button" tabindex="0"
-      onkeydown="if(event.key==='Enter'||event.key===' ')catSelectNHI('${n.id}')"
+      data-onkeydown="catSelectNHIKey" data-arg="${n.id}"
       title="${lang==='en'?'Select':'Selectează'} ${nName(n)} — ${lang==='en'?'start simulation':'pornește simularea'}">
       <div class="cp-card-hdr">
         <span class="cp-card-icon">${n.icon||'•'}</span>
@@ -10651,7 +10652,7 @@ function openCatChooser(){
   if(rb)rb.style.display='none';if(axb)axb.style.display='none';if(stats)stats.innerHTML='';
   var counts={};NHI_DATA.forEach(function(n){counts[n.cat]=(counts[n.cat]||0)+1;});
   if(grid)grid.innerHTML=Object.keys(CAT_META).map(function(cat){var m=CAT_META[cat];
-    return '<div class="cp-card" role="button" tabindex="0" style="--card-accent:'+m.accent+'" onclick="_activeCat=null;openCatPanel(\''+cat.replace(/'/g,"\\'")+'\')" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){_activeCat=null;openCatPanel(\''+cat.replace(/'/g,"\\'")+'\')}"><div class="cp-card-hdr"><span class="cp-card-icon">'+m.icon+'</span><div class="cp-card-info"><div class="cp-card-name">'+(en&&typeof catLabel==='function'?catLabel(cat):cat)+'</div><div class="cp-card-type">'+(counts[cat]||0)+' NHI</div></div></div></div>';}).join('');
+    return '<div class="cp-card" role="button" tabindex="0" style="--card-accent:'+m.accent+'" data-onclick="catCardOpen" data-arg="'+_nomiaEA(cat)+'" data-onkeydown="catCardKey"><div class="cp-card-hdr"><span class="cp-card-icon">'+m.icon+'</span><div class="cp-card-info"><div class="cp-card-name">'+(en&&typeof catLabel==='function'?catLabel(cat):cat)+'</div><div class="cp-card-type">'+(counts[cat]||0)+' NHI</div></div></div></div>';}).join('');
   wrap.classList.add('open');document.body.classList.add('panel-open');
   var cp=document.getElementById('cat-panel');if(cp)cp.scrollTop=0;
 }
@@ -11093,13 +11094,13 @@ function _showAutocomplete(q){
     +'OPERATORI CĂUTARE</div>'
     +matches.map(function(op){
       var needsColon = ['!text','!det','!type','!cat','!ch'].includes(op.op);
-      return '<button onclick="_insertSearchOp(\''+op.op+'\')"'
+      return '<button data-onclick="_insertSearchOp" data-arg="'+op.op+'"'
         +' style="display:flex;align-items:flex-start;gap:10px;width:100%;'
         +'text-align:left;padding:9px 10px;border-radius:10px;cursor:pointer;'
         +'background:#f8faff;border:1px solid #c8d8f0;margin-bottom:4px;'
         +'transition:all .12s"'
-        +' onmouseover="this.style.background=\'#e8f0ff\';this.style.borderColor=\''+op.color+'\'"'
-        +' onmouseout="this.style.background=\'#f8faff\';this.style.borderColor=\'#c8d8f0\'">'
+        +' data-onmouseover="opHoverOn" data-color="'+_nomiaEA(op.color)+'"'
+        +' data-onmouseout="opHoverOff">'
         +'<span style="font-size:18px;flex-shrink:0;line-height:1.2">'+op.icon+'</span>'
         +'<span style="flex:1">'
         +'<span style="display:block;font-size:12px;font-weight:700;color:'+op.color+';font-family:Space Mono,monospace">'+op.op+(needsColon?':…':'')+'</span>'
@@ -11865,9 +11866,9 @@ button,[role="button"],.abtn,.nhi-btn,.gm-btn,#nhi-pill,#autorun-toggle,.ia-tab,
 #top-bar,#bottom-bar,#left-bar,.s-hdr,.grp-menu,.nomia-sheet .s-handle,.abtn,.nhi-btn,.gm-btn,.ia-tab,.ch-btn,#nhi-pill{-webkit-user-select:none;user-select:none;}
 #log,#log *,.pb,.pb *{-webkit-user-select:text;user-select:text;}
 .nhi-btn{-webkit-touch-callout:none;content-visibility:auto;contain-intrinsic-size:auto 116px;}
-.nhi-btn>span[onclick]{display:flex!important;align-items:center;justify-content:center;min-width:30px;min-height:30px;font-size:13px!important;bottom:0!important;opacity:.8!important;border-radius:8px;}
+.nhi-btn>span[data-onclick]{display:flex!important;align-items:center;justify-content:center;min-width:30px;min-height:30px;font-size:13px!important;bottom:0!important;opacity:.8!important;border-radius:8px;}
 .nhi-btn>.ni-fav{left:0!important;}
-.nhi-btn>span[onclick]:not(.ni-fav){right:0!important;}
+.nhi-btn>span[data-onclick]:not(.ni-fav){right:0!important;}
 .ni-cat{font-size:10px;}
 #quick-export-btn{display:none!important;}
 /* toast / banners: the original calc() was invalid (missing spaces) */
@@ -12136,14 +12137,14 @@ body:not(.dark-mode) .op-chip-label{color:#2a3558!important;}
     var seen={},html='';
     var en=(typeof lang!=='undefined'&&lang==='en');
     html+='<div class="mm-sec">'+(en?'QUICK':'RAPID')+'</div><div class="mm-grid">'+
-      '<button class="gm-btn" onclick="toggleStatsSheet()"><span class="gm-icon">📊</span><span class="gm-lbl">'+(en?'Statistics & settings':'Statistici & setări')+'</span></button>'+
-      '<button class="gm-btn" onclick="toggleLang()"><span class="gm-icon">🌐</span><span class="gm-lbl">'+(en?'Language: EN → RO':'Limbă: RO → EN')+'</span></button></div>';
+      '<button class="gm-btn" data-onclick="toggleStatsSheet()"><span class="gm-icon">📊</span><span class="gm-lbl">'+(en?'Statistics & settings':'Statistici & setări')+'</span></button>'+
+      '<button class="gm-btn" data-onclick="toggleLang()"><span class="gm-icon">🌐</span><span class="gm-lbl">'+(en?'Language: EN → RO':'Limbă: RO → EN')+'</span></button></div>';
     seen["toggleStatsSheet"]=1;seen["toggleLang"]=1;
     document.querySelectorAll('.grp-menu').forEach(function(m){
       var ttl=m.querySelector('.grp-menu-ttl'),items=[];
       m.querySelectorAll('.gm-btn').forEach(function(b){
         if(b.id==='gm-stack'||b.id==='gm-split')return;
-        var key=(b.getAttribute('onclick')||'').replace(/\s+/g,'');
+        var key=(b.getAttribute('data-onclick')||'').replace(/\s+/g,'');
         if(seen[key])return;seen[key]=1;
         var c=b.cloneNode(true);c.removeAttribute('id');c.querySelectorAll('[id]').forEach(function(x){x.removeAttribute('id');});
         items.push(c.outerHTML);
@@ -12216,6 +12217,179 @@ body:not(.dark-mode) .op-chip-label{color:#2a3558!important;}
   if(at){new MutationObserver(function(){at.setAttribute('aria-pressed',at.classList.contains('active')?'true':'false');}).observe(at,{attributes:true,attributeFilter:['class']});}
 })();
 
+</script>
+<script id="nomia-dispatch">
+/* NOMIA: delegated event dispatcher (replaces inline on* handlers; no eval/Function; CSP script-src by hash).
+   data-onclick/-onkeydown/-oninput/-onmouseover/-onmouseout = key of a table below or a named action; data-arg/-arg2 = literal arguments (strings). */
+(function(){
+  var HAS=Object.prototype.hasOwnProperty;
+  var LIT={
+click:{
+  "_runOrStop()":function(event){_runOrStop()},
+  "_stepOrToggle()":function(event){_stepOrToggle()},
+  "clearCompare()":function(event){clearCompare()},
+  "clearLog()":function(event){clearLog()},
+  "closeAllGrpMenus()":function(event){closeAllGrpMenus()},
+  "closeAllSheets();_passThroughRunControls(event)":function(event){closeAllSheets();_passThroughRunControls(event)},
+  "closeCatPanel()":function(event){closeCatPanel()},
+  "closeCompare()":function(event){closeCompare()},
+  "closeDetailSheet()":function(event){closeDetailSheet()},
+  "closeGrpAndRun(checkMonthlySnapshot)":function(event){closeGrpAndRun(checkMonthlySnapshot)},
+  "closeGrpAndRun(clearAllData)":function(event){closeGrpAndRun(clearAllData)},
+  "closeGrpAndRun(clearCompare)":function(event){closeGrpAndRun(clearCompare)},
+  "closeGrpAndRun(clearLog)":function(event){closeGrpAndRun(clearLog)},
+  "closeGrpAndRun(copyNHILink)":function(event){closeGrpAndRun(copyNHILink)},
+  "closeGrpAndRun(exportBackup)":function(event){closeGrpAndRun(exportBackup)},
+  "closeGrpAndRun(exportComparisonCSV)":function(event){closeGrpAndRun(exportComparisonCSV)},
+  "closeGrpAndRun(exportCurrentSession)":function(event){closeGrpAndRun(exportCurrentSession)},
+  "closeGrpAndRun(exportLog)":function(event){closeGrpAndRun(exportLog)},
+  "closeGrpAndRun(exportMonthlySnapshots)":function(event){closeGrpAndRun(exportMonthlySnapshots)},
+  "closeGrpAndRun(exportNHINotesCSV)":function(event){closeGrpAndRun(exportNHINotesCSV)},
+  "closeGrpAndRun(exportNHINotesMarkdown)":function(event){closeGrpAndRun(exportNHINotesMarkdown)},
+  "closeGrpAndRun(exportProtocolHistoryCSV)":function(event){closeGrpAndRun(exportProtocolHistoryCSV)},
+  "closeGrpAndRun(exportStatsSummary)":function(event){closeGrpAndRun(exportStatsSummary)},
+  "closeGrpAndRun(function(){if(selNHI)addToCompare(selNHI.id);openCompare();})":function(event){closeGrpAndRun(function(){if(selNHI)addToCompare(selNHI.id);openCompare();})},
+  "closeGrpAndRun(function(){if(selNHI)renderSimilarNHI(selNHI,'similar-nhi-mob')})":function(event){closeGrpAndRun(function(){if(selNHI)renderSimilarNHI(selNHI,'similar-nhi-mob')})},
+  "closeGrpAndRun(function(){sortComparison('det');})":function(event){closeGrpAndRun(function(){sortComparison('det');})},
+  "closeGrpAndRun(function(){var n=document.getElementById('np-search-input');if(n&&selNHI){n.value=selNHI.name||'';n.dispatchEvent(new Event('input'));}toggleNHISheet();closeAllGrpMenus();})":function(event){closeGrpAndRun(function(){var n=document.getElementById('np-search-input');if(n&&selNHI){n.value=selNHI.name||'';n.dispatchEvent(new Event('input'));}toggleNHISheet();closeAllGrpMenus();})},
+  "closeGrpAndRun(importBackup)":function(event){closeGrpAndRun(importBackup)},
+  "closeGrpAndRun(logScrollToBottom)":function(event){closeGrpAndRun(logScrollToBottom)},
+  "closeGrpAndRun(logScrollToTop)":function(event){closeGrpAndRun(logScrollToTop)},
+  "closeGrpAndRun(openCatPanel)":function(event){closeGrpAndRun(openCatPanel)},
+  "closeGrpAndRun(openCompare)":function(event){closeGrpAndRun(openCompare)},
+  "closeGrpAndRun(printComparison)":function(event){closeGrpAndRun(printComparison)},
+  "closeGrpAndRun(printNHIProfile)":function(event){closeGrpAndRun(printNHIProfile)},
+  "closeGrpAndRun(printStats)":function(event){closeGrpAndRun(printStats)},
+  "closeGrpAndRun(randomUnexploredNHI)":function(event){closeGrpAndRun(randomUnexploredNHI)},
+  "closeGrpAndRun(resetExploration)":function(event){closeGrpAndRun(resetExploration)},
+  "closeGrpAndRun(shareComparison)":function(event){closeGrpAndRun(shareComparison)},
+  "closeGrpAndRun(shareNHI)":function(event){closeGrpAndRun(shareNHI)},
+  "closeGrpAndRun(shareProgress)":function(event){closeGrpAndRun(shareProgress)},
+  "closeGrpAndRun(showSeasonalSuggestions)":function(event){closeGrpAndRun(showSeasonalSuggestions)},
+  "closeGrpAndRun(suggestNHI)":function(event){closeGrpAndRun(suggestNHI)},
+  "closeGrpAndRun(toggleAutoRun)":function(event){closeGrpAndRun(toggleAutoRun)},
+  "closeGrpAndRun(toggleDarkMode)":function(event){closeGrpAndRun(toggleDarkMode)},
+  "closeGrpAndRun(toggleDetailSheet)":function(event){closeGrpAndRun(toggleDetailSheet)},
+  "closeGrpAndRun(toggleDyslexiaFont)":function(event){closeGrpAndRun(toggleDyslexiaFont)},
+  "closeGrpAndRun(toggleFocusMode)":function(event){closeGrpAndRun(toggleFocusMode)},
+  "closeGrpAndRun(toggleFontSize)":function(event){closeGrpAndRun(toggleFontSize)},
+  "closeGrpAndRun(toggleLang)":function(event){closeGrpAndRun(toggleLang)},
+  "closeGrpAndRun(toggleLogWrap)":function(event){closeGrpAndRun(toggleLogWrap)},
+  "closeGrpAndRun(toggleNHISheet)":function(event){closeGrpAndRun(toggleNHISheet)},
+  "closeGrpAndRun(toggleNightMode)":function(event){closeGrpAndRun(toggleNightMode)},
+  "closeGrpAndRun(togglePinNHI)":function(event){closeGrpAndRun(togglePinNHI)},
+  "closeGrpAndRun(togglePresentationMode)":function(event){closeGrpAndRun(togglePresentationMode)},
+  "closeGrpAndRun(toggleSplitMode)":function(event){closeGrpAndRun(toggleSplitMode)},
+  "closeGrpAndRun(toggleStackedMode)":function(event){closeGrpAndRun(toggleStackedMode)},
+  "closeGrpAndRun(toggleStatsSheet)":function(event){closeGrpAndRun(toggleStatsSheet)},
+  "closeGrpAndRun(toggleTriadicSheet)":function(event){closeGrpAndRun(toggleTriadicSheet)},
+  "closeMobMenu()":function(event){closeMobMenu()},
+  "closeNHISheet()":function(event){closeNHISheet()},
+  "closeNodePopup()":function(event){closeNodePopup()},
+  "closeStatsSheet()":function(event){closeStatsSheet()},
+  "closeTriadicSheet()":function(event){closeTriadicSheet()},
+  "const _nps=document.getElementById('np-nhi-search');if(_nps)_nps.value='';npNHISearch('');":function(event){const _nps=document.getElementById('np-nhi-search');if(_nps)_nps.value='';npNHISearch('');},
+  "dismissTutorial()":function(event){dismissTutorial()},
+  "dismissTutorial();toggleNHISheet()":function(event){dismissTutorial();toggleNHISheet()},
+  "dismissTutorial();topMenuClick()":function(event){dismissTutorial();topMenuClick()},
+  "exportComparison()":function(event){exportComparison()},
+  "exportComparisonCSV()":function(event){exportComparisonCSV()},
+  "exportStatsSummary()":function(event){exportStatsSummary()},
+  "initiateIA_NHI()":function(event){initiateIA_NHI()},
+  "initiateInverse()":function(event){initiateInverse()},
+  "initiateNHI_IA()":function(event){initiateNHI_IA()},
+  "pauseProtocol()":function(event){pauseProtocol()},
+  "printComparison()":function(event){printComparison()},
+  "resetExploration()":function(event){resetExploration()},
+  "restoreUndo()":function(event){restoreUndo()},
+  "selIA(0,this)":function(event){selIA(0,this)},
+  "selIA(1,this)":function(event){selIA(1,this)},
+  "selIA(2,this)":function(event){selIA(2,this)},
+  "selectNode('ia')":function(event){selectNode('ia')},
+  "selectNode('nhi')":function(event){selectNode('nhi')},
+  "selectNode('om')":function(event){selectNode('om')},
+  "shareComparison()":function(event){shareComparison()},
+  "shareNHI()":function(event){shareNHI()},
+  "shareProgress()":function(event){shareProgress()},
+  "sortComparison('clarity')":function(event){sortComparison('clarity')},
+  "sortComparison('det')":function(event){sortComparison('det')},
+  "sortComparison('risk')":function(event){sortComparison('risk')},
+  "stopProtocol()":function(event){stopProtocol()},
+  "this.closest('#quick-export-btn').classList.toggle('open')":function(event){this.closest('#quick-export-btn').classList.toggle('open')},
+  "toggleAutoRun()":function(event){toggleAutoRun()},
+  "toggleAutoScroll()":function(event){toggleAutoScroll()},
+  "toggleDarkMode()":function(event){toggleDarkMode()},
+  "toggleGrpMenu('grp-cmp-menu',this)":function(event){toggleGrpMenu('grp-cmp-menu',this)},
+  "toggleGrpMenu('grp-detail-menu',this)":function(event){toggleGrpMenu('grp-detail-menu',this)},
+  "toggleGrpMenu('grp-exp-menu',this)":function(event){toggleGrpMenu('grp-exp-menu',this)},
+  "toggleGrpMenu('grp-log-menu',this)":function(event){toggleGrpMenu('grp-log-menu',this)},
+  "toggleGrpMenu('grp-nhi-menu',this)":function(event){toggleGrpMenu('grp-nhi-menu',this)},
+  "toggleGrpMenu('grp-set-menu',this)":function(event){toggleGrpMenu('grp-set-menu',this)},
+  "toggleGrpMenu('grp-stat-menu',this)":function(event){toggleGrpMenu('grp-stat-menu',this)},
+  "toggleGrpMenu('grp-tri-menu',this)":function(event){toggleGrpMenu('grp-tri-menu',this)},
+  "toggleLang()":function(event){toggleLang()},
+  "toggleNHISheet()":function(event){toggleNHISheet()},
+  "toggleNightMode()":function(event){toggleNightMode()},
+  "togglePresentationMode()":function(event){togglePresentationMode()},
+  "toggleSplitMode()":function(event){toggleSplitMode()},
+  "toggleStackedMode()":function(event){toggleStackedMode()},
+  "toggleStatsSheet()":function(event){toggleStatsSheet()},
+  "topMenuClick()":function(event){topMenuClick()},
+  "try{navigator.clipboard.writeText(this.textContent.trim());if(typeof showToast==='function')showToast(lang==='en'?'📋 Copied.':'📋 Copiat.',1200);}catch(e){}":function(event){try{navigator.clipboard.writeText(this.textContent.trim());if(typeof showToast==='function')showToast(lang==='en'?'📋 Copied.':'📋 Copiat.',1200);}catch(e){}}
+},
+keydown:{
+  "if(event.key==='Enter'||event.key===' ')selectNode('ia')":function(event){if(event.key==='Enter'||event.key===' ')selectNode('ia')},
+  "if(event.key==='Enter'||event.key===' ')selectNode('nhi')":function(event){if(event.key==='Enter'||event.key===' ')selectNode('nhi')},
+  "if(event.key==='Enter'||event.key===' ')selectNode('om')":function(event){if(event.key==='Enter'||event.key===' ')selectNode('om')},
+  "if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleAutoRun()}":function(event){if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleAutoRun()}},
+  "if(event.key==='Escape'){const _nps=document.getElementById('np-nhi-search');if(_nps)_nps.value='';npNHISearch('');}":function(event){if(event.key==='Escape'){const _nps=document.getElementById('np-nhi-search');if(_nps)_nps.value='';npNHISearch('');}}
+},
+input:{
+  "npNHISearch(this.value)":function(event){npNHISearch(this.value)},
+  "renderCompareSuggestions(this.value)":function(event){renderCompareSuggestions(this.value)}
+}};
+  var DYN={addToCompareClr:function(ev,a){addToCompare(a);this.parentElement.innerHTML='';},
+  _inlineSelect:function(ev,a){_inlineSelect(a);},
+  _inlineSetCat:function(ev,a){_inlineSetCat(a);},
+  _splitSelectNHI:function(ev,a){_splitSelectNHI(a);},
+  _splitSetCat:function(ev,a){_splitSetCat(a);},
+  selectNHI:function(ev,a){selectNHI(a);},
+  applySearch:function(ev,a){applySearch(a);},
+  removeFromCompare:function(ev,a){removeFromCompare(a);},
+  selChannel:function(ev,a){selChannel(a,this);},
+  _insertSearchOp:function(ev,a){_insertSearchOp(a);},
+  setCat:function(ev,a,b){setCat(a,b);},
+  selectUAP:function(ev,a){selectUAP(window._uapCache[a]);},
+  addToCompareStop:function(ev,a){ev.stopPropagation();addToCompare(a);},
+  toggleFavoriteStop:function(ev,a){ev.stopPropagation();toggleFavorite(a);},
+  selChannelClose:function(ev,a){selChannel(a,this);closeNodePopup();},
+  selIAClose:function(ev,a){selIA(Number(a),this);closeNodePopup();},
+  openCatPanel:function(ev,a){openCatPanel(a);},
+  catSelectNHI:function(ev,a){catSelectNHI(a);},
+  catCardOpen:function(ev,a){_activeCat=null;openCatPanel(a);},
+  opHoverOn:function(){this.style.background='#e8f0ff';this.style.borderColor=this.dataset.color;},
+  opHoverOff:function(){this.style.background='#f8faff';this.style.borderColor='#c8d8f0';},enterClick:function(ev){if(ev.key==='Enter'||ev.key===' ')this.click();},
+  catSelectNHIKey:function(ev,a){if(ev.key==='Enter'||ev.key===' ')catSelectNHI(a);},
+  catCardKey:function(ev,a){if(ev.key==='Enter'||ev.key===' '){_activeCat=null;openCatPanel(a);}}};
+  function run(el,type,ev){
+    var k=el.getAttribute('data-on'+type);
+    if(k===null)return;
+    var f=(LIT[type]&&HAS.call(LIT[type],k))?LIT[type][k]:(HAS.call(DYN,k)?DYN[k]:null);
+    if(!f)return;
+    try{ if(LIT[type]&&HAS.call(LIT[type],k))f.call(el,ev); else f.call(el,ev,el.dataset.arg,el.dataset.arg2); }
+    catch(e){ setTimeout(function(){throw e;},0); }
+  }
+  ['click','keydown','input','mouseover','mouseout'].forEach(function(type){
+    document.body.addEventListener(type,function(ev){
+      var path=ev.composedPath?ev.composedPath():[],attr='data-on'+type;
+      for(var i=0;i<path.length;i++){
+        var el=path[i];
+        if(el===document.body)break;
+        if(el.nodeType===1&&el.hasAttribute(attr)){ run(el,type,ev); if(ev.cancelBubble)break; }
+      }
+    });
+  });
+})();
 </script>
 </body>
 </html>

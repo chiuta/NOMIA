@@ -11,6 +11,7 @@ async def main():
     r=await pg.evaluate("""()=>{
       const out={missingFn:[],dupIds:[],missingTargets:[],badCSSvars:[]};
       const fns=new Set();
+      // din 0.8.56 handlerele sunt delegate (data-on*, dispecer în #nomia-dispatch); selectorul rămâne pentru a prinde reintroducerea handlerelor inline
       document.querySelectorAll('[onclick],[oninput],[onchange],[onkeydown],[onsubmit]').forEach(e=>{
         for(const a of ['onclick','oninput','onchange','onkeydown','onsubmit']){const v=e.getAttribute(a);if(!v)continue;
           for(const m of v.matchAll(/(?<![\\w.$'"])([A-Za-z_$][\\w$]*)\\s*\\(/g)){const n=m[1];
