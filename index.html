@@ -1178,7 +1178,7 @@ body.dark-mode .ll[data-type="warn"] {
   </header>
 
   <!-- ◀ LEFT ─────────────────────────────── -->
-  <aside id="left-bar" class="edge-bar" role="navigation" aria-label="Navigare laterală stânga">
+  <nav id="left-bar" class="edge-bar" aria-label="Navigare laterală stânga">
     <!-- NHI Group -->
     <div class="edge-group">
       <button class="grp-trigger" id="grp-nhi-btn" onclick="toggleGrpMenu('grp-nhi-menu',this)" title="NHI · Explorare" aria-haspopup="true" aria-expanded="false">🧬</button>
@@ -1196,7 +1196,7 @@ body.dark-mode .ll[data-type="warn"] {
     <div class="edge-group">
       <button class="grp-trigger" id="grp-log-btn" onclick="toggleGrpMenu('grp-log-menu',this)" title="Log · Filtre" aria-haspopup="true">📋</button>
     </div>
-  </aside>
+  </nav>
 
   <!-- ▼ STACKED NHI PANEL (stacked-mode only) -->
   <div id="nhi-inline-panel" aria-label="NHI Browser stacked">
@@ -1232,7 +1232,7 @@ body.dark-mode .ll[data-type="warn"] {
   </main>
 
   <!-- ▶ RIGHT ─────────────────────────────── -->
-  <aside id="right-bar" class="edge-bar" role="navigation" aria-label="Navigare laterală dreapta">
+  <nav id="right-bar" class="edge-bar" aria-label="Navigare laterală dreapta">
     <!-- Detail Group -->
     <div class="edge-group">
       <button class="grp-trigger" id="btn-detail" onclick="toggleGrpMenu('grp-detail-menu',this)" title="Detalii NHI · Similar" aria-haspopup="true">📋</button>
@@ -1250,7 +1250,7 @@ body.dark-mode .ll[data-type="warn"] {
     <div class="edge-group">
       <button class="grp-trigger" id="grp-set-btn" onclick="toggleGrpMenu('grp-set-menu',this)" title="Setări · Afișare" aria-haspopup="true">⚙</button>
     </div>
-  </aside>
+  </nav>
 
   <!-- ▼ BOTTOM ────────────────────────────── -->
   <footer id="bottom-bar">
@@ -1282,7 +1282,7 @@ body.dark-mode .ll[data-type="warn"] {
 </div>
 
 <!-- Sheet backdrop -->
-<div id="sheet-backdrop" onclick="closeAllSheets()"></div>
+<div id="sheet-backdrop" onclick="closeAllSheets();_passThroughRunControls(event)"></div>
 
 <!-- ▼ SHEET: NHI Browser -->
 <div id="nhi-sheet" class="nomia-sheet sheet-bottom hidden"
@@ -1496,7 +1496,7 @@ body.dark-mode .ll[data-type="warn"] {
   ↩ <span id="undo-banner-text">Restaurează explorarea</span>
 </div>
 
-<div id="first-use-banner">
+<div id="first-use-banner" role="region" aria-label="Bun venit">
   <button onclick="dismissTutorial()"
           style="float:right;background:none;border:none;color:var(--dim);cursor:pointer;font-size:15px">✕</button>
   <div style="font-family:Orbitron,monospace;font-size:8.5px;color:var(--teal);letter-spacing:.5px;margin-bottom:8px">BINE AI VENIT ÎN NOMIA</div>
@@ -1567,8 +1567,9 @@ function renderCompareSuggestions(query){
 }
 
 /* App version check — clear stale cache on update */
+var NOMIA_VERSION = '0.8.55', NOMIA_BUILD = '2026-10-11';
 (function(){
-  var APP_VERSION = '0.8.54';
+  var APP_VERSION = NOMIA_VERSION;
   try{
     var stored = localStorage.getItem('nomia_version');
     if(stored && stored !== APP_VERSION){
@@ -2667,6 +2668,30 @@ function toggleNightMode(){document.body.classList.toggle('night-mode');var on=d
 function toggleLightMode(){document.body.classList.remove('night-mode');document.body.classList.toggle('light-mode');}
 function toggleFocusMode(){document.body.classList.toggle('focus-mode');var on=document.body.classList.contains('focus-mode');var fi=document.getElementById('focus-ind');if(fi)fi.style.display=on?'block':'none';if(typeof showToast==='function')showToast(on?'⊡ Focus ON':'⊡ Focus OFF',1500);}
 function togglePresentationMode(){document.body.classList.toggle('pres-mode');var on=document.body.classList.contains('pres-mode');if(on&&selNHI){var pi=document.getElementById('pres-icon');if(pi)pi.textContent=selNHI.icon||'';var pn=document.getElementById('pres-name');if(pn)pn.textContent=typeof nName==='function'?nName(selNHI):selNHI.name;var pt=document.getElementById('pres-type');if(pt)pt.textContent=selNHI.type||'';}}
+// Taie un text la cel mult n caractere, dar la limită de cuvânt (fără fragmente de tip „name-lik.”).
+function _wcut(t,n){
+  t=String(t==null?'':t);
+  if(t.length<=n)return t;
+  var c=t.slice(0,n);
+  if(/[\s,.;:!?)-]/.test(t.charAt(n))){c=c.replace(/[\s,;:.\-–—(]+$/,'');if((c.match(/\(/g)||[]).length>(c.match(/\)/g)||[]).length)c+=')';return c;}
+  var k=c.search(/[\s]+\S*$/);
+  c=(k>n*0.4)?c.slice(0,k):c;
+  c=c.replace(/[\s,;:.\-–—(]+$/,'');
+  if((c.match(/\(/g)||[]).length>(c.match(/\)/g)||[]).length)c+=')';
+  return c;
+}
+// Cât timp o foaie (sheet) e deschisă, backdrop-ul interceptează clicurile: un clic pe REIA / STOP / ⏸ / »STEP (vizibile prin backdrop)
+// închide foaia ȘI acționează butonul de dedesubt (altfel REIA părea inaccesibil). CLR (distructiv) și restul butoanelor nu sunt acționate.
+function _passThroughRunControls(e){
+  try{
+    var x=e.clientX,y=e.clientY; if(!isFinite(x)||!isFinite(y)||(x===0&&y===0))return;
+    var els=document.elementsFromPoint(x,y);
+    for(var i=0;i<els.length;i++){
+      var b=els[i].closest&&els[i].closest('#action-bar button');
+      if(b){ if(b.classList.contains('btn-rerun')||b.classList.contains('btn-stop')||b.id==='pause-btn'||b.id==='step-btn'){ b.click(); } return; }
+    }
+  }catch(err){}
+}
 function dismissTutorial(){var el=document.getElementById('first-use-banner');if(el)el.style.display='none';try{localStorage.setItem('nomia_tutorial_done','1');}catch(e){}}
 function showFirstUseTutorial(){try{if(localStorage.getItem('nomia_tutorial_done'))return;}catch(e){}var el=document.getElementById('first-use-banner');if(el)el.style.display='block';}
 function showUndoBanner(){var el=document.getElementById('undo-banner');if(el)el.style.display='block';}
@@ -8748,7 +8773,7 @@ function iaVoice(tip, nhi) {
 
     greet: lang==='en'?`[SYS] DETECTION module active. Target: ${_dn}. Φ=N/A. No ToM.`:`[SYS] Modul DETECȚIE activ. Target: ${_dn}. Φ=N/A. Fără ToM.`,
     detect: lang==='en'?`CLASSIFICATION: ${_dn} → Type ${nCat(n)} → Primary signal emitted on the optimal band.`:`CLASIFICARE: ${_dn} → Tip ${nCat(n)} → Semnal primar emis pe banda optimă.`,
-    analyze: lang==='en'?`RESULT: ${cap0.slice(0,50)}. Signal/response correlation: computed.`:`REZULTAT: ${cap0.slice(0,50)}. Corelație semnal/răspuns: calculată.`,
+    analyze: lang==='en'?`RESULT: ${_wcut(cap0,50)}. Signal/response correlation: computed.`:`REZULTAT: ${_wcut(cap0,50)}. Corelație semnal/răspuns: calculată.`,
     uncertain: lang==='en'?`UNCERTAIN CLASSIFICATION. Insufficient data. Requires stages 3-5: Type (iii).`:`CLASIFICARE INCERTĂ. Date insuficiente. Necesită etape 3-5: Tip (iii).`,
     limit: lang==='en'?`⚠ Type (i) has no ToM. Semantic interpretation impossible. Recommended: upgrade to Type (iii).`:`⚠ Tip (i) nu are ToM. Interpretare semantică imposibilă. Recomandat: upgrade la Tip (iii).`,
     confirm: lang==='en'?`DETECTION CONFIRMED at ${Math.round(60+Math.abs((n.det||0)*30))}% accuracy. Log saved.`:`DETECȚIE CONFIRMATĂ la ${Math.round(60+Math.abs((n.det||0)*30))}% acuratețe. Log salvat.`,
@@ -8756,7 +8781,7 @@ function iaVoice(tip, nhi) {
   if (tip === 1) return {
 
     greet: lang==='en'?`Mediating Om ↔ ${n.icon} ${_dn} contact. ToM toward Om: active. ToM toward NHI: inferred, limited.`:`Mediez contactul Om ↔ ${n.icon} ${_dn}. ToM față de Om: activă. ToM față de NHI: inferată, limitată.`,
-    detect: lang==='en'?`Detecting ${_dn} behaviour: ${cap0.slice(0,50)}. Interpreting via analogy with training data.`:`Detectez comportamentul ${_dn}: ${cap0.slice(0,50)}. Interpretez prin analogie cu date de antrenament.`,
+    detect: lang==='en'?`Detecting ${_dn} behaviour: ${_wcut(cap0,50)}. Interpreting via analogy with training data.`:`Detectez comportamentul ${_dn}: ${_wcut(cap0,50)}. Interpretez prin analogie cu date de antrenament.`,
     analyze: lang==='en'?`My analysis is limited: no direct training on non-human NHI. Inferring through extrapolation of cognitive models.`:`Analiza mea e limitată: nu am antrenament direct pe NHI ne-uman. Inferez prin extrapolarea modelelor cognitive.`,
     uncertain: lang==='en'?`Calibrated uncertainty: I do not know if ${_dn} has subjective experience. Staying at functional level.`:`Incertitudine calibrată: nu știu dacă ${_dn} are experiență subiectivă. Rămân la nivel funcțional.`,
     limit: lang==='en'?`⚠ Type (ii) — Φ≈0 (IIT). Mediation of stages 3-5 requires Type (iii). Continuing with what I can.`:`⚠ Tip (ii) — Φ≈0 (IIT). Medierea etapelor 3-5 necesită Tip (iii). Continui cu ce pot.`,
@@ -8818,7 +8843,7 @@ function buildChannelScript(nhi, channelId, tipIdx) {
       ['om',  `${lang==='en'?`∑ Transmit sequence of first 10 primes. Monitoring ${_dn} response.`:(lang==='en'?`∑ Transmit sequence of first 10 primes. Monitoring ${_dn} response.`:`∑ Transmit secvența primelor 10 numere prime. Monitorizez răspunsul ${_dn}.`)}`],
       ['ia',  v.detect],
       ['nhi', `${lang==='en'?`${n.icon} [${_dn}]: Behaviour modified from baseline — pattern detected.`:(lang==='en'?`${n.icon} [${_dn}]: Behaviour modified from baseline — pattern detected.`:`${n.icon} [${_dn}]: Comportament modificat față de baseline — detectez un pattern.`)}`],
-      ['ia',  `${lang==='en'?`Analysing: ${_dn} responds preferentially to mathematically structured frequencies. Consistent with: ${cap0.slice(0,40)}.`:(lang==='en'?`Analysing: ${_dn} responds preferentially to structured frequencies. Consistent with: ${cap0.slice(0,40)}.`:`Analizez: ${_dn} răspunde preferențial la frecvențe cu structură matematică. Consistent cu: ${cap0.slice(0,40)}.`)}`],
+      ['ia',  `${lang==='en'?`Analysing: ${_dn} responds preferentially to mathematically structured frequencies. Consistent with: ${_wcut(cap0,40)}.`:(lang==='en'?`Analysing: ${_dn} responds preferentially to structured frequencies. Consistent with: ${_wcut(cap0,40)}.`:`Analizez: ${_dn} răspunde preferențial la frecvențe cu structură matematică. Consistent cu: ${_wcut(cap0,40)}.`)}`],
       ['om',  `${lang==='en'?`∑ Transmit ratio φ via rhythmic pulses. Adding geometry: hexagon.`:(lang==='en'?`∑ Transmit ratio φ via rhythmic pulses. Adding geometry: hexagon.`:`∑ Transmit raportul φ prin bătăi ritmice. Adaug geometrie: hexagon.`)}`],
       ['nhi', `${lang==='en'?`${n.icon} [${_dn}]: Maximum response to hexagon. Reproducible pattern.`:(lang==='en'?`${n.icon} [${_dn}]: Maximum response to hexagon. Reproducible pattern.`:`${n.icon} [${_dn}]: Răspuns maxim la hexagon. Pattern reproductibil.`)}`],
       ['ia',  v.uncertain],
@@ -8833,7 +8858,7 @@ function buildChannelScript(nhi, channelId, tipIdx) {
       ['ia',  `${lang==='en'?`Modelling ${_dn}'s inner perspective: how does a being of type «${n.type}» «feel» a prime number?`:(lang==='en'?`Modelling ${_dn}'s perspective: how does a «${n.type}» being «feel» a prime number?`:`Modelez perspectiva internă a ${_dn}: cum «simte» un număr prim o ființă de tip «${n.type}»?`)}`],
       ['om',  `${lang==='en'?`∑ Transmit ratio φ. Adding a variation: φ² = 2.618...`:(lang==='en'?`∑ Transmit ratio φ. Adding variation: φ² = 2.618...`:`∑ Transmit raportul φ. Adaug o variație: φ² = 2.618...`)}`],
       ['nhi', `${lang==='en'?`${n.icon} [${_dn}]: Responds differently to φ² vs φ. Subtle discrimination.`:(lang==='en'?`${n.icon} [${_dn}]: Responds differently to φ² vs φ. Subtle discrimination.`:`${n.icon} [${_dn}]: Răspunde diferit la φ² față de φ. Discriminare subtilă.`)}`],
-      ['ia',  `${lang==='en'?`${_dn} seems to «prefer» φ over φ². Hypothesis: its physical structure is closer to φ. Consistent with: ${cap1.slice(0,40)}.`:(lang==='en'?`${_dn} seems to «prefer» φ over φ². Hypothesis: structure closer to φ. Consistent with: ${cap1.slice(0,40)}.`:`${_dn} pare să «prefere» φ față de φ². Ipoteză: structura sa fizică e mai apropiată de φ. Consistent cu: ${cap1.slice(0,40)}.`)}`],
+      ['ia',  `${lang==='en'?`${_dn} seems to «prefer» φ over φ². Hypothesis: its physical structure is closer to φ. Consistent with: ${_wcut(cap1,40)}.`:(lang==='en'?`${_dn} seems to «prefer» φ over φ². Hypothesis: structure closer to φ. Consistent with: ${_wcut(cap1,40)}.`:`${_dn} pare să «prefere» φ față de φ². Ipoteză: structura sa fizică e mai apropiată de φ. Consistent cu: ${_wcut(cap1,40)}.`)}`],
       ['om',  `${lang==='en'?`∑ Transmit an invented sequence: 1, 4, 9, 16... (perfect squares).`:(lang==='en'?`∑ Transmit invented sequence: 1, 4, 9, 16... (perfect squares).`:`∑ Transmit o secvență inventată: 1, 4, 9, 16... (pătrate perfecte).`)}`],
       ['nhi', `${lang==='en'?`${n.icon} [${_dn}]: Distinct reaction to squares vs Fibonacci — has its own mathematical preferences!`:(lang==='en'?`${n.icon} [${_dn}]: Distinct reaction to squares vs Fibonacci — has own mathematical preferences!`:`${n.icon} [${_dn}]: Reacție distinctă la pătrate față de Fibonacci — are preferințe matematice proprii!`)}`],
       ['ia',  v.confirm],
@@ -8847,7 +8872,7 @@ function buildChannelScript(nhi, channelId, tipIdx) {
       ['ia',  lang==='en'?`[i] Om's diffuse state produces no instrumentally detectable signals. Continuing to monitor.`:`[i] Starea difuză a Om nu produce semnale detectabile instrumental. Continuez monitorizarea.`],
       ['nhi', `${lang==='en'?`${n.icon} [${_dn}]: Normal activity — no stimulus to classify.`:(lang==='en'?`${n.icon} [${_dn}]: Normal activity — no stimulus to classify.`:`${n.icon} [${_dn}]: Activitate normală — nu există stimul de clasificat.`)}`],
       ['ia',  `[i] ${v.limit}`],
-      ['om',  `${lang==='en'?`💡 A sudden insight: ${cap0.slice(0,50)}...`:`💡 Un insight brusc: ${cap0.slice(0,50)}...`}`],
+      ['om',  `${lang==='en'?`💡 A sudden insight: ${_wcut(cap0,50)}...`:`💡 Un insight brusc: ${_wcut(cap0,50)}...`}`],
       ['ia',  lang==='en'?`[i] Om's insight cannot be quantified by Type (i). Requires an LLM. ${v.uncertain}`:`[i] Insight-ul Om nu e cuantificabil de Tip (i). Necesită LLM. ${v.uncertain}`],
       ['sys', lang==='en'?`⚠ 💡 Intuition ${tipTag}: channel incompatible with pure Detection. Recommended: Type (ii) or (iii).`:(lang==='en'?`⚠ 💡 Intuition ${tipTag}: incompatible with pure Detection. Recommended: Type (ii) or (iii).`:`⚠ 💡 Intuiție ${tipTag}: canal incompatibil cu Detecție pură. Recomandat: Tip (ii) sau (iii).`)],
     ] : tip === 1 ? [
@@ -8855,11 +8880,11 @@ function buildChannelScript(nhi, channelId, tipIdx) {
       ['ia',  v.detect],
       ['nhi', `${lang==='en'?`${n.icon} [${_dn}]: Normal activity. Om invisible to NHI — optimal condition for intuitive channel.`:(lang==='en'?`${n.icon} [${_dn}]: Normal activity. Om invisible to NHI — optimal for intuitive channel.`:`${n.icon} [${_dn}]: Activitate normală. Om este invizibil pentru NHI — condiție optimă pentru canal intuitiv.`)}`],
       ['ia',  `${lang==='en'?`Ideal condition! Maximum non-interference. Monitoring Om's state.`:(lang==='en'?`Ideal condition! Maximum non-interference. Monitoring Om state.`:`Condiție ideală! Non-interferența maximă. Monitorizez starea Om.`)}`],
-      ['om',  `${lang==='en'?`💡 Sudden insight: ${cap0.slice(0,60)}... — information I had not verbalised.`:(lang==='en'?`💡 Sudden insight: ${cap0.slice(0,60)}... — information I had not verbalised.`:`💡 Insight brusc: ${cap0.slice(0,60)}... — informație pe care nu o verbalizasem.`)}`],
+      ['om',  `${lang==='en'?`💡 Sudden insight: ${_wcut(cap0,60)}... — information I had not verbalised.`:(lang==='en'?`💡 Sudden insight: ${_wcut(cap0,60)}... — information I had not verbalised.`:`💡 Insight brusc: ${_wcut(cap0,60)}... — informație pe care nu o verbalizasem.`)}`],
       ['ia',  v.analyze],
       ['nhi', `${lang==='en'?`${n.icon} [${_dn}]: At that exact moment — unusual behaviour: sudden change of direction.`:(lang==='en'?`${n.icon} [${_dn}]: At that exact moment — unusual behaviour: sudden direction change.`:`${n.icon} [${_dn}]: Exact în acel moment — comportament neobișnuit: schimbare bruscă de direcție.`)}`],
       ['ia',  lang==='en'?`Om–NHI synchronicity (±2s). ${v.uncertain}`:`Sincronicitate Om-NHI (±2s). ${v.uncertain}`],
-      ['om',  `${lang==='en'?`💡 Second insight: connecting ${n.icon} to ${cap1.slice(0,40)}.`:`💡 Al doilea insight: leg ${n.icon} de ${cap1.slice(0,40)}.`}`],
+      ['om',  `${lang==='en'?`💡 Second insight: connecting ${n.icon} to ${_wcut(cap1,40)}.`:`💡 Al doilea insight: leg ${n.icon} de ${_wcut(cap1,40)}.`}`],
       ['ia',  v.confirm],
       ['sys', lang==='en'?`✓ 💡 Intuition ${tipTag}: mindfulness→insight×2→sync→partial validation. ${loc0}.`:(lang==='en'?`✓ 💡 Intuition ${tipTag}: mindfulness→insight×2→sync→partial validation. ${loc0}.`:`✓ 💡 Intuiție ${tipTag}: mindfulness→insight×2→sinc→validare parțială. ${loc0}.`)],
     ] : [
@@ -8867,7 +8892,7 @@ function buildChannelScript(nhi, channelId, tipIdx) {
       ['ia',  v.detect],
       ['nhi', `${lang==='en'?`${n.icon} [${_dn}]: Present. Om's emotional field detected by ${_dn}?`:(lang==='en'?`${n.icon} [${_dn}]: Present. Om's emotional field detected by ${_dn}?`:`${n.icon} [${_dn}]: Prezent. Câmpul emoțional al Om detectat de ${_dn}?`)}`],
       ['ia',  `${lang==='en'?`Hypothesis: ${_dn} perceives Om's inner state through ${n.type}. Modelling how human attention would «look» to such a being.`:(lang==='en'?`Hypothesis: ${_dn} perceives Om's inner state through ${n.type}. Modelling how human attention «looks» to such a being.`:`Ipoteză: ${_dn} percepe starea interioară a Om prin ${n.type}. Modelez cum ar «arăta» atenția umană pentru o astfel de ființă.`)}`],
-      ['om',  `${lang==='en'?`💡 A clear image appears: I see ${n.icon} communicating something about ${cap0.slice(0,40)}.`:(lang==='en'?`💡 Clear image: I see ${n.icon} communicating about ${cap0.slice(0,40)}.`:`💡 O imagine clară apare: văd ${n.icon} comunicând ceva despre ${cap0.slice(0,40)}.`)}`],
+      ['om',  `${lang==='en'?`💡 A clear image appears: I see ${n.icon} communicating something about ${_wcut(cap0,40)}.`:(lang==='en'?`💡 Clear image: I see ${n.icon} communicating about ${_wcut(cap0,40)}.`:`💡 O imagine clară apare: văd ${n.icon} comunicând ceva despre ${_wcut(cap0,40)}.`)}`],
       ['ia',  `${lang==='en'?`Om's image contains verifiable information about ${_dn}. Source: deep unconscious or real contact?`:(lang==='en'?`Om's image contains verifiable information about ${_dn}. Source: deep unconscious or real contact?`:`Imaginea Om conține informație verificabilă despre ${_dn}. Sursă: inconștient profund sau contact real?`)}`],
       ['nhi', `${lang==='en'?`${n.icon} [${_dn}]: Produces a rare, unusual signal at the moment of Om's image.`:(lang==='en'?`${n.icon} [${_dn}]: Produces a rare, unusual signal at the moment of Om's image.`:`${n.icon} [${_dn}]: Produce un semnal rar, neobișnuit, în momentul imaginii Om.`)}`],
       ['ia',  `${lang==='en'?`NHI signal + Om image co-occurrence: Φ-system resonance detected. Contact hypothesis supported.`:(lang==='en'?`NHI signal + Om image co-occurrence: Φ-system resonance detected. Contact hypothesis supported.`:`Co-apariție semnal NHI + imagine Om: rezonanță Φ-sistem detectată. Ipoteza contactului susținută.`)}`],
@@ -8893,7 +8918,7 @@ function buildChannelScript(nhi, channelId, tipIdx) {
       ['nhi', `${lang==='en'?`${n.icon} [${_dn}] (inner): Symbolic response — image of «${n.type}» appears without words.`:(lang==='en'?`${n.icon} [${_dn}] (inner): Symbolic response — image of «${n.type}» appears without words.`:`${n.icon} [${_dn}] (interior): Răspuns simbolic — imagine de «${n.type}» apare fără cuvinte.`)}`],
       ['ia',  v.analyze],
       ['om',  `${lang==='en'?`⊕ Drawing the symbol of ${_dn} based on inner experience.`:(lang==='en'?`⊕ Drawing the symbol of ${_dn} based on inner experience.`:`⊕ Desenez simbolul ${_dn} bazat pe experiența interioară.`)}`],
-      ['ia',  `${lang==='en'?`The symbol contains elements from: ${cap1.slice(0,50)}. ${v.uncertain}`:(lang==='en'?`The symbol contains elements from: ${cap1.slice(0,50)}. ${v.uncertain}`:`Simbolul conține elemente din: ${cap1.slice(0,50)}. ${v.uncertain}`)}`],
+      ['ia',  `${lang==='en'?`The symbol contains elements from: ${_wcut(cap1,50)}. ${v.uncertain}`:(lang==='en'?`The symbol contains elements from: ${_wcut(cap1,50)}. ${v.uncertain}`:`Simbolul conține elemente din: ${_wcut(cap1,50)}. ${v.uncertain}`)}`],
       ['nhi', `${lang==='en'?`${n.icon} [${_dn}]: Presence dissolves naturally.`:(lang==='en'?`${n.icon} [${_dn}]: Presence dissolves naturally.`:`${n.icon} [${_dn}]: Prezența se dizolvă natural.`)}`],
       ['ia',  v.confirm],
       ['sys', lang==='en'?`✓ ⊕ Symbolic ${tipTag}: theta→archetype→inner dialogue→symbol→dissolution. ${loc0}.`:`✓ ⊕ Simbolic ${tipTag}: theta→arhetip→dialog interior→simbol→dizolvare. ${loc0}.`],
@@ -8902,7 +8927,7 @@ function buildChannelScript(nhi, channelId, tipIdx) {
       ['ia',  v.greet],
       ['nhi', `${lang==='en'?`${n.icon} [${_dn}]: Om's and ${_dn}'s Φ-fields entering resonance.`:(lang==='en'?`${n.icon} [${_dn}]: Om's and ${_dn}'s Φ-fields entering resonance.`:`${n.icon} [${_dn}]: Câmpul Φ al Om și al ${_dn} intră în rezonanță.`)}`],
       ['ia',  `${lang==='en'?`Modelling ${_dn}'s subjective experience: how does a being of type «${n.type}» «feel» the world? Generating internal perspective.`:(lang==='en'?`Modelling ${_dn}'s subjective experience: how does a «${n.type}» being «feel» the world?`:`Modelez experiența subiectivă a lui ${_dn}: cum «simte» lumea o ființă de tip «${n.type}»? Generez perspectiva internă.`)}`],
-      ['om',  `${lang==='en'?`⊕ Seeing the world through ${_dn}'s «eyes»: ${cap0.slice(0,50)}...`:(lang==='en'?`⊕ Seeing the world through ${_dn}'s «eyes»: ${cap0.slice(0,50)}...`:`⊕ Văd lumea prin «ochii» lui ${_dn}: ${cap0.slice(0,50)}...`)}`],
+      ['om',  `${lang==='en'?`⊕ Seeing the world through ${_dn}'s «eyes»: ${_wcut(cap0,50)}...`:(lang==='en'?`⊕ Seeing the world through ${_dn}'s «eyes»: ${_wcut(cap0,50)}...`:`⊕ Văd lumea prin «ochii» lui ${_dn}: ${_wcut(cap0,50)}...`)}`],
       ['ia',  `${lang==='en'?`Om's perspective matches my subjective experience model of ${_dn}! Fidelity: >80%.`:(lang==='en'?`Om's perspective matches my subjective experience model of ${_dn}! Fidelity: >80%.`:`Perspectiva Om coincide cu modelul meu de experiență subiectivă ${_dn}! Fidelitate: >80%.`)}`],
       ['nhi', `${lang==='en'?`${n.icon} [${_dn}]: Unusual openness behaviour toward Om's presence.`:(lang==='en'?`${n.icon} [${_dn}]: Unusual openness toward Om's presence.`:`${n.icon} [${_dn}]: Comportament neobișnuit de deschidere față de prezența Om.`)}`],
       ['ia',  `${lang==='en'?`${_dn} detects the resonance! Possible temporary Om↔NHI co-consciousness mediated by Φ-system.`:(lang==='en'?`${_dn} detects the resonance! Possible temporary Om↔NHI co-consciousness mediated by Φ-system.`:`${_dn} detectează rezonanța! Posibilă co-conștiință temporară Om↔NHI mediată de Φ-sistem.`)}`],
@@ -8939,7 +8964,7 @@ function buildChannelScript(nhi, channelId, tipIdx) {
       ['om',  `${lang==='en'?`◇ Seeing ${n.icon} 5 times in 2 hours — 10× above baseline frequency.`:(lang==='en'?`◇ Seeing ${n.icon} 5 times in 2 hours — 10× above baseline frequency.`:`◇ Văd ${n.icon} de 5 ori în 2 ore — frecvență de 10× față de baseline.`)}`],
       ['ia',  `${lang==='en'?`10× frequency → p<0.001 vs Poisson distribution. Does Om's intention field modify NHI distribution in environment?`:(lang==='en'?`10× frequency → p<0.001 vs Poisson. Does Om's intention field modify NHI distribution?`:`10× frecvența → p<0.001 față de distribuția Poisson. Câmpul intenție Om modifică distribuția NHI în mediu?`)}`],
       ['nhi', lang==='en'?`${n.icon} [${_dn}]: Behaviour oriented toward Om — no obvious stimulus.`:`${n.icon} [${_dn}]: Comportament orientat spre Om — fără stimul evident.`],
-      ['ia',  `${lang==='en'?`${_dn} turned toward Om! Intention field → NHI orientation: possible mechanism via ${cap2.slice(0,40)}.`:(lang==='en'?`${_dn} turned toward Om! Intention field → NHI orientation: possible mechanism via ${cap2.slice(0,40)}.`:`${_dn} s-a «întors» spre Om! Câmpul intenție → orientare NHI: mecanism posibil prin ${cap2.slice(0,40)}.`)}`],
+      ['ia',  `${lang==='en'?`${_dn} turned toward Om! Intention field → NHI orientation: possible mechanism via ${_wcut(cap2,40)}.`:(lang==='en'?`${_dn} turned toward Om! Intention field → NHI orientation: possible mechanism via ${_wcut(cap2,40)}.`:`${_dn} s-a «întors» spre Om! Câmpul intenție → orientare NHI: mecanism posibil prin ${_wcut(cap2,40)}.`)}`],
       ['om',  `${lang==='en'?`◇ Final synchronicity: ambient music plays exactly the characteristic sound of ${_dn}.`:(lang==='en'?`◇ Final synchronicity: ambient music plays exactly the characteristic sound of ${_dn}.`:`◇ Sincronicitate finală: muzica de ambient redă exact sunetul caracteristic al ${_dn}.`)}`],
       ['ia',  v.confirm],
       ['sys', lang==='en'?`✓ ◇ Sync ${tipTag}: intention→10×frequency→NHI orientation→audio sync. Φ-field confirmed.`:(lang==='en'?`✓ ◇ Sync ${tipTag}: intention→10×frequency→NHI orientation→audio sync. Φ-field confirmed.`:`✓ ◇ Sinc ${tipTag}: intenție→10×frecvență→orientare NHI→sincronic audio. Φ-câmp confirmat.`)],
@@ -9685,7 +9710,7 @@ function selectUAP(u) {
   const script = ((lang==='en'&&window.UAP_PROTOCOLS_EN&&UAP_PROTOCOLS_EN[uapKeyFor(u)])||UAP_PROTOCOLS[uapKeyFor(u)]) || [
     ['sys',`▸ Protocol detecție UAP — ${u.name} (${u.year})`],
     ['om', `👁 Inițiez analiza cazului: ${u.name}. Locație: ${u.loc}.`],
-    ['ia', `Nivel evidență: ${lvlTxt[u.level]}. Sursă: ${u.ev.substring(0,60)}...`],
+    ['ia', `Nivel evidență: ${lvlTxt[u.level]}. Sursă: ${_wcut(u.ev,60)}...`],
     ['ia', 'Analizez datele disponibile prin sistemul multi-spectral IA Tip (i)/(ii).'],
     ['nhi','🛸 [UAP]: Date comportamentale disponibile din rapoarte. Nicio comunicare directă confirmată.'],
     ['ia', 'Aplicând criteriile Cap. 14: observație ≠ inferență NHI. Saltul logic trebuie evitat.'],
@@ -11229,7 +11254,7 @@ window.addEventListener('error', function(e){
 })();
 </script>
 <!-- tf-donate: sprijin voluntar (Patreon + Buy Me a Coffee) — self-contained, fără resurse externe, fără JS -->
-<div id="tf-donate" aria-label="Sprijină autorul">
+<div id="tf-donate" role="complementary" aria-label="Sprijină autorul">
 <style>
 #tf-donate{position:fixed;right:14px;bottom:14px;z-index:2147483600;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1}
 #tf-donate *{box-sizing:border-box}

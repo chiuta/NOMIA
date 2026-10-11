@@ -1,5 +1,7 @@
 # NOMIA — Om·IA·NHI
 
+**Ultima actualizare:** 11 octombrie 2026 (versiune 0.8.55)
+
 **Live / demo:** https://chiuta.github.io/NOMIA/
 
 ![NOMIA — captură de ecran / screenshot](screenshot.png)
@@ -54,3 +56,8 @@ Audit: 2026-10-10 (rundă 3: notă de drepturi și atribuire). Corecturi de acce
 ## Autor
 
 Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf.
+
+## Istoric / Changelog
+
+- **0.8.55 — 11 octombrie 2026:** cât timp o foaie (NHI Browser, meniu, statistici) este deschisă, un clic pe REIA / STOP / ⏸ / »STEP vizibile prin backdrop închide foaia și acționează butonul (înainte backdrop-ul „înghițea” clicul; CLR rămâne neacționat, fiind distructiv); textele din log nu se mai taie în mijlocul cuvintelor (de ex. „name-lik.”) — tăierea se face acum la limită de cuvânt (29 de locuri în șabloanele de dialog + nota de evidență); cache-ul service worker devine `nomia-v4`.
+- Accesibilitate: barele laterale sunt `nav` (rolul `navigation` nu era permis pe `aside`), banner-ul de bun venit și widgetul de sprijin au repere; axe-core: 0 violări la 1280×800 și 360×740. Cele 166 de handlere inline au rămas (CSP-ul păstrează `'unsafe-inline'`; eliminarea lor în masă în 5,4 MB de cod ar fi riscantă). Testele din `tests/` (Python) nu au fost rulate aici (mediul are doar Node/Playwright); verificarea s-a făcut cu Playwright/Node: fără erori JS, sintaxa scripturilor validă, fluxul „foaie deschisă → REIA” funcțional.
