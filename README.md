@@ -1,6 +1,6 @@
 # NOMIA — Om·IA·NHI
 
-**Ficțiune / speculație.** Aplicație conceptuală, companion al antologiei *Printre inteligențe* (2026). Protocoalele, scorurile și „sesiunile” sunt modele narative și conceptuale, nu fapte verificate.
+**Ficțiune / speculație (Fiction / speculation).** Aplicație conceptuală, companion al antologiei *Printre inteligențe* (2026). Protocoalele, scorurile și „sesiunile” sunt modele narative și conceptuale, nu fapte verificate.
 
 ## Ce este
 
@@ -30,6 +30,8 @@ Niciuna. În cod nu există `fetch`/XHR/WebSocket și nici scripturi, fonturi sa
 ## Licență
 
 CC0 1.0 Universal (domeniu public) — vezi fișierul LICENSE. Declarată în antetul `index.html`.
+
+**NOTICE – conținut cu coautor.** Dedicarea CC0 se aplică codului aplicației și textelor scrise de Alexandru-Ionuț Chiuță. Fragmentele care provin din Anexa I, Cap. 14 a antologiei *Printre inteligențe* (2026, semnat Urzică & Chiuță) sunt opera a doi coautori; coautorul nu a confirmat (în materialele auditate) dedicarea CC0 pentru partea sa, iar acest repository nu o presupune. Titlurile și numele unor opere terțe (de ex. *Solaris*, *Norul Negru*, *Monolitul*, *Prima Directivă*) aparțin deținătorilor lor și sunt folosite descriptiv.
 
 ## Audit
 
