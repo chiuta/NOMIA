@@ -33,9 +33,18 @@ CC0 1.0 Universal (domeniu public) — vezi fișierul LICENSE. Declarată în an
 
 **NOTICE – conținut cu coautor.** Dedicarea CC0 se aplică codului aplicației și textelor scrise de Alexandru-Ionuț Chiuță. Fragmentele care provin din Anexa I, Cap. 14 a antologiei *Printre inteligențe* (2026, semnat Urzică & Chiuță) sunt opera a doi coautori; coautorul nu a confirmat (în materialele auditate) dedicarea CC0 pentru partea sa, iar acest repository nu o presupune. Titlurile și numele unor opere terțe (de ex. *Solaris*, *Norul Negru*, *Monolitul*, *Prima Directivă*) aparțin deținătorilor lor și sunt folosite descriptiv.
 
+## Drepturi și atribuire / Rights and attribution
+
+- **Partea autorului:** licența declarată (CC0 1.0) se aplică DOAR codului aplicației și textelor scrise de Alexandru-Ionuț Chiuță.
+- **Coautor:** Anexa I, Cap. 14 din *Printre inteligențe* (Urzică & Chiuță) – coautorul nu a confirmat dedicarea CC0; nu este presupusă.
+- **Materiale terțe:** titluri/nume de opere (folosite descriptiv) și referințele științifice din fișe aparțin titularilor; dedicarea CC0 nu le acoperă.
+- **Rectificare / retragere:** dacă ești titular de drepturi sau persoană menționată și dorești corectarea sau retragerea, scrie la alexio@trom.tf; răspundem în 7 zile.
+
+*EN:* The CC0 1.0 dedication applies ONLY to the code and to texts written by Alexandru-Ionuț Chiuță. The co-authored part (Annex I, Ch. 14, Urzică & Chiuță) is not assumed dedicated; third-party materials belong to their holders and are not covered by CC0. Rights holders or persons mentioned may request correction or withdrawal at alexio@trom.tf (reply within 7 days). The same note is visible in the app (log bar, "Drepturi și atribuire").
+
 ## Audit
 
-Audit: 2026-10-10. Corecturi de accesibilitate (roluri ARIA, contrast în temele luminoasă și întunecată, etichete) și adăugarea notei „Ficțiune / speculație” în aplicație.
+Audit: 2026-10-10 (rundă 3: notă de drepturi și atribuire). Corecturi de accesibilitate (roluri ARIA, contrast în temele luminoasă și întunecată, etichete) și adăugarea notei „Ficțiune / speculație” în aplicație.
 
 ## Autor
 
