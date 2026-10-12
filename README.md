@@ -1,6 +1,6 @@
 # NOMIA — Om·IA·NHI
 
-**Ultima actualizare:** 11 octombrie 2026 (versiune 0.8.57)
+**Versiune:** 0.8.58 · **Ultima actualizare:** 12 octombrie 2026
 
 **Live / demo:** https://chiuta.github.io/NOMIA/
 
@@ -59,6 +59,7 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf.
 
 ## Istoric / Changelog
 
+- **0.8.58 — 2026-10-12:** versiunea și data ultimei actualizări sunt afișate în aplicație (panoul „Statistici · Setări”)
 - **0.8.57 — 11 octombrie 2026:** Escape închide acum banner-ul „Bine ai venit” (textul îl anunța, dar tasta nu făcea nimic), iar banner-ul se închide singur când alegi un NHI (nu mai acoperă jurnalul); canalele incompatibile cu profilul unui NHI au în bara de jos explicația în `title`, iar alegerea lor scrie în jurnal motivul și lista canalelor compatibile (înainte: doar chenar punctat); CSP recalculat; 0 erori, axe 0 violări la 1280×800 și 360×740. Dialogurile-șablon și `style-src 'unsafe-inline'` rămân neschimbate (decizie de conținut / atribute style numeroase).
 - **0.8.56 — 11 octombrie 2026:** cele 168 de handlere inline (`onclick`, `onkeydown`, `oninput`, `onmouseover/out`) sunt înlocuite cu un singur dispecer delegat (`data-onclick` etc. + argumente literale în `data-arg`; fără `eval`/`Function`); paritate verificată prin Playwright (aceleași apeluri de funcții, aceleași argumente și aceeași stare a paginii pentru 156.189 de evenimente simulate, pe 17 stări ale interfeței); CSP cu `script-src 'self'` + hash-uri SHA-256, fără `'unsafe-inline'` pentru script (și fără `blob:` la scripturi); textele de protocol cu habitatul tăiat în paranteză („Africa Centrală (Congo.”) sunt completate cu valoarea întreagă din date (14 șiruri, 7 NHI); toast-ul „Copiat/Copied” la copierea unei linii din log urmează acum limba aplicației. Stilurile inline (`style-src 'unsafe-inline'`) rămân.
 - **0.8.55 — 11 octombrie 2026:** cât timp o foaie (NHI Browser, meniu, statistici) este deschisă, un clic pe REIA / STOP / ⏸ / »STEP vizibile prin backdrop închide foaia și acționează butonul (înainte backdrop-ul „înghițea” clicul; CLR rămâne neacționat, fiind distructiv); textele din log nu se mai taie în mijlocul cuvintelor (de ex. „name-lik.”) — tăierea se face acum la limită de cuvânt (29 de locuri în șabloanele de dialog + nota de evidență); cache-ul service worker devine `nomia-v4`.
