@@ -1,0 +1,94 @@
+{
+  "schema": 1,
+  "slug": "nomia",
+  "name": "NOMIA — Om·IA·NHI Protocol v0.8",
+  "version": "0.9.0",
+  "updated": "2026-10-14",
+  "description": "Protocol de comunicare Om–IA–NHI: explorează 1001 inteligențe non-umane prin sesiuni trilogice imersive.",
+  "egress": [],
+  "permissions": [
+    "navigator.share",
+    "clipboard",
+    "serviceWorker",
+    "localStorage"
+  ],
+  "storageKeys": [
+    "a11y",
+    "nomia_autorun",
+    "nomia_dark",
+    "nomia_disc_v2",
+    "nomia_fav_dates",
+    "nomia_favorites",
+    "nomia_font_size",
+    "nomia_history",
+    "nomia_idmig1",
+    "nomia_last_visit",
+    "nomia_monthly_snapshots",
+    "nomia_ms_",
+    "nomia_nhi_notes",
+    "nomia_night",
+    "nomia_pins",
+    "nomia_protocol_nhi_log",
+    "nomia_protocols",
+    "nomia_saved_searches",
+    "nomia_split",
+    "nomia_stacked",
+    "nomia_streak",
+    "nomia_tutorial_done",
+    "nomia_version"
+  ],
+  "sizeBytes": 5630934,
+  "sha256": "a3cade78a4fde8c938c6049892db95b3c48202b6286c11a8b50e81f9f503a5ff",
+  "csp": {
+    "present": true,
+    "directives": {
+      "default-src": "'self'",
+      "img-src": "'self' data: blob:",
+      "style-src": "'self' 'unsafe-inline'",
+      "font-src": "'self' data:",
+      "media-src": "'self' blob: data:",
+      "object-src": "'none'",
+      "base-uri": "'self'",
+      "form-action": "'self'",
+      "worker-src": "'self' blob:",
+      "script-src": "'self' sha256×9",
+      "connect-src": "'self'"
+    },
+    "scriptInline": "hash",
+    "connect": "'self'"
+  },
+  "features": {
+    "export": true,
+    "import": true,
+    "i18n": [
+      "ro",
+      "en",
+      "fr",
+      "it",
+      "es",
+      "pt",
+      "hu",
+      "de"
+    ],
+    "pwa": {
+      "manifest": true,
+      "serviceWorker": true
+    },
+    "modules": [
+      "core",
+      "label",
+      "bundle",
+      "tts"
+    ]
+  },
+  "kit": {
+    "version": "1.0.0",
+    "modules": [
+      "core",
+      "label",
+      "bundle",
+      "tts"
+    ]
+  },
+  "selfSerializing": false
+}
