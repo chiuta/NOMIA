@@ -7,9 +7,7 @@
   "description": "Protocol de comunicare Om–IA–NHI: explorează 1001 inteligențe non-umane prin sesiuni trilogice imersive.",
   "egress": [],
   "permissions": [
-    "navigator.share",
     "clipboard",
-    "serviceWorker",
     "localStorage"
   ],
   "storageKeys": [
@@ -37,8 +35,8 @@
     "nomia_tutorial_done",
     "nomia_version"
   ],
-  "sizeBytes": 5630887,
-  "sha256": "f658de84bb32861bf6dc50007771273e02de487b7503ab6147da18cdf9fa7486",
+  "sizeBytes": 5511608,
+  "sha256": "81759641c17f8bb20699b7f81787b65f3666a7f68373cd5785e630a154d2ca17",
   "csp": {
     "present": true,
     "directives": {
@@ -62,17 +60,11 @@
     "import": true,
     "i18n": [
       "ro",
-      "en",
-      "fr",
-      "it",
-      "es",
-      "pt",
-      "hu",
-      "de"
+      "en"
     ],
     "pwa": {
       "manifest": true,
-      "serviceWorker": true
+      "serviceWorker": false
     },
     "modules": [
       "core",

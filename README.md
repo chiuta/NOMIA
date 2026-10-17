@@ -22,7 +22,7 @@ NOMIA este o aplicație single-file (`index.html`, PWA) care simulează „proto
 
 ## Ce date pleacă din browser
 
-Niciuna. În cod nu există `fetch`/XHR/WebSocket și nici scripturi, fonturi sau imagini externe (CSP `default-src 'self'`, scripturile permise doar pe hash, fără `'unsafe-inline'` pentru script). Singurele adrese externe sunt linkurile de sprijin (Patreon, Buy Me a Coffee). Preferințele, istoricul sesiunilor, notele și favoritele se păstrează doar în `localStorage` (chei `nomia_*`). Service worker-ul (`sw.js`) ține în cache doar fișierele aceleiași origini pentru funcționare offline.
+Niciuna. În cod nu există `fetch`/XHR/WebSocket și nici scripturi, fonturi sau imagini externe (CSP `default-src 'self'`, scripturile permise doar pe hash, fără `'unsafe-inline'` pentru script). Singurele adrese externe sunt linkurile de sprijin (Buy Me a Coffee). Preferințele, istoricul sesiunilor, notele și favoritele se păstrează doar în `localStorage` (chei `nomia_*`). Service worker-ul (`sw.js`) ține în cache doar fișierele aceleiași origini pentru funcționare offline.
 
 ## Limitări
 
