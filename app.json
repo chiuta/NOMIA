@@ -35,8 +35,8 @@
     "nomia_tutorial_done",
     "nomia_version"
   ],
-  "sizeBytes": 5511608,
-  "sha256": "81759641c17f8bb20699b7f81787b65f3666a7f68373cd5785e630a154d2ca17",
+  "sizeBytes": 5511727,
+  "sha256": "3a946436b59850034a877ed6e96045c3b8b24eb0cfe25e0b47b56585b6173e4e",
   "csp": {
     "present": true,
     "directives": {
@@ -49,7 +49,7 @@
       "base-uri": "'self'",
       "form-action": "'self'",
       "worker-src": "'self' blob:",
-      "script-src": "'self' sha256×9",
+      "script-src": "'self' sha256×4",
       "connect-src": "'self'"
     },
     "scriptInline": "hash",
