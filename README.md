@@ -1,6 +1,6 @@
 # NOMIA — Om·IA·NHI
 
-**Versiune:** 0.9.0 · **Ultima actualizare:** 14 octombrie 2026
+**Versiune:** 0.9.1 · **Ultima actualizare:** 18 octombrie 2026
 
 **Live / demo:** https://chiuta.github.io/NOMIA/
 
@@ -61,12 +61,13 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf.
 
 - **Citirea jurnalului de protocol cu voce** (butonul 🔊 din antetul jurnalului, FFF.tts): citește liniile mesajelor în ordine (fără etichetele OM/IA/NHI), cu vocea locală a browserului, în limba activă (ro/en); „⏹” oprește. Textul nu pleacă din dispozitiv; dacă nu există voce, apare un mesaj. Nu citește jurnalul pe măsură ce apare, ci ce este afișat în momentul apăsării.
 - **Etichetă de transparență și copie .fff.json** (kit comun: core, label, bundle, tts): clic pe `v 0.9.0 · 2026-10-14` din „Statistici · Setări”; arată stocarea locală și rețeaua (0 cereri), exportă/importă (opțional criptat cu parolă) istoricul, fixările și setările. Exporturile existente (TXT, Markdown, snapshot) rămân.
-- Cache Service Worker: nomia-v5. CSP neschimbat (doar hash-urile scripturilor, recalculate).
+- Cache Service Worker: nomia-v6. CSP neschimbat (doar hash-urile scripturilor, recalculate).
 - Textele noi sunt în ro, en, fr, it, es, pt, hu, de; traducerile fr/it/es/pt/hu/de sunt automate și neverificate nativ.
 - Teste: `tests/fff-r8.test.mjs` (Node + Playwright; rețea blocată, 1280 și 360 px, axe 0 violări); testele Python existente rulează ca înainte.
 
 ## Istoric / Changelog
 
+- **0.9.1 — 18 octombrie 2026:** linkul `?nhi=<id>` acceptă id-uri cu diacritice (`murmurații`, `leopard-nebuloși`; regex Unicode `\p{L}`), iar „Copiază link” codifică id-ul (`encodeURIComponent`); cache SW nomia-v6; teste pentru `?nhi=`.
 - **0.9.0 — 14 octombrie 2026:** citirea jurnalului cu voce (FFF.tts); etichetă de transparență și copie .fff.json (kit comun); cache SW nomia-v5; teste `tests/fff-r8.test.mjs`.
 
 - **0.8.58 — 2026-10-12:** versiunea și data ultimei actualizări sunt afișate în aplicație (panoul „Statistici · Setări”)
