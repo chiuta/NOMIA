@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 0.9.1 · **Ultimo aggiornamento:** 2026-10-18
+**Versione:** 0.10.0 · **Ultimo aggiornamento:** 2026-10-19
+
+Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 **Online / demo:** https://chiuta.github.io/NOMIA/
 
@@ -12,7 +14,7 @@
 
 ## Cos'è
 
-NOMIA è un'applicazione in un unico file (`index.html`, PWA) che simula «protocolli di contatto» trilogici Uomo–IA–NHI (intelligenze non umane) su 5 canali (matematico, intuizione, simbolico, sincronicità, modifica dello stato), in rumeno e inglese. Il catalogo contiene 1001 voci in 14 categorie: animali (primati, cetacei, mammiferi, uccelli, cefalopodi, insetti, fauna della Romania), entità collettive e non neuronali, «Tradizioni esoteriche», «Tradizioni religiose» e «Ipotesi moderne» (comprese ipotesi su UAP/NHI). Le voci sugli animali si basano sulla letteratura scientifica citata nelle schede; le voci esoteriche e religiose e le ipotesi su UAP/NHI sono presentate come idee, non come prove, e le schede le segnalano spesso come speculative o non confermate. Il pannello «Asse B» avverte esplicitamente: «elevata incertezza epistemica».
+NOMIA è un'applicazione in un unico file (`index.html`, PWA) che simula «protocolli di contatto» trilogici Uomo–IA–NHI (intelligenze non umane) su 5 canali (matematico, intuizione, simbolico, sincronicità, modifica dello stato), con interfaccia in 8 lingue (RO, EN, FR, IT, ES, PT, DE, HU; il catalogo e i testi lunghi sono in rumeno e inglese). Il catalogo contiene 1001 voci in 14 categorie: animali (primati, cetacei, mammiferi, uccelli, cefalopodi, insetti, fauna della Romania), entità collettive e non neuronali, «Tradizioni esoteriche», «Tradizioni religiose» e «Ipotesi moderne» (comprese ipotesi su UAP/NHI). Le voci sugli animali si basano sulla letteratura scientifica citata nelle schede; le voci esoteriche e religiose e le ipotesi su UAP/NHI sono presentate come idee, non come prove, e le schede le segnalano spesso come speculative o non confermate. Il pannello «Asse B» avverte esplicitamente: «elevata incertezza epistemica».
 
 ## Come si usa
 

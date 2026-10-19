@@ -2,7 +2,9 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 0.9.1 · **Last updated:** 2026-10-18
+**Version:** 0.10.0 · **Last updated:** 2026-10-19
+
+Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 **Live / demo:** https://chiuta.github.io/NOMIA/
 
@@ -12,7 +14,7 @@
 
 ## What it is
 
-NOMIA is a single-file application (`index.html`, PWA) that simulates trilogic Human–AI–NHI (non-human intelligences) "contact protocols" across 5 channels (mathematical, intuition, symbolic, synchronicities, altered state), in Romanian and English. The catalog contains 1001 entries in 14 categories: animals (primates, cetaceans, mammals, birds, cephalopods, insects, fauna of Romania), collective and non-neuronal entities, "Esoteric traditions", "Religious traditions" and "Modern hypotheses" (including hypotheses about UAP/NHI). The entries about animals are based on scientific literature cited in the sheets; the esoteric and religious entries and the UAP/NHI hypotheses are presented as ideas, not as evidence, and the sheets often mark them as speculative or unconfirmed. The "Axis B" panel explicitly warns: "high epistemic uncertainty".
+NOMIA is a single-file application (`index.html`, PWA) that simulates trilogic Human–AI–NHI (non-human intelligences) "contact protocols" across 5 channels (mathematical, intuition, symbolic, synchronicities, altered state), with an interface in 8 languages (RO, EN, FR, IT, ES, PT, DE, HU; the catalog and long texts are in Romanian and English). The catalog contains 1001 entries in 14 categories: animals (primates, cetaceans, mammals, birds, cephalopods, insects, fauna of Romania), collective and non-neuronal entities, "Esoteric traditions", "Religious traditions" and "Modern hypotheses" (including hypotheses about UAP/NHI). The entries about animals are based on scientific literature cited in the sheets; the esoteric and religious entries and the UAP/NHI hypotheses are presented as ideas, not as evidence, and the sheets often mark them as speculative or unconfirmed. The "Axis B" panel explicitly warns: "high epistemic uncertainty".
 
 ## How to use
 

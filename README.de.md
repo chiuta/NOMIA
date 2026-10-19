@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 0.9.1 · **Zuletzt aktualisiert:** 2026-10-18
+**Version:** 0.10.0 · **Zuletzt aktualisiert:** 2026-10-19
+
+Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 **Online / Demo:** https://chiuta.github.io/NOMIA/
 
@@ -12,7 +14,7 @@
 
 ## Was es ist
 
-NOMIA ist eine Ein-Datei-Anwendung (`index.html`, PWA), die trilogische „Kontaktprotokolle“ Mensch–KI–NHI (nichtmenschliche Intelligenzen) auf 5 Kanälen simuliert (mathematisch, Intuition, symbolisch, Synchronizitäten, Zustandsveränderung), auf Rumänisch und Englisch. Der Katalog enthält 1001 Einträge in 14 Kategorien: Tiere (Primaten, Wale und Delfine, Säugetiere, Vögel, Kopffüßer, Insekten, Fauna Rumäniens), kollektive und nicht-neuronale Entitäten, „Esoterische Traditionen“, „Religiöse Traditionen“ und „Moderne Hypothesen“ (einschließlich Hypothesen zu UAP/NHI). Die Einträge zu Tieren stützen sich auf wissenschaftliche Literatur, die in den Datenblättern zitiert wird; die esoterischen und religiösen Einträge sowie die Hypothesen zu UAP/NHI werden als Ideen, nicht als Belege dargestellt, und die Datenblätter kennzeichnen sie oft als spekulativ oder unbestätigt. Das Panel „Achse B“ warnt ausdrücklich: „hohe epistemische Unsicherheit“.
+NOMIA ist eine Ein-Datei-Anwendung (`index.html`, PWA), die trilogische „Kontaktprotokolle“ Mensch–KI–NHI (nichtmenschliche Intelligenzen) auf 5 Kanälen simuliert (mathematisch, Intuition, symbolisch, Synchronizitäten, Zustandsveränderung), mit einer Oberfläche in 8 Sprachen (RO, EN, FR, IT, ES, PT, DE, HU; der Katalog und die langen Texte sind auf Rumänisch und Englisch). Der Katalog enthält 1001 Einträge in 14 Kategorien: Tiere (Primaten, Wale und Delfine, Säugetiere, Vögel, Kopffüßer, Insekten, Fauna Rumäniens), kollektive und nicht-neuronale Entitäten, „Esoterische Traditionen“, „Religiöse Traditionen“ und „Moderne Hypothesen“ (einschließlich Hypothesen zu UAP/NHI). Die Einträge zu Tieren stützen sich auf wissenschaftliche Literatur, die in den Datenblättern zitiert wird; die esoterischen und religiösen Einträge sowie die Hypothesen zu UAP/NHI werden als Ideen, nicht als Belege dargestellt, und die Datenblätter kennzeichnen sie oft als spekulativ oder unbestätigt. Das Panel „Achse B“ warnt ausdrücklich: „hohe epistemische Unsicherheit“.
 
 ## Verwendung
 

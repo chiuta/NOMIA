@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 0.9.1 · **Última atualização:** 2026-10-18
+**Versão:** 0.10.0 · **Última atualização:** 2026-10-19
+
+Idiomas da interface: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 **Online / demo:** https://chiuta.github.io/NOMIA/
 
@@ -12,7 +14,7 @@
 
 ## O que é
 
-O NOMIA é uma aplicação de um único ficheiro (`index.html`, PWA) que simula «protocolos de contacto» trilógicos Humano–IA–NHI (inteligências não humanas) em 5 canais (matemático, intuição, simbólico, sincronicidades, alteração do estado), em romeno e inglês. O catálogo contém 1001 entradas em 14 categorias: animais (primatas, cetáceos, mamíferos, aves, cefalópodes, insetos, fauna da Roménia), entidades coletivas e não neuronais, «Tradições esotéricas», «Tradições religiosas» e «Hipóteses modernas» (incluindo hipóteses sobre UAP/NHI). As entradas sobre animais baseiam-se em literatura científica citada nas fichas; as entradas esotéricas e religiosas e as hipóteses sobre UAP/NHI são apresentadas como ideias, não como provas, e as fichas assinalam-nas muitas vezes como especulativas ou não confirmadas. O painel «Eixo B» avisa explicitamente: «elevada incerteza epistémica».
+O NOMIA é uma aplicação de um único ficheiro (`index.html`, PWA) que simula «protocolos de contacto» trilógicos Humano–IA–NHI (inteligências não humanas) em 5 canais (matemático, intuição, simbólico, sincronicidades, alteração do estado), com interface em 8 idiomas (RO, EN, FR, IT, ES, PT, DE, HU; o catálogo e os textos longos estão em romeno e inglês). O catálogo contém 1001 entradas em 14 categorias: animais (primatas, cetáceos, mamíferos, aves, cefalópodes, insetos, fauna da Roménia), entidades coletivas e não neuronais, «Tradições esotéricas», «Tradições religiosas» e «Hipóteses modernas» (incluindo hipóteses sobre UAP/NHI). As entradas sobre animais baseiam-se em literatura científica citada nas fichas; as entradas esotéricas e religiosas e as hipóteses sobre UAP/NHI são apresentadas como ideias, não como provas, e as fichas assinalam-nas muitas vezes como especulativas ou não confirmadas. O painel «Eixo B» avisa explicitamente: «elevada incerteza epistémica».
 
 ## Como se utiliza
 

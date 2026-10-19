@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 0.9.1 · **Utolsó frissítés:** 2026-10-18
+**Verzió:** 0.10.0 · **Utolsó frissítés:** 2026-10-19
+
+A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 **Élő változat / demó:** https://chiuta.github.io/NOMIA/
 
@@ -12,7 +14,7 @@
 
 ## Mi ez
 
-A NOMIA egyetlen fájlból álló alkalmazás (`index.html`, PWA), amely trilógikus Ember–MI–NHI (nem emberi intelligenciák) „kapcsolatfelvételi protokollokat” szimulál 5 csatornán (matematikai, intuíció, szimbolikus, szinkronicitások, tudatállapot-módosítás), románul és angolul. A katalógus 1001 bejegyzést tartalmaz 14 kategóriában: állatok (főemlősök, cetfélék, emlősök, madarak, fejlábúak, rovarok, Románia faunája), kollektív és nem neuronális entitások, „Ezoterikus hagyományok”, „Vallási hagyományok” és „Modern hipotézisek” (az UAP/NHI-ra vonatkozó hipotéziseket is beleértve). Az állatokról szóló bejegyzések a lapokon idézett tudományos szakirodalomra támaszkodnak; az ezoterikus és vallási bejegyzések, valamint az UAP/NHI-hipotézisek ötletként, nem bizonyítékként jelennek meg, és a lapok gyakran spekulatívnak vagy meg nem erősítettnek jelölik őket. A „B tengely” panel kifejezetten figyelmeztet: „magas episztemikus bizonytalanság”.
+A NOMIA egyetlen fájlból álló alkalmazás (`index.html`, PWA), amely trilógikus Ember–MI–NHI (nem emberi intelligenciák) „kapcsolatfelvételi protokollokat” szimulál 5 csatornán (matematikai, intuíció, szimbolikus, szinkronicitások, tudatállapot-módosítás), 8 nyelvű felülettel (RO, EN, FR, IT, ES, PT, DE, HU; a katalógus és a hosszú szövegek románul és angolul vannak). A katalógus 1001 bejegyzést tartalmaz 14 kategóriában: állatok (főemlősök, cetfélék, emlősök, madarak, fejlábúak, rovarok, Románia faunája), kollektív és nem neuronális entitások, „Ezoterikus hagyományok”, „Vallási hagyományok” és „Modern hipotézisek” (az UAP/NHI-ra vonatkozó hipotéziseket is beleértve). Az állatokról szóló bejegyzések a lapokon idézett tudományos szakirodalomra támaszkodnak; az ezoterikus és vallási bejegyzések, valamint az UAP/NHI-hipotézisek ötletként, nem bizonyítékként jelennek meg, és a lapok gyakran spekulatívnak vagy meg nem erősítettnek jelölik őket. A „B tengely” panel kifejezetten figyelmeztet: „magas episztemikus bizonytalanság”.
 
 ## Hogyan használható
 

@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 0.9.1 · **Dernière mise à jour :** 2026-10-18
+**Version :** 0.10.0 · **Dernière mise à jour :** 2026-10-19
+
+Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 **En ligne / démo :** https://chiuta.github.io/NOMIA/
 
@@ -12,7 +14,7 @@
 
 ## De quoi s'agit-il
 
-NOMIA est une application en un seul fichier (`index.html`, PWA) qui simule des « protocoles de contact » trilogiques Humain–IA–NHI (intelligences non humaines) sur 5 canaux (mathématique, intuition, symbolique, synchronicités, modification de l'état), en roumain et en anglais. Le catalogue contient 1001 entrées réparties en 14 catégories : animaux (primates, cétacés, mammifères, oiseaux, céphalopodes, insectes, faune de Roumanie), entités collectives et non neuronales, « Traditions ésotériques », « Traditions religieuses » et « Hypothèses modernes » (y compris des hypothèses sur les UAP/NHI). Les entrées sur les animaux reposent sur la littérature scientifique citée dans les fiches ; les entrées ésotériques, religieuses et les hypothèses sur les UAP/NHI sont présentées comme des idées, non comme des preuves, et les fiches les signalent souvent comme spéculatives ou non confirmées. Le panneau « Axe B » avertit explicitement : « incertitude épistémique élevée ».
+NOMIA est une application en un seul fichier (`index.html`, PWA) qui simule des « protocoles de contact » trilogiques Humain–IA–NHI (intelligences non humaines) sur 5 canaux (mathématique, intuition, symbolique, synchronicités, modification de l'état), avec une interface en 8 langues (RO, EN, FR, IT, ES, PT, DE, HU ; le catalogue et les longs textes sont en roumain et en anglais). Le catalogue contient 1001 entrées réparties en 14 catégories : animaux (primates, cétacés, mammifères, oiseaux, céphalopodes, insectes, faune de Roumanie), entités collectives et non neuronales, « Traditions ésotériques », « Traditions religieuses » et « Hypothèses modernes » (y compris des hypothèses sur les UAP/NHI). Les entrées sur les animaux reposent sur la littérature scientifique citée dans les fiches ; les entrées ésotériques, religieuses et les hypothèses sur les UAP/NHI sont présentées comme des idées, non comme des preuves, et les fiches les signalent souvent comme spéculatives ou non confirmées. Le panneau « Axe B » avertit explicitement : « incertitude épistémique élevée ».
 
 ## Mode d'emploi
 
