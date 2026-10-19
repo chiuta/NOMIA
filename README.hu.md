@@ -8,7 +8,7 @@ A felület nyelvei: **Română, English, Français, Italiano, Español, Portugu�
 
 **Élő változat / demó:** https://chiuta.github.io/NOMIA/
 
-![NOMIA — képernyőkép](screenshot.png)
+![NOMIA — képernyőkép](screenshot.hu.png)
 
 **Fikció / spekuláció.** Koncepcionális alkalmazás, a *Printre inteligențe* (2026) antológia kísérője. A protokollok, pontszámok és „munkamenetek” narratív és koncepcionális modellek, nem ellenőrzött tények.
 

@@ -8,7 +8,7 @@ Oberflächensprachen: **Română, English, Français, Italiano, Español, Portug
 
 **Online / Demo:** https://chiuta.github.io/NOMIA/
 
-![NOMIA — Screenshot](screenshot.png)
+![NOMIA — Screenshot](screenshot.de.png)
 
 **Fiktion / Spekulation.** Konzeptionelle Anwendung, Begleiterin der Anthologie *Printre inteligențe* (2026). Die Protokolle, Punktzahlen und „Sitzungen“ sind narrative und konzeptionelle Modelle, keine überprüften Tatsachen.
 

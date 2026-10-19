@@ -8,7 +8,7 @@ Langues de l'interface : **Română, English, Français, Italiano, Español, Por
 
 **En ligne / démo :** https://chiuta.github.io/NOMIA/
 
-![NOMIA — capture d'écran](screenshot.png)
+![NOMIA — capture d'écran](screenshot.fr.png)
 
 **Fiction / spéculation.** Application conceptuelle, compagnon de l'anthologie *Printre inteligențe* (2026). Les protocoles, les scores et les « sessions » sont des modèles narratifs et conceptuels, non des faits vérifiés.
 

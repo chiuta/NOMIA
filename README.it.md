@@ -8,7 +8,7 @@ Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Por
 
 **Online / demo:** https://chiuta.github.io/NOMIA/
 
-![NOMIA — schermata](screenshot.png)
+![NOMIA — schermata](screenshot.it.png)
 
 **Finzione / speculazione.** Applicazione concettuale, compagna dell'antologia *Printre inteligențe* (2026). I protocolli, i punteggi e le «sessioni» sono modelli narrativi e concettuali, non fatti verificati.
 
