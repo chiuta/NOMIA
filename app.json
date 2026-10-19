@@ -35,8 +35,8 @@
     "nomia_tutorial_done",
     "nomia_version"
   ],
-  "sizeBytes": 5511757,
-  "sha256": "b4c28b5ad9e0439679378b1ff095ef8c2a0fefdc2f678dfcc08964a018337493",
+  "sizeBytes": 5512393,
+  "sha256": "f67529f84419f55994df6db4d9a97dd4fef45bdac78a7d296bc696cb36fe5fe8",
   "csp": {
     "present": true,
     "directives": {
@@ -74,7 +74,7 @@
     ]
   },
   "kit": {
-    "version": "1.1.0",
+    "version": "1.1.1",
     "modules": [
       "core",
       "label",
