@@ -74,7 +74,7 @@ ok(errs.length === 0, 'fără pageerror/CSP la pornire', errs); ok(net.length ==
   const b = await page.evaluate(async () => JSON.stringify(await FFF.bundle.build()));
   ok(/"app":"nomia"/.test(b) && /nomia_pins/.test(b), 'copia .fff.json conține datele NOMIA');
   // etichetă: panoul Statistici · Setări conține #app-version
-  ok((await page.evaluate(() => document.getElementById('app-version').textContent)) === 'v 0.9.1 · 2026-10-18', 'versiune afișată');
+  ok((await page.evaluate(() => document.getElementById('app-version').textContent)) === 'v ' + (await page.evaluate(() => document.querySelector('meta[name="application-version"]').content)) + ' · 2026-10-19', 'versiune afișată (coerentă cu meta application-version)');
   await ctx.close();
 }
 ok(errs.length === 0, 'fără pageerror/CSP în tot setul', errs); ok(net.length === 0, '0 cereri de rețea în tot setul', net);
