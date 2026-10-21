@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 0.10.4 · **Last updated:** 2026-10-19
+**Version:** 0.10.5 · **Last updated:** 2026-10-19
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -14,7 +14,7 @@ Interface languages: **Română, English, Français, Italiano, Español, Portugu
 
 ## What it is
 
-NOMIA is a single-file application (`index.html`, PWA) that simulates trilogic Human–AI–NHI (non-human intelligences) "contact protocols" across 5 channels (mathematical, intuition, symbolic, synchronicities, altered state), with an interface in 8 languages (RO, EN, FR, IT, ES, PT, DE, HU; the catalog and long texts are in Romanian and English). The catalog contains 1001 entries in 14 categories: animals (primates, cetaceans, mammals, birds, cephalopods, insects, fauna of Romania), collective and non-neuronal entities, "Esoteric traditions", "Religious traditions" and "Modern hypotheses" (including hypotheses about UAP/NHI). The entries about animals are based on scientific literature cited in the sheets; the esoteric and religious entries and the UAP/NHI hypotheses are presented as ideas, not as evidence, and the sheets often mark them as speculative or unconfirmed. The "Axis B" panel explicitly warns: "high epistemic uncertainty".
+NOMIA is a single-file application (`index.html`, PWA) that simulates trilogic Human–AI–NHI (non-human intelligences) "contact protocols" across 5 channels (mathematical, intuition, symbolic, synchronicities, altered state), with an interface in 8 languages (RO, EN, FR, IT, ES, PT, DE, HU; the catalog sheets and the UAP texts are fully translated; the protocol narratives are only partly translated (see "Limitations")). The catalog contains 1001 entries in 14 categories: animals (primates, cetaceans, mammals, birds, cephalopods, insects, fauna of Romania), collective and non-neuronal entities, "Esoteric traditions", "Religious traditions" and "Modern hypotheses" (including hypotheses about UAP/NHI). The entries about animals are based on scientific literature cited in the sheets; the esoteric and religious entries and the UAP/NHI hypotheses are presented as ideas, not as evidence, and the sheets often mark them as speculative or unconfirmed. The "Axis B" panel explicitly warns: "high epistemic uncertainty".
 
 ## How to use
 
@@ -29,6 +29,7 @@ None. The code contains no `fetch`/XHR/WebSocket and no external scripts, fonts 
 
 ## Limitations
 
+- **Languages:** the catalog sheets (locations, captions, unknowns, references: 100%) and the 301 UAP texts are translated into fr, it, es, pt, de, hu, and so is the "Rights and attribution" note (RO+EN kept as the reference version). The protocol narratives (about 2.5 million displayed characters) are translated only in part: a sentence-level fallback with 436 sentence templates (some with name/place/number slots) and 277 directly translated sentences covers about 59% of the narrative characters (about 68% counting the leading fragments); the rest (about 11,000 unique hand-written sentences) **stays in Romanian** in the other languages. The translations are automatic and not verified by native speakers; the religious, medical (e.g. Sacks migraine, Hildegard, Jaynes hypothesis, cancer resistance) and speculative/folklore/UAP content, as well as the legal note, **need specialist review**.
 - Informative and creative content; it is not scientific, medical or legal advice. The esoteric/religious content has no scientific validation.
 - Texts generated from templates: the "protocol" results are not measurements.
 
@@ -70,6 +71,8 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf.
 
 ## History / Changelog
 
+- **0.10.5 — 2026-10-19:** the "Rights and attribution" note is translated into fr, it, es, pt, de, hu (RO+EN kept as the reference version); sentence splitter and 105 more slot templates plus 277 translated sentences: about 59% of the protocol narrative characters are now translated (68% counting leading fragments). Translations need specialist (legal) review.
+- **0.10.4 — 2026-10-19:** the catalog sheets and UAP texts are translated into fr, it, es, pt, de, hu; sentence-level fallback for the 331 most frequent narrative templates (about half of the narrative characters). **0.10.1:** the undo / first-use banners and the toast get their bottom offset and width back (invalid `calc()`).
 - **0.9.1 — 18 October 2026:** the `?nhi=<id>` link accepts ids with diacritics (`murmurații`, `leopard-nebuloși`; Unicode regex `\p{L}`), and "Copy link" encodes the id (`encodeURIComponent`); SW cache nomia-v6; tests for `?nhi=`.
 - **0.9.0 — 14 October 2026:** reading the log aloud (FFF.tts); transparency label and .fff.json backup (common kit); SW cache nomia-v5; `tests/fff-r8.test.mjs` tests.
 

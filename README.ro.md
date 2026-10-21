@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 0.10.4 · **Ultima actualizare:** 2026-10-19
+**Versiune:** 0.10.5 · **Ultima actualizare:** 2026-10-19
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -14,7 +14,7 @@ Limbile interfeței: **Română, English, Français, Italiano, Español, Portugu
 
 ## Ce este
 
-NOMIA este o aplicație single-file (`index.html`, PWA) care simulează „protocoale de contact” trilogice Om–IA–NHI (inteligențe non-umane) pe 5 canale (matematic, intuiție, simbolic, sincronicități, modificarea stării), cu interfață în 8 limbi (RO, EN, FR, IT, ES, PT, DE, HU; catalogul și textele lungi sunt în română și engleză). Catalogul conține 1001 de intrări, în 14 categorii: animale (primate, cetacee, mamifere, păsări, cefalopode, insecte, faună din România), entități colective și non-neuronale, „Tradiții esoterice”, „Tradiții religioase” și „Ipoteze moderne” (inclusiv ipoteze despre UAP/NHI). Intrările despre animale se bazează pe literatură științifică citată în fișe; intrările esoterice, religioase și ipotezele despre UAP/NHI sunt prezentate ca idei, nu ca dovezi, iar fișele le marchează adesea ca speculative sau neconfirmate. Panoul „Axa B” avertizează explicit: „incertitudine epistemică ridicată”.
+NOMIA este o aplicație single-file (`index.html`, PWA) care simulează „protocoale de contact” trilogice Om–IA–NHI (inteligențe non-umane) pe 5 canale (matematic, intuiție, simbolic, sincronicități, modificarea stării), cu interfață în 8 limbi (RO, EN, FR, IT, ES, PT, DE, HU; fișele din catalog și textele UAP sunt traduse integral; narațiunile protocoalelor sunt traduse doar în parte (vezi „Limitări”)). Catalogul conține 1001 de intrări, în 14 categorii: animale (primate, cetacee, mamifere, păsări, cefalopode, insecte, faună din România), entități colective și non-neuronale, „Tradiții esoterice”, „Tradiții religioase” și „Ipoteze moderne” (inclusiv ipoteze despre UAP/NHI). Intrările despre animale se bazează pe literatură științifică citată în fișe; intrările esoterice, religioase și ipotezele despre UAP/NHI sunt prezentate ca idei, nu ca dovezi, iar fișele le marchează adesea ca speculative sau neconfirmate. Panoul „Axa B” avertizează explicit: „incertitudine epistemică ridicată”.
 
 ## Cum se folosește
 
@@ -29,6 +29,7 @@ Niciuna. În cod nu există `fetch`/XHR/WebSocket și nici scripturi, fonturi sa
 
 ## Limitări
 
+- **Limbi:** fișele din catalog (locuri, legende, necunoscute, referințe: 100%) și cele 301 texte UAP sunt traduse în fr, it, es, pt, de, hu, la fel și nota „Drepturi și atribuire” (RO+EN rămân versiunea de referință). Narațiunile protocoalelor (circa 2,5 milioane de caractere afișate) sunt traduse doar în parte: un mecanism de rezervă la nivel de propoziție, cu 436 de șabloane de propoziții (unele cu locuri pentru nume/locuri/numere) și 277 de propoziții traduse direct, acoperă circa 59% din caracterele narațiunilor (circa 68% dacă se numără și fragmentele de început); restul (circa 11.000 de propoziții unice scrise de mână) **rămâne în română** în celelalte limbi. Traducerile sunt automate, neverificate de vorbitori nativi; conținutul religios, medical (de ex. migrena lui Sacks, Hildegard, ipoteza lui Jaynes, rezistența la cancer) și cel speculativ/folcloric/UAP, precum și nota juridică, **necesită revizie de specialitate**.
 - Conținut informativ și creativ; nu este sfat științific, medical sau juridic. Conținutul esoteric/religios nu are validare științifică.
 - Texte generate din șabloane: rezultatele „protocolului” nu sunt măsurători.
 
@@ -70,6 +71,8 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf.
 
 ## Istoric / Changelog
 
+- **0.10.5 — 2026-10-19:** nota „Drepturi și atribuire” este tradusă în fr, it, es, pt, de, hu (RO+EN rămân versiunea de referință); separator de propoziții și încă 105 șabloane cu locuri, plus 277 de propoziții traduse: circa 59% din caracterele narațiunilor protocoalelor sunt acum traduse (68% dacă se numără fragmentele de început). Traducerile necesită revizie de specialitate (juridică).
+- **0.10.4 — 2026-10-19:** fișele din catalog și textele UAP sunt traduse în fr, it, es, pt, de, hu; mecanism de rezervă la nivel de propoziție pentru cele 331 de șabloane narative cele mai frecvente (circa jumătate din caracterele narațiunilor). **0.10.1:** bannerele de anulare / prima utilizare și toast-ul își recapătă decalajul de jos și lățimea (`calc()` invalid).
 - **0.9.1 — 18 octombrie 2026:** linkul `?nhi=<id>` acceptă id-uri cu diacritice (`murmurații`, `leopard-nebuloși`; regex Unicode `\p{L}`), iar „Copiază link” codifică id-ul (`encodeURIComponent`); cache SW nomia-v6; teste pentru `?nhi=`.
 - **0.9.0 — 14 octombrie 2026:** citirea jurnalului cu voce (FFF.tts); etichetă de transparență și copie .fff.json (kit comun); cache SW nomia-v5; teste `tests/fff-r8.test.mjs`.
 

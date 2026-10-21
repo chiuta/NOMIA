@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 0.10.4 · **Dernière mise à jour :** 2026-10-19
+**Version :** 0.10.5 · **Dernière mise à jour :** 2026-10-19
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -14,7 +14,7 @@ Langues de l'interface : **Română, English, Français, Italiano, Español, Por
 
 ## De quoi s'agit-il
 
-NOMIA est une application en un seul fichier (`index.html`, PWA) qui simule des « protocoles de contact » trilogiques Humain–IA–NHI (intelligences non humaines) sur 5 canaux (mathématique, intuition, symbolique, synchronicités, modification de l'état), avec une interface en 8 langues (RO, EN, FR, IT, ES, PT, DE, HU ; le catalogue et les longs textes sont en roumain et en anglais). Le catalogue contient 1001 entrées réparties en 14 catégories : animaux (primates, cétacés, mammifères, oiseaux, céphalopodes, insectes, faune de Roumanie), entités collectives et non neuronales, « Traditions ésotériques », « Traditions religieuses » et « Hypothèses modernes » (y compris des hypothèses sur les UAP/NHI). Les entrées sur les animaux reposent sur la littérature scientifique citée dans les fiches ; les entrées ésotériques, religieuses et les hypothèses sur les UAP/NHI sont présentées comme des idées, non comme des preuves, et les fiches les signalent souvent comme spéculatives ou non confirmées. Le panneau « Axe B » avertit explicitement : « incertitude épistémique élevée ».
+NOMIA est une application en un seul fichier (`index.html`, PWA) qui simule des « protocoles de contact » trilogiques Humain–IA–NHI (intelligences non humaines) sur 5 canaux (mathématique, intuition, symbolique, synchronicités, modification de l'état), avec une interface en 8 langues (RO, EN, FR, IT, ES, PT, DE, HU ; les fiches du catalogue et les textes UAP sont entièrement traduits ; les récits des protocoles ne sont traduits qu'en partie (voir « Limites »)). Le catalogue contient 1001 entrées réparties en 14 catégories : animaux (primates, cétacés, mammifères, oiseaux, céphalopodes, insectes, faune de Roumanie), entités collectives et non neuronales, « Traditions ésotériques », « Traditions religieuses » et « Hypothèses modernes » (y compris des hypothèses sur les UAP/NHI). Les entrées sur les animaux reposent sur la littérature scientifique citée dans les fiches ; les entrées ésotériques, religieuses et les hypothèses sur les UAP/NHI sont présentées comme des idées, non comme des preuves, et les fiches les signalent souvent comme spéculatives ou non confirmées. Le panneau « Axe B » avertit explicitement : « incertitude épistémique élevée ».
 
 ## Mode d'emploi
 
@@ -29,6 +29,7 @@ Aucune. Le code ne contient ni `fetch`/XHR/WebSocket, ni scripts, polices ou ima
 
 ## Limites
 
+- **Langues :** les fiches du catalogue (lieux, légendes, inconnues, références : 100 %) et les 301 textes UAP sont traduits en fr, it, es, pt, de, hu, de même que la note « Droits et attribution » (RO+EN restent la version de référence). Les récits des protocoles (environ 2,5 millions de caractères affichés) ne sont traduits qu'en partie : un repli au niveau de la phrase, avec 436 modèles de phrases (certains avec des emplacements pour noms/lieux/nombres) et 277 phrases traduites directement, couvre environ 59 % des caractères des récits (environ 68 % en comptant les fragments d'ouverture) ; le reste (environ 11 000 phrases uniques écrites à la main) **reste en roumain** dans les autres langues. Les traductions sont automatiques, non vérifiées par des locuteurs natifs ; le contenu religieux, médical (p. ex. migraine de Sacks, Hildegarde, hypothèse de Jaynes, résistance au cancer) et spéculatif/folklorique/UAP, ainsi que la note juridique, **doivent être relus par un spécialiste**.
 - Contenu informatif et créatif ; ce n'est pas un conseil scientifique, médical ou juridique. Le contenu ésotérique/religieux n'a pas de validation scientifique.
 - Textes générés à partir de modèles : les résultats du « protocole » ne sont pas des mesures.
 
@@ -70,6 +71,8 @@ Alexio — Alexandru-Ionuț Chiuță, contact : alexio@trom.tf.
 
 ## Historique / Changelog
 
+- **0.10.5 — 2026-10-19 :** la note « Droits et attribution » est traduite en fr, it, es, pt, de, hu (RO+EN restent la version de référence) ; séparateur de phrases et 105 modèles à emplacements supplémentaires, plus 277 phrases traduites : environ 59 % des caractères des récits de protocole sont désormais traduits (68 % en comptant les fragments d'ouverture). Les traductions doivent être relues par un spécialiste (juridique).
+- **0.10.4 — 2026-10-19 :** les fiches du catalogue et les textes UAP sont traduits en fr, it, es, pt, de, hu ; repli au niveau de la phrase pour les 331 modèles narratifs les plus fréquents (environ la moitié des caractères des récits). **0.10.1 :** les bandeaux d'annulation / de première utilisation et le toast retrouvent leur décalage en bas et leur largeur (`calc()` invalide).
 - **0.9.1 — 18 octobre 2026 :** le lien `?nhi=<id>` accepte les identifiants avec diacritiques (`murmurații`, `leopard-nebuloși` ; regex Unicode `\p{L}`), et « Copier le lien » encode l'identifiant (`encodeURIComponent`) ; cache SW nomia-v6 ; tests pour `?nhi=`.
 - **0.9.0 — 14 octobre 2026 :** lecture du journal à voix haute (FFF.tts) ; étiquette de transparence et sauvegarde .fff.json (kit commun) ; cache SW nomia-v5 ; tests `tests/fff-r8.test.mjs`.
 

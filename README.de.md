@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 0.10.4 · **Zuletzt aktualisiert:** 2026-10-19
+**Version:** 0.10.5 · **Zuletzt aktualisiert:** 2026-10-19
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -14,7 +14,7 @@ Oberflächensprachen: **Română, English, Français, Italiano, Español, Portug
 
 ## Was es ist
 
-NOMIA ist eine Ein-Datei-Anwendung (`index.html`, PWA), die trilogische „Kontaktprotokolle“ Mensch–KI–NHI (nichtmenschliche Intelligenzen) auf 5 Kanälen simuliert (mathematisch, Intuition, symbolisch, Synchronizitäten, Zustandsveränderung), mit einer Oberfläche in 8 Sprachen (RO, EN, FR, IT, ES, PT, DE, HU; der Katalog und die langen Texte sind auf Rumänisch und Englisch). Der Katalog enthält 1001 Einträge in 14 Kategorien: Tiere (Primaten, Wale und Delfine, Säugetiere, Vögel, Kopffüßer, Insekten, Fauna Rumäniens), kollektive und nicht-neuronale Entitäten, „Esoterische Traditionen“, „Religiöse Traditionen“ und „Moderne Hypothesen“ (einschließlich Hypothesen zu UAP/NHI). Die Einträge zu Tieren stützen sich auf wissenschaftliche Literatur, die in den Datenblättern zitiert wird; die esoterischen und religiösen Einträge sowie die Hypothesen zu UAP/NHI werden als Ideen, nicht als Belege dargestellt, und die Datenblätter kennzeichnen sie oft als spekulativ oder unbestätigt. Das Panel „Achse B“ warnt ausdrücklich: „hohe epistemische Unsicherheit“.
+NOMIA ist eine Ein-Datei-Anwendung (`index.html`, PWA), die trilogische „Kontaktprotokolle“ Mensch–KI–NHI (nichtmenschliche Intelligenzen) auf 5 Kanälen simuliert (mathematisch, Intuition, symbolisch, Synchronizitäten, Zustandsveränderung), mit einer Oberfläche in 8 Sprachen (RO, EN, FR, IT, ES, PT, DE, HU; die Katalogkarten und die UAP-Texte sind vollständig übersetzt; die Protokollerzählungen sind nur teilweise übersetzt (siehe „Einschränkungen“)). Der Katalog enthält 1001 Einträge in 14 Kategorien: Tiere (Primaten, Wale und Delfine, Säugetiere, Vögel, Kopffüßer, Insekten, Fauna Rumäniens), kollektive und nicht-neuronale Entitäten, „Esoterische Traditionen“, „Religiöse Traditionen“ und „Moderne Hypothesen“ (einschließlich Hypothesen zu UAP/NHI). Die Einträge zu Tieren stützen sich auf wissenschaftliche Literatur, die in den Datenblättern zitiert wird; die esoterischen und religiösen Einträge sowie die Hypothesen zu UAP/NHI werden als Ideen, nicht als Belege dargestellt, und die Datenblätter kennzeichnen sie oft als spekulativ oder unbestätigt. Das Panel „Achse B“ warnt ausdrücklich: „hohe epistemische Unsicherheit“.
 
 ## Verwendung
 
@@ -29,6 +29,7 @@ Keine. Im Code gibt es kein `fetch`/XHR/WebSocket und keine externen Skripte, Sc
 
 ## Einschränkungen
 
+- **Sprachen:** die Katalogkarten (Orte, Bildunterschriften, Unbekannte, Verweise: 100 %) und die 301 UAP-Texte sind nach fr, it, es, pt, de, hu übersetzt, ebenso der Hinweis „Rechte und Zuschreibung“ (RO+EN bleiben die Referenzfassung). Die Protokollerzählungen (rund 2,5 Millionen angezeigte Zeichen) sind nur teilweise übersetzt: Ein Rückgriff auf Satzebene mit 436 Satzvorlagen (teils mit Platzhaltern für Namen/Orte/Zahlen) und 277 direkt übersetzten Sätzen deckt etwa 59 % der Erzählzeichen ab (etwa 68 %, wenn man die Einleitungsfragmente mitzählt); der Rest (rund 11.000 einmalige handgeschriebene Sätze) **bleibt in den anderen Sprachen auf Rumänisch**. Die Übersetzungen sind automatisch und nicht von Muttersprachlern geprüft; religiöse, medizinische (z. B. Sacks-Migräne, Hildegard, Jaynes-Hypothese, Krebsresistenz) und spekulative/folkloristische/UAP-Inhalte sowie der Rechtshinweis **müssen fachlich geprüft werden**.
 - Informativer und kreativer Inhalt; keine wissenschaftliche, medizinische oder rechtliche Beratung. Der esoterische/religiöse Inhalt hat keine wissenschaftliche Validierung.
 - Aus Vorlagen erzeugte Texte: Die Ergebnisse des „Protokolls“ sind keine Messungen.
 
@@ -70,6 +71,8 @@ Alexio — Alexandru-Ionuț Chiuță, Kontakt: alexio@trom.tf.
 
 ## Verlauf / Changelog
 
+- **0.10.5 — 2026-10-19:** der Hinweis „Rechte und Zuschreibung“ ist nach fr, it, es, pt, de, hu übersetzt (RO+EN bleiben die Referenzfassung); Satzteiler und 105 weitere Vorlagen mit Platzhaltern sowie 277 übersetzte Sätze: etwa 59 % der Erzählzeichen der Protokolle sind nun übersetzt (68 % mit den Einleitungsfragmenten). Die Übersetzungen müssen fachlich (juristisch) geprüft werden.
+- **0.10.4 — 2026-10-19:** Katalogkarten und UAP-Texte sind nach fr, it, es, pt, de, hu übersetzt; Rückgriff auf Satzebene für die 331 häufigsten Erzählvorlagen (etwa die Hälfte der Erzählzeichen). **0.10.1:** Die Banner für Rückgängig / Erstnutzung und der Toast erhalten Bodenabstand und Breite zurück (ungültiges `calc()`).
 - **0.9.1 — 18. Oktober 2026:** Der Link `?nhi=<id>` akzeptiert IDs mit diakritischen Zeichen (`murmurații`, `leopard-nebuloși`; Unicode-Regex `\p{L}`), und „Link kopieren“ kodiert die ID (`encodeURIComponent`); SW-Cache nomia-v6; Tests für `?nhi=`.
 - **0.9.0 — 14. Oktober 2026:** Vorlesen des Logs (FFF.tts); Transparenz-Label und .fff.json-Sicherung (gemeinsames Kit); SW-Cache nomia-v5; Tests `tests/fff-r8.test.mjs`.
 

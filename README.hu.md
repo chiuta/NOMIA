@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 0.10.4 · **Utolsó frissítés:** 2026-10-19
+**Verzió:** 0.10.5 · **Utolsó frissítés:** 2026-10-19
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -14,7 +14,7 @@ A felület nyelvei: **Română, English, Français, Italiano, Español, Portugu�
 
 ## Mi ez
 
-A NOMIA egyetlen fájlból álló alkalmazás (`index.html`, PWA), amely trilógikus Ember–MI–NHI (nem emberi intelligenciák) „kapcsolatfelvételi protokollokat” szimulál 5 csatornán (matematikai, intuíció, szimbolikus, szinkronicitások, tudatállapot-módosítás), 8 nyelvű felülettel (RO, EN, FR, IT, ES, PT, DE, HU; a katalógus és a hosszú szövegek románul és angolul vannak). A katalógus 1001 bejegyzést tartalmaz 14 kategóriában: állatok (főemlősök, cetfélék, emlősök, madarak, fejlábúak, rovarok, Románia faunája), kollektív és nem neuronális entitások, „Ezoterikus hagyományok”, „Vallási hagyományok” és „Modern hipotézisek” (az UAP/NHI-ra vonatkozó hipotéziseket is beleértve). Az állatokról szóló bejegyzések a lapokon idézett tudományos szakirodalomra támaszkodnak; az ezoterikus és vallási bejegyzések, valamint az UAP/NHI-hipotézisek ötletként, nem bizonyítékként jelennek meg, és a lapok gyakran spekulatívnak vagy meg nem erősítettnek jelölik őket. A „B tengely” panel kifejezetten figyelmeztet: „magas episztemikus bizonytalanság”.
+A NOMIA egyetlen fájlból álló alkalmazás (`index.html`, PWA), amely trilógikus Ember–MI–NHI (nem emberi intelligenciák) „kapcsolatfelvételi protokollokat” szimulál 5 csatornán (matematikai, intuíció, szimbolikus, szinkronicitások, tudatállapot-módosítás), 8 nyelvű felülettel (RO, EN, FR, IT, ES, PT, DE, HU; a katalóguslapok és az UAP-szövegek teljesen le vannak fordítva; a protokollok elbeszélései csak részben vannak lefordítva (lásd a „Korlátok” szakaszt)). A katalógus 1001 bejegyzést tartalmaz 14 kategóriában: állatok (főemlősök, cetfélék, emlősök, madarak, fejlábúak, rovarok, Románia faunája), kollektív és nem neuronális entitások, „Ezoterikus hagyományok”, „Vallási hagyományok” és „Modern hipotézisek” (az UAP/NHI-ra vonatkozó hipotéziseket is beleértve). Az állatokról szóló bejegyzések a lapokon idézett tudományos szakirodalomra támaszkodnak; az ezoterikus és vallási bejegyzések, valamint az UAP/NHI-hipotézisek ötletként, nem bizonyítékként jelennek meg, és a lapok gyakran spekulatívnak vagy meg nem erősítettnek jelölik őket. A „B tengely” panel kifejezetten figyelmeztet: „magas episztemikus bizonytalanság”.
 
 ## Hogyan használható
 
@@ -29,6 +29,7 @@ Semmilyen. A kódban nincs `fetch`/XHR/WebSocket, sem külső szkript, betűtíp
 
 ## Korlátok
 
+- **Nyelvek:** a katalóguslapok (helyszínek, feliratok, ismeretlenek, hivatkozások: 100%) és a 301 UAP-szöveg le van fordítva fr, it, es, pt, de, hu nyelvre, csakúgy, mint a „Jogok és forrásmegjelölés” megjegyzés (az RO+EN marad a referenciaváltozat). A protokollok elbeszélései (kb. 2,5 millió megjelenített karakter) csak részben vannak lefordítva: egy mondatszintű tartalék 436 mondatsablonnal (némelyik név/hely/szám helyőrzővel) és 277 közvetlenül lefordított mondattal az elbeszélés-karakterek kb. 59%-át fedi le (kb. 68%-át, ha a bevezető töredékeket is számoljuk); a többi (kb. 11 000 egyedi, kézzel írt mondat) a többi nyelven **románul marad**. A fordítások automatikusak, anyanyelvi beszélők nem ellenőrizték; a vallási, orvosi (pl. Sacks-migrén, Hildegard, Jaynes-hipotézis, rákrezisztencia) és spekulatív/népi/UAP-tartalom, valamint a jogi megjegyzés **szakmai felülvizsgálatot igényel**.
 - Tájékoztató és kreatív tartalom; nem tudományos, orvosi vagy jogi tanács. Az ezoterikus/vallási tartalomnak nincs tudományos érvényesítése.
 - Sablonokból generált szövegek: a „protokoll” eredményei nem mérések.
 
@@ -70,6 +71,8 @@ Alexio — Alexandru-Ionuț Chiuță, kapcsolat: alexio@trom.tf.
 
 ## Előzmények / Changelog
 
+- **0.10.5 — 2026-10-19:** a „Jogok és forrásmegjelölés” megjegyzés le van fordítva fr, it, es, pt, de, hu nyelvre (az RO+EN marad a referenciaváltozat); mondatfelosztó és további 105 helyőrzős sablon, valamint 277 lefordított mondat: a protokollok elbeszélés-karaktereinek kb. 59%-a van most lefordítva (68%, ha a bevezető töredékeket is számoljuk). A fordítások szakmai (jogi) felülvizsgálatot igényelnek.
+- **0.10.4 — 2026-10-19:** a katalóguslapok és az UAP-szövegek le vannak fordítva fr, it, es, pt, de, hu nyelvre; mondatszintű tartalék a 331 leggyakoribb elbeszélősablonhoz (az elbeszélés-karakterek kb. fele). **0.10.1:** a visszavonás / első használat szalagok és a toast visszakapják az alsó eltolást és a szélességet (érvénytelen `calc()`).
 - **0.9.1 — 2026. október 18.:** a `?nhi=<id>` hivatkozás elfogad ékezetes azonosítókat (`murmurații`, `leopard-nebuloși`; Unicode regex `\p{L}`), a „Hivatkozás másolása” pedig kódolja az azonosítót (`encodeURIComponent`); SW gyorsítótár nomia-v6; tesztek a `?nhi=` paraméterhez.
 - **0.9.0 — 2026. október 14.:** a napló felolvasása (FFF.tts); átláthatósági címke és .fff.json mentés (közös kit); SW gyorsítótár nomia-v5; `tests/fff-r8.test.mjs` tesztek.
 
