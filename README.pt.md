@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 0.10.5 · **Última atualização:** 2026-10-19
+**Versão:** 0.10.6 · **Última atualização:** 2026-10-21
 
 Idiomas da interface: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -29,7 +29,7 @@ Nenhuns. No código não existem `fetch`/XHR/WebSocket nem scripts, tipos de let
 
 ## Limitações
 
-- **Idiomas:** as fichas do catálogo (locais, legendas, incógnitas, referências: 100%) e os 301 textos UAP estão traduzidos para fr, it, es, pt, de, hu, tal como a nota «Direitos e atribuição» (RO+EN mantêm-se como versão de referência). As narrativas dos protocolos (cerca de 2,5 milhões de carateres apresentados) só estão traduzidas em parte: um recurso ao nível da frase, com 436 modelos de frases (alguns com espaços para nomes/locais/números) e 277 frases traduzidas diretamente, cobre cerca de 59% dos carateres das narrativas (cerca de 68% contando os fragmentos iniciais); o resto (cerca de 11 000 frases únicas escritas à mão) **permanece em romeno** nos outros idiomas. As traduções são automáticas, não verificadas por falantes nativos; o conteúdo religioso, médico (p. ex. enxaqueca de Sacks, Hildegarda, hipótese de Jaynes, resistência ao cancro) e especulativo/folclórico/UAP, bem como a nota jurídica, **precisam de revisão especializada**.
+- **Idiomas:** as fichas do catálogo (locais, legendas, incógnitas, referências: 100%) e os 301 textos UAP estão traduzidos para fr, it, es, pt, de, hu, tal como a nota «Direitos e atribuição» (RO+EN mantêm-se como versão de referência). As narrativas dos protocolos (cerca de 2,5 milhões de carateres apresentados) estão agora traduzidas quase por completo: cerca de 11 400 frases únicas traduzidas diretamente cobrem cerca de 91% dos carateres das narrativas (cerca de 99% contando os fragmentos iniciais); apenas um pequeno resíduo (cerca de 1% contando os fragmentos iniciais: algumas centenas de frases rejeitadas na validação, p. ex. formatos numéricos) **permanece em romeno** nos outros idiomas. As traduções são automáticas, não verificadas por falantes nativos; o conteúdo religioso, médico (p. ex. enxaqueca de Sacks, Hildegarda, hipótese de Jaynes, resistência ao cancro) e especulativo/folclórico/UAP, bem como a nota jurídica, **precisam de revisão especializada**.
 - Conteúdo informativo e criativo; não constitui aconselhamento científico, médico ou jurídico. O conteúdo esotérico/religioso não tem validação científica.
 - Textos gerados a partir de modelos: os resultados do «protocolo» não são medições.
 
@@ -71,6 +71,7 @@ Alexio — Alexandru-Ionuț Chiuță, contacto: alexio@trom.tf.
 
 ## Histórico / Changelog
 
+- **0.10.6 — 2026-10-21:** as narrativas dos protocolos estão agora traduzidas para fr, it, es, pt, de, hu quase por completo: cerca de 11 400 frases únicas traduzidas diretamente, cerca de 91% dos carateres das narrativas (cerca de 99% contando os fragmentos iniciais); apenas um pequeno resíduo permanece em romeno. As traduções são automáticas, não verificadas por falantes nativos, e precisam de revisão especializada (conteúdo religioso, médico, especulativo/folclórico/UAP e nota jurídica).
 - **0.10.5 — 2026-10-19:** a nota «Direitos e atribuição» está traduzida para fr, it, es, pt, de, hu (RO+EN mantêm-se como versão de referência); divisor de frases e mais 105 modelos com espaços, além de 277 frases traduzidas: cerca de 59% dos carateres das narrativas dos protocolos estão agora traduzidos (68% contando os fragmentos iniciais). As traduções precisam de revisão especializada (jurídica).
 - **0.10.4 — 2026-10-19:** as fichas do catálogo e os textos UAP estão traduzidos para fr, it, es, pt, de, hu; recurso ao nível da frase para os 331 modelos narrativos mais frequentes (cerca de metade dos carateres das narrativas). **0.10.1:** os avisos de anular / primeira utilização e o toast recuperam a margem inferior e a largura (`calc()` inválido).
 - **0.9.1 — 18 de outubro de 2026:** a ligação `?nhi=<id>` aceita ids com diacríticos (`murmurații`, `leopard-nebuloși`; regex Unicode `\p{L}`), e «Copiar ligação» codifica o id (`encodeURIComponent`); cache SW nomia-v6; testes para `?nhi=`.
