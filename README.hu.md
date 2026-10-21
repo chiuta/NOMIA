@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 0.10.6 · **Utolsó frissítés:** 2026-10-21
+**Verzió:** 0.10.7 · **Utolsó frissítés:** 2026-10-22
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -29,7 +29,7 @@ Semmilyen. A kódban nincs `fetch`/XHR/WebSocket, sem külső szkript, betűtíp
 
 ## Korlátok
 
-- **Nyelvek:** a katalóguslapok (helyszínek, feliratok, ismeretlenek, hivatkozások: 100%) és a 301 UAP-szöveg le van fordítva fr, it, es, pt, de, hu nyelvre, csakúgy, mint a „Jogok és forrásmegjelölés” megjegyzés (az RO+EN marad a referenciaváltozat). A protokollok elbeszélései (kb. 2,5 millió megjelenített karakter) most már szinte teljesen le vannak fordítva: kb. 11 400 egyedi, közvetlenül lefordított mondat az elbeszélés-karakterek kb. 91%-át fedi le (kb. 99%-át, ha a bevezető töredékeket is számoljuk); csak egy kis maradék (kb. 1% a bevezető töredékekkel együtt: néhány száz, az ellenőrzésen elutasított mondat, pl. számformátumok) a többi nyelven **románul marad**. A fordítások automatikusak, anyanyelvi beszélők nem ellenőrizték; a vallási, orvosi (pl. Sacks-migrén, Hildegard, Jaynes-hipotézis, rákrezisztencia) és spekulatív/népi/UAP-tartalom, valamint a jogi megjegyzés **szakmai felülvizsgálatot igényel**.
+- **Nyelvek:** a katalóguslapok (helyszínek, feliratok, ismeretlenek, hivatkozások: 100%) és a 301 UAP-szöveg le van fordítva fr, it, es, pt, de, hu nyelvre, csakúgy, mint a „Jogok és forrásmegjelölés” megjegyzés (az RO+EN marad a referenciaváltozat). A protokollok elbeszélései (kb. 2,5 millió megjelenített karakter) most már szinte teljesen le vannak fordítva: kb. 11 500 egyedi, közvetlenül lefordított mondat az elbeszélés-karakterek kb. 91%-át fedi le (kb. 99,6%-át, ha a bevezető töredékeket is számoljuk); csak egy kis maradék (kb. 0,4% a bevezető töredékekkel együtt: még le nem fordított mondatok) a többi nyelven **románul marad**. A fordítások automatikusak, anyanyelvi beszélők nem ellenőrizték; a vallási, orvosi (pl. Sacks-migrén, Hildegard, Jaynes-hipotézis, rákrezisztencia) és spekulatív/népi/UAP-tartalom, valamint a jogi megjegyzés **szakmai felülvizsgálatot igényel**.
 - Tájékoztató és kreatív tartalom; nem tudományos, orvosi vagy jogi tanács. Az ezoterikus/vallási tartalomnak nincs tudományos érvényesítése.
 - Sablonokból generált szövegek: a „protokoll” eredményei nem mérések.
 
@@ -71,6 +71,7 @@ Alexio — Alexandru-Ionuț Chiuță, kapcsolat: alexio@trom.tf.
 
 ## Előzmények / Changelog
 
+- **0.10.7 — 2026-10-22:** a fordítások ellenőrzése mostantól elfogadja a helyi számformátumot (10.000 / 10,000 / 10 000, 1.2 / 1,2) és a betűvel vagy sorszámnévvel kifejezett számokat; kb. 320 korábban elutasított mondatot átnéztünk és beépítettünk (mind helyes fordítás: betűvel írt számok, órabeosztás, római számos századok, a „trillió” számskála): kb. 11 500 egyedi mondat, az elbeszélés-karakterek kb. 91%-a (kb. 99,6%-a a bevezető töredékekkel); az ellenőrzés már egyetlen mondatot sem utasít el.
 - **0.10.6 — 2026-10-21:** a protokollok elbeszélései most már szinte teljesen le vannak fordítva fr, it, es, pt, de, hu nyelvre: kb. 11 400 egyedi, közvetlenül lefordított mondat, az elbeszélés-karakterek kb. 91%-a (kb. 99%-a a bevezető töredékekkel); csak egy kis maradék marad románul. A fordítások automatikusak, anyanyelvi beszélők nem ellenőrizték, és szakmai felülvizsgálatot igényelnek (vallási, orvosi, spekulatív/népi/UAP-tartalom és a jogi megjegyzés).
 - **0.10.5 — 2026-10-19:** a „Jogok és forrásmegjelölés” megjegyzés le van fordítva fr, it, es, pt, de, hu nyelvre (az RO+EN marad a referenciaváltozat); mondatfelosztó és további 105 helyőrzős sablon, valamint 277 lefordított mondat: a protokollok elbeszélés-karaktereinek kb. 59%-a van most lefordítva (68%, ha a bevezető töredékeket is számoljuk). A fordítások szakmai (jogi) felülvizsgálatot igényelnek.
 - **0.10.4 — 2026-10-19:** a katalóguslapok és az UAP-szövegek le vannak fordítva fr, it, es, pt, de, hu nyelvre; mondatszintű tartalék a 331 leggyakoribb elbeszélősablonhoz (az elbeszélés-karakterek kb. fele). **0.10.1:** a visszavonás / első használat szalagok és a toast visszakapják az alsó eltolást és a szélességet (érvénytelen `calc()`).

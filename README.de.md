@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 0.10.6 · **Zuletzt aktualisiert:** 2026-10-21
+**Version:** 0.10.7 · **Zuletzt aktualisiert:** 2026-10-22
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -29,7 +29,7 @@ Keine. Im Code gibt es kein `fetch`/XHR/WebSocket und keine externen Skripte, Sc
 
 ## Einschränkungen
 
-- **Sprachen:** die Katalogkarten (Orte, Bildunterschriften, Unbekannte, Verweise: 100 %) und die 301 UAP-Texte sind nach fr, it, es, pt, de, hu übersetzt, ebenso der Hinweis „Rechte und Zuschreibung“ (RO+EN bleiben die Referenzfassung). Die Protokollerzählungen (rund 2,5 Millionen angezeigte Zeichen) sind nun fast vollständig übersetzt: rund 11.400 einmalige, direkt übersetzte Sätze decken etwa 91 % der Erzählzeichen ab (etwa 99 %, wenn man die Einleitungsfragmente mitzählt); nur ein kleiner Rest (etwa 1 % mit Einleitungsfragmenten: einige hundert bei der Validierung verworfene Sätze, z. B. numerische Formate) **bleibt in den anderen Sprachen auf Rumänisch**. Die Übersetzungen sind automatisch und nicht von Muttersprachlern geprüft; religiöse, medizinische (z. B. Sacks-Migräne, Hildegard, Jaynes-Hypothese, Krebsresistenz) und spekulative/folkloristische/UAP-Inhalte sowie der Rechtshinweis **müssen fachlich geprüft werden**.
+- **Sprachen:** die Katalogkarten (Orte, Bildunterschriften, Unbekannte, Verweise: 100 %) und die 301 UAP-Texte sind nach fr, it, es, pt, de, hu übersetzt, ebenso der Hinweis „Rechte und Zuschreibung“ (RO+EN bleiben die Referenzfassung). Die Protokollerzählungen (rund 2,5 Millionen angezeigte Zeichen) sind nun fast vollständig übersetzt: rund 11.500 einmalige, direkt übersetzte Sätze decken etwa 91 % der Erzählzeichen ab (etwa 99,6 %, wenn man die Einleitungsfragmente mitzählt); nur ein kleiner Rest (etwa 0,4 % mit Einleitungsfragmenten: noch nicht übersetzte Sätze) **bleibt in den anderen Sprachen auf Rumänisch**. Die Übersetzungen sind automatisch und nicht von Muttersprachlern geprüft; religiöse, medizinische (z. B. Sacks-Migräne, Hildegard, Jaynes-Hypothese, Krebsresistenz) und spekulative/folkloristische/UAP-Inhalte sowie der Rechtshinweis **müssen fachlich geprüft werden**.
 - Informativer und kreativer Inhalt; keine wissenschaftliche, medizinische oder rechtliche Beratung. Der esoterische/religiöse Inhalt hat keine wissenschaftliche Validierung.
 - Aus Vorlagen erzeugte Texte: Die Ergebnisse des „Protokolls“ sind keine Messungen.
 
@@ -71,6 +71,7 @@ Alexio — Alexandru-Ionuț Chiuță, Kontakt: alexio@trom.tf.
 
 ## Verlauf / Changelog
 
+- **0.10.7 — 2026-10-22:** die Validierung der Übersetzungen akzeptiert nun das lokale Zahlenformat (10.000 / 10,000 / 10 000, 1.2 / 1,2) sowie in Worten oder als Ordnungszahl ausgedrückte Zahlen; rund 320 zuvor verworfene Sätze wurden geprüft und übernommen (alles korrekte Übersetzungen: ausgeschriebene Zahlen, Uhrzeitformat, Jahrhunderte in römischen Ziffern, Zahlenskala der „Trillionen“): rund 11.500 einmalige Sätze, etwa 91 % der Erzählzeichen (etwa 99,6 % mit den Einleitungsfragmenten); kein Satz wird bei der Validierung mehr verworfen.
 - **0.10.6 — 2026-10-21:** die Protokollerzählungen sind nun fast vollständig nach fr, it, es, pt, de, hu übersetzt: rund 11.400 einmalige, direkt übersetzte Sätze, etwa 91 % der Erzählzeichen (etwa 99 % mit den Einleitungsfragmenten); nur ein kleiner Rest bleibt auf Rumänisch. Die Übersetzungen sind automatisch, nicht von Muttersprachlern geprüft und müssen fachlich geprüft werden (religiöse, medizinische, spekulative/folkloristische/UAP-Inhalte und der Rechtshinweis).
 - **0.10.5 — 2026-10-19:** der Hinweis „Rechte und Zuschreibung“ ist nach fr, it, es, pt, de, hu übersetzt (RO+EN bleiben die Referenzfassung); Satzteiler und 105 weitere Vorlagen mit Platzhaltern sowie 277 übersetzte Sätze: etwa 59 % der Erzählzeichen der Protokolle sind nun übersetzt (68 % mit den Einleitungsfragmenten). Die Übersetzungen müssen fachlich (juristisch) geprüft werden.
 - **0.10.4 — 2026-10-19:** Katalogkarten und UAP-Texte sind nach fr, it, es, pt, de, hu übersetzt; Rückgriff auf Satzebene für die 331 häufigsten Erzählvorlagen (etwa die Hälfte der Erzählzeichen). **0.10.1:** Die Banner für Rückgängig / Erstnutzung und der Toast erhalten Bodenabstand und Breite zurück (ungültiges `calc()`).

@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 0.10.6 · **Ultima actualizare:** 2026-10-21
+**Versiune:** 0.10.7 · **Ultima actualizare:** 2026-10-22
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -29,7 +29,7 @@ Niciuna. În cod nu există `fetch`/XHR/WebSocket și nici scripturi, fonturi sa
 
 ## Limitări
 
-- **Limbi:** fișele din catalog (locuri, legende, necunoscute, referințe: 100%) și cele 301 texte UAP sunt traduse în fr, it, es, pt, de, hu, la fel și nota „Drepturi și atribuire” (RO+EN rămân versiunea de referință). Narațiunile protocoalelor (circa 2,5 milioane de caractere afișate) sunt acum traduse aproape complet: circa 11.400 de propoziții unice traduse direct acoperă circa 91% din caracterele narațiunilor (circa 99% dacă se numără și fragmentele de început); doar un mic rest (circa 1% după numărarea fragmentelor de început: câteva sute de propoziții respinse la validare, de ex. formate numerice) **rămâne în română** în celelalte limbi. Traducerile sunt automate, neverificate de vorbitori nativi; conținutul religios, medical (de ex. migrena lui Sacks, Hildegard, ipoteza lui Jaynes, rezistența la cancer) și cel speculativ/folcloric/UAP, precum și nota juridică, **necesită revizie de specialitate**.
+- **Limbi:** fișele din catalog (locuri, legende, necunoscute, referințe: 100%) și cele 301 texte UAP sunt traduse în fr, it, es, pt, de, hu, la fel și nota „Drepturi și atribuire” (RO+EN rămân versiunea de referință). Narațiunile protocoalelor (circa 2,5 milioane de caractere afișate) sunt acum traduse aproape complet: circa 11.500 de propoziții unice traduse direct acoperă circa 91% din caracterele narațiunilor (circa 99,6% dacă se numără și fragmentele de început); doar un mic rest (circa 0,4% după numărarea fragmentelor de început: propoziții încă netraduse) **rămâne în română** în celelalte limbi. Traducerile sunt automate, neverificate de vorbitori nativi; conținutul religios, medical (de ex. migrena lui Sacks, Hildegard, ipoteza lui Jaynes, rezistența la cancer) și cel speculativ/folcloric/UAP, precum și nota juridică, **necesită revizie de specialitate**.
 - Conținut informativ și creativ; nu este sfat științific, medical sau juridic. Conținutul esoteric/religios nu are validare științifică.
 - Texte generate din șabloane: rezultatele „protocolului” nu sunt măsurători.
 
@@ -71,6 +71,7 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf.
 
 ## Istoric / Changelog
 
+- **0.10.7 — 2026-10-22:** validarea traducerilor acceptă acum formatul local al numerelor (10.000 / 10,000 / 10 000, 1.2 / 1,2) și numerele redate în litere sau ordinale; circa 320 de propoziții respinse anterior au fost revizuite și integrate (toate traduceri corecte: numere scrise în litere, format de oră, secole cu cifre romane, scara numerică a trilioanelor): circa 11.500 de propoziții unice, circa 91% din caracterele narațiunilor (circa 99,6% dacă se numără fragmentele de început); nicio propoziție nu mai este respinsă la validare.
 - **0.10.6 — 2026-10-21:** narațiunile protocoalelor sunt acum traduse în fr, it, es, pt, de, hu aproape complet: circa 11.400 de propoziții unice traduse direct, circa 91% din caracterele narațiunilor (circa 99% dacă se numără fragmentele de început); doar un mic reziduu rămâne în română. Traducerile sunt automate, neverificate de vorbitori nativi, și necesită revizie de specialitate (conținut religios, medical, speculativ/folcloric/UAP și nota juridică).
 - **0.10.5 — 2026-10-19:** nota „Drepturi și atribuire” este tradusă în fr, it, es, pt, de, hu (RO+EN rămân versiunea de referință); separator de propoziții și încă 105 șabloane cu locuri, plus 277 de propoziții traduse: circa 59% din caracterele narațiunilor protocoalelor sunt acum traduse (68% dacă se numără fragmentele de început). Traducerile necesită revizie de specialitate (juridică).
 - **0.10.4 — 2026-10-19:** fișele din catalog și textele UAP sunt traduse în fr, it, es, pt, de, hu; mecanism de rezervă la nivel de propoziție pentru cele 331 de șabloane narative cele mai frecvente (circa jumătate din caracterele narațiunilor). **0.10.1:** bannerele de anulare / prima utilizare și toast-ul își recapătă decalajul de jos și lățimea (`calc()` invalid).

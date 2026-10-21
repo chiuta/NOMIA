@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 0.10.6 · **Last updated:** 2026-10-21
+**Version:** 0.10.7 · **Last updated:** 2026-10-22
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -29,7 +29,7 @@ None. The code contains no `fetch`/XHR/WebSocket and no external scripts, fonts 
 
 ## Limitations
 
-- **Languages:** the catalog sheets (locations, captions, unknowns, references: 100%) and the 301 UAP texts are translated into fr, it, es, pt, de, hu, and so is the "Rights and attribution" note (RO+EN kept as the reference version). The protocol narratives (about 2.5 million displayed characters) are now translated almost completely: about 11,400 unique sentences translated directly cover about 91% of the narrative characters (about 99% counting the leading fragments); only a small residue (about 1% counting the leading fragments: a few hundred sentences rejected at validation, e.g. numeric formats) **stays in Romanian** in the other languages. The translations are automatic and not verified by native speakers; the religious, medical (e.g. Sacks migraine, Hildegard, Jaynes hypothesis, cancer resistance) and speculative/folklore/UAP content, as well as the legal note, **need specialist review**.
+- **Languages:** the catalog sheets (locations, captions, unknowns, references: 100%) and the 301 UAP texts are translated into fr, it, es, pt, de, hu, and so is the "Rights and attribution" note (RO+EN kept as the reference version). The protocol narratives (about 2.5 million displayed characters) are now translated almost completely: about 11,500 unique sentences translated directly cover about 91% of the narrative characters (about 99.6% counting the leading fragments); only a small residue (about 0.4% counting the leading fragments: sentences not yet translated) **stays in Romanian** in the other languages. The translations are automatic and not verified by native speakers; the religious, medical (e.g. Sacks migraine, Hildegard, Jaynes hypothesis, cancer resistance) and speculative/folklore/UAP content, as well as the legal note, **need specialist review**.
 - Informative and creative content; it is not scientific, medical or legal advice. The esoteric/religious content has no scientific validation.
 - Texts generated from templates: the "protocol" results are not measurements.
 
@@ -71,6 +71,7 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf.
 
 ## History / Changelog
 
+- **0.10.7 — 2026-10-22:** the translation validation now accepts the local number format (10.000 / 10,000 / 10 000, 1.2 / 1,2) and numerals rendered as words or ordinals; about 320 previously rejected sentences were reviewed and merged (all correct translations: spelled-out numbers, clock format, Roman-numeral centuries, short/long scale for trillions): about 11,500 unique sentences, about 91% of the narrative characters (about 99.6% counting leading fragments); no sentence is rejected by validation any more.
 - **0.10.6 — 2026-10-21:** the protocol narratives are now translated into fr, it, es, pt, de, hu almost completely: about 11,400 unique sentences translated directly, about 91% of the narrative characters (about 99% counting leading fragments); only a small residue stays in Romanian. Translations are automatic, not verified by native speakers, and need specialist review (religious, medical, speculative/folklore/UAP content and the legal note).
 - **0.10.5 — 2026-10-19:** the "Rights and attribution" note is translated into fr, it, es, pt, de, hu (RO+EN kept as the reference version); sentence splitter and 105 more slot templates plus 277 translated sentences: about 59% of the protocol narrative characters are now translated (68% counting leading fragments). Translations need specialist (legal) review.
 - **0.10.4 — 2026-10-19:** the catalog sheets and UAP texts are translated into fr, it, es, pt, de, hu; sentence-level fallback for the 331 most frequent narrative templates (about half of the narrative characters). **0.10.1:** the undo / first-use banners and the toast get their bottom offset and width back (invalid `calc()`).
