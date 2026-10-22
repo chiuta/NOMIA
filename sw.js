@@ -1,5 +1,5 @@
 /* NOMIA service worker — offline cache (network-first for the app shell so updates arrive immediately) */
-const CACHE = 'nomia-v19';
+const CACHE = 'nomia-v20';
 const SHELL = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './icon-180.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL).catch(() => {})).then(() => self.skipWaiting()));

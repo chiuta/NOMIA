@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 0.10.12 · **Ultima actualizare:** 2026-10-22
+**Versiune:** 0.10.13 · **Ultima actualizare:** 2026-10-22
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -70,6 +70,7 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf.
 - Teste: `tests/fff-r8.test.mjs` (Node + Playwright; rețea blocată, 1280 și 360 px, axe 0 violări); testele Python existente rulează ca înainte.
 
 ## Istoric / Changelog
+- **0.10.13 — 2026-10-22:** fff-kit 1.1.4: ținte tactile și text minim în interfața comună; ținte tactile/text corectate (butoanele de citire și auto-scroll, salvarea căutării, bannerul de prima utilizare, nota de drepturi, etichetele canalelor, etichetele modelului triadic).
 - **0.10.12 — 2026-10-22:** Securitate: mesajul „Niciun NHI pentru …” și butoanele căutărilor salvate nu mai inserează interogarea tastată ca HTML (DOM-XSS latent).
 - **0.10.11 — 2026-10-22:** fff-kit 1.1.2: PBKDF2 600 000 iterații, protecție anti-clickjacking.
 - **0.10.10 (22 octombrie 2026):** Accesibilitate și mobil: un singur H1, nume accesibile pe cele 1001 butoane NHI (derivate din numele intrării) și pe câmpurile de căutare, text de minimum 12 px pe carduri și filtre; confirm() înlocuit cu dialoguri inline traduse; exporturile CSV neutralizează prefixele de formulă (=, +, -, @).

@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 0.10.12 · **Dernière mise à jour :** 2026-10-22
+**Version :** 0.10.13 · **Dernière mise à jour :** 2026-10-22
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -70,6 +70,7 @@ Alexio — Alexandru-Ionuț Chiuță, contact : alexio@trom.tf.
 - Tests : `tests/fff-r8.test.mjs` (Node + Playwright ; réseau bloqué, 1280 et 360 px, axe 0 violation) ; les tests Python existants s'exécutent comme avant.
 
 ## Historique / Changelog
+- **0.10.13 — 2026-10-22 :** fff-kit 1.1.4 : cibles tactiles et taille minimale du texte dans l’interface commune ; cibles tactiles/texte corrigés (boutons de lecture et de défilement auto, enregistrement de la recherche, bandeau de première utilisation, note de droits, libellés des canaux, étiquettes du modèle triadique).
 - **0.10.12 — 2026-10-22:** Sécurité : le message « Aucun NHI pour … » et les boutons de recherches enregistrées n’insèrent plus la requête saisie comme HTML (DOM-XSS latent).
 - **0.10.11 — 2026-10-22 :** fff-kit 1.1.2 : PBKDF2 600 000 itérations, protection anti-clickjacking.
 - **0.10.10 (22 octobre 2026) :** Accessibilité et mobile : un seul H1, noms accessibles sur les 1001 boutons NHI (dérivés du nom de l'entrée) et sur les champs de recherche, texte d'au moins 12 px sur les cartes et filtres ; confirm() remplacé par des dialogues intégrés traduits ; les exports CSV neutralisent les préfixes de formule (=, +, -, @).

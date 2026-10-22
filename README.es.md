@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 0.10.12 · **Última actualización:** 2026-10-22
+**Versión:** 0.10.13 · **Última actualización:** 2026-10-22
 
 Idiomas de la interfaz: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -70,6 +70,7 @@ Alexio — Alexandru-Ionuț Chiuță, contacto: alexio@trom.tf.
 - Pruebas: `tests/fff-r8.test.mjs` (Node + Playwright; red bloqueada, 1280 y 360 px, axe 0 infracciones); las pruebas Python existentes se ejecutan como antes.
 
 ## Historial / Changelog
+- **0.10.13 — 2026-10-22:** fff-kit 1.1.4: áreas táctiles y tamaño mínimo del texto en la interfaz común; áreas táctiles/texto corregidos (botones de lectura y desplazamiento automático, guardar búsqueda, banner de primer uso, nota de derechos, etiquetas de canales, etiquetas del modelo triádico).
 - **0.10.12 — 2026-10-22:** Seguridad: el mensaje «Ningún NHI para …» y los botones de búsquedas guardadas ya no insertan la consulta escrita como HTML (DOM-XSS latente).
 - **0.10.11 — 2026-10-22:** fff-kit 1.1.2: PBKDF2 600 000 iteraciones, protección anti-clickjacking.
 - **0.10.10 (22 de octubre de 2026):** Accesibilidad y móvil: un solo H1, nombres accesibles en los 1001 botones NHI (derivados del nombre de la entrada) y en los campos de búsqueda, texto de al menos 12 px en tarjetas y filtros; confirm() sustituido por diálogos integrados traducidos; las exportaciones CSV neutralizan los prefijos de fórmula (=, +, -, @).
