@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 0.10.10 · **Zuletzt aktualisiert:** 2026-10-22
+**Version:** 0.10.11 · **Zuletzt aktualisiert:** 2026-10-22
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -70,6 +70,7 @@ Alexio — Alexandru-Ionuț Chiuță, Kontakt: alexio@trom.tf.
 - Tests: `tests/fff-r8.test.mjs` (Node + Playwright; Netzwerk blockiert, 1280 und 360 px, axe 0 Verstöße); die vorhandenen Python-Tests laufen wie bisher.
 
 ## Verlauf / Changelog
+- **0.10.11 — 2026-10-22:** fff-kit 1.1.2: PBKDF2 600.000 Iterationen, Schutz vor Clickjacking.
 - **0.10.10 (22. Oktober 2026):** Barrierefreiheit und Mobil: genau eine H1, zugängliche Namen für die 1001 NHI-Schaltflächen (vom Eintragsnamen abgeleitet) und die Suchfelder, Text von mindestens 12 px auf Karten und Filtern; confirm() durch übersetzte Inline-Dialoge ersetzt; CSV-Exporte neutralisieren Formelpräfixe (=, +, -, @).
 - **0.10.9 — 2026-10-22:** Die 1001 Entitätsnamen (z. B. „Giraffen“, „Die Zoo-Hypothese“, „Afrikanische Strauße“) sind jetzt in fr/it/es/pt/de/hu in Liste, Suche und Steckbriefen übersetzt; UAP-Falltabelle und Detailbereich, Kanal-Tooltips und das Startprotokoll zeigen kein Rumänisch (bzw. Englisch im Rumänischen) mehr.
 - **0.10.8 — 2026-10-22:** Titel, Rechtehinweis und Kategorienamen (esoterische/religiöse Traditionen, moderne Hypothesen, Kopffüßer) folgen nun der Oberflächensprache.

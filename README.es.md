@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 0.10.10 · **Última actualización:** 2026-10-22
+**Versión:** 0.10.11 · **Última actualización:** 2026-10-22
 
 Idiomas de la interfaz: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -70,6 +70,7 @@ Alexio — Alexandru-Ionuț Chiuță, contacto: alexio@trom.tf.
 - Pruebas: `tests/fff-r8.test.mjs` (Node + Playwright; red bloqueada, 1280 y 360 px, axe 0 infracciones); las pruebas Python existentes se ejecutan como antes.
 
 ## Historial / Changelog
+- **0.10.11 — 2026-10-22:** fff-kit 1.1.2: PBKDF2 600 000 iteraciones, protección anti-clickjacking.
 - **0.10.10 (22 de octubre de 2026):** Accesibilidad y móvil: un solo H1, nombres accesibles en los 1001 botones NHI (derivados del nombre de la entrada) y en los campos de búsqueda, texto de al menos 12 px en tarjetas y filtros; confirm() sustituido por diálogos integrados traducidos; las exportaciones CSV neutralizan los prefijos de fórmula (=, +, -, @).
 - **0.10.9 — 2026-10-22:** los 1001 nombres de entidades (p. ej. «Jirafas», «La hipótesis del zoológico», «Avestruces comunes») se traducen ahora en fr/it/es/pt/de/hu en la lista, la búsqueda y las fichas; la tabla y el panel de detalles de los UAP, las descripciones de los canales y el registro de inicio ya no muestran rumano (ni inglés en rumano).
 - **0.10.8 — 2026-10-22:** el título, la nota de derechos y los nombres de categorías (tradiciones esotéricas/religiosas, hipótesis modernas, cefalópodos) siguen ahora el idioma de la interfaz.

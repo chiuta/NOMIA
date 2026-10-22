@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 0.10.10 · **Utolsó frissítés:** 2026-10-22
+**Verzió:** 0.10.11 · **Utolsó frissítés:** 2026-10-22
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -70,6 +70,7 @@ Alexio — Alexandru-Ionuț Chiuță, kapcsolat: alexio@trom.tf.
 - Tesztek: `tests/fff-r8.test.mjs` (Node + Playwright; hálózat blokkolva, 1280 és 360 px, axe 0 szabálysértés); a meglévő Python-tesztek a korábbiak szerint futnak.
 
 ## Előzmények / Changelog
+- **0.10.11 — 2026-10-22:** fff-kit 1.1.2: PBKDF2 600 000 iteráció, clickjacking elleni védelem.
 - **0.10.10 (2026. október 22.):** Akadálymentesség és mobil: pontosan egy H1, elérhető nevek az 1001 NHI-gombon (a bejegyzés nevéből származtatva) és a keresőmezőkön, legalább 12 px szöveg a kártyákon és szűrőkön; a confirm() helyett lefordított beágyazott párbeszédablakok; a CSV-exportok semlegesítik a képletelőtagokat (=, +, -, @).
 - **0.10.9 — 2026-10-22:** az 1001 entitásnév (pl. „Zsiráfok”, „Az Állatkert-hipotézis”, „Afrikai struccok”) mostantól fr/it/es/pt/de/hu nyelven is lefordítva jelenik meg a listában, a keresésben és a lapokon; az UAP-esettábla és a részletpanel, a csatornák súgószövege és az indítási napló már nem mutat románt (vagy angolt román nyelven).
 - **0.10.8 — 2026-10-22:** a cím, a jogi megjegyzés és a kategórianevek (ezoterikus/vallási hagyományok, modern hipotézisek, fejlábúak) mostantól a felület nyelvét követik.
