@@ -1,7 +1,7 @@
 /* NOMIA service worker — offline cache (network-first for the app shell so updates arrive immediately;
    cache-first for i18n/* and data/* packs, which are versioned through ?v=<build>) */
-const CACHE = 'nomia-v21';
-const SHELL = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './icon-180.png', './i18n/keys.js?v=0.10.15'];
+const CACHE = 'nomia-v22';
+const SHELL = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './icon-180.png', './i18n/keys.js?v=0.10.16'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL).catch(() => {})).then(() => self.skipWaiting()));
 });

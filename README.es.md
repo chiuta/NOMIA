@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 0.10.15 · **Última actualización:** 2026-10-23
+**Versión:** 0.10.16 · **Última actualización:** 2026-10-23
 
 Idiomas de la interfaz: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -70,6 +70,7 @@ Alexio — Alexandru-Ionuț Chiuță, contacto: alexio@trom.tf.
 - Pruebas: `tests/fff-r8.test.mjs` (Node + Playwright; red bloqueada, 1280 y 360 px, axe 0 infracciones); las pruebas Python existentes se ejecutan como antes.
 
 ## Historial / Changelog
+- **0.10.16 — 2026-10-23:** Almacenamiento: las claves llevan ahora el prefijo de la aplicación (`nomia.a11y`); los datos existentes se migran automáticamente al iniciar desde las claves antiguas (`a11y`) y las copias `.fff.json` antiguas se siguen importando (fff-kit 1.2.0).
 - **0.10.14 — 2026-10-22:** Peso: la página baja de 18,6 MB a 3,3 MB. El diccionario en 8 idiomas se divide en paquetes de idioma (`i18n/keys.js` + un archivo por idioma, cargado solo para el idioma elegido) y las variantes de protocolo NHI→Humano / IA→NHI / NHI→IA (2,4 MB) están en `data/variants.js`, que se carga al primer uso; el service worker los sirve primero desde la caché y, cuando la página está inactiva, descarga los demás paquetes en segundo plano (no con Save-Data / conexiones lentas), de modo que la aplicación sigue siendo totalmente offline. Si un paquete no se puede cargar (sin conexión antes de descargarlo) se muestra el texto original con un aviso en el idioma elegido. Sin parpadeo de texto sin traducir (la página aparece cuando llega el paquete, como máximo tras 6 s). Nueva prueba: `tests/lazy.test.mjs`.
 - **0.10.13 — 2026-10-22:** fff-kit 1.1.4: áreas táctiles y tamaño mínimo del texto en la interfaz común; áreas táctiles/texto corregidos (botones de lectura y desplazamiento automático, guardar búsqueda, banner de primer uso, nota de derechos, etiquetas de canales, etiquetas del modelo triádico).
 - **0.10.12 — 2026-10-22:** Seguridad: el mensaje «Ningún NHI para …» y los botones de búsquedas guardadas ya no insertan la consulta escrita como HTML (DOM-XSS latente).
