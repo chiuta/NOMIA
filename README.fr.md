@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 0.10.8 · **Dernière mise à jour :** 2026-10-22
+**Version :** 0.10.9 · **Dernière mise à jour :** 2026-10-22
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -71,6 +71,7 @@ Alexio — Alexandru-Ionuț Chiuță, contact : alexio@trom.tf.
 
 ## Historique / Changelog
 
+- **0.10.9 — 2026-10-22 :** les 1001 noms d'entités (p. ex. « Girafes », « L'hypothèse du zoo », « Autruches d'Afrique ») sont désormais traduits en fr/it/es/pt/de/hu dans la liste, la recherche et les fiches ; le tableau et le panneau de détails des UAP, les infobulles des canaux et le journal de démarrage n'affichent plus de roumain (ni d'anglais en roumain).
 - **0.10.8 — 2026-10-22 :** le titre, la note de droits et les noms de catégories (traditions ésotériques/religieuses, hypothèses modernes, céphalopodes) suivent désormais la langue de l'interface.
 - **0.10.7 — 2026-10-22 :** la validation des traductions accepte désormais le format local des nombres (10.000 / 10,000 / 10 000, 1.2 / 1,2) et les nombres rendus en lettres ou en ordinaux ; environ 320 phrases précédemment rejetées ont été revues et intégrées (toutes des traductions correctes : nombres en toutes lettres, format horaire, siècles en chiffres romains, échelle des « trillions ») : environ 11 500 phrases uniques, environ 91 % des caractères des récits (environ 99,6 % en comptant les fragments d'ouverture) ; plus aucune phrase n'est rejetée à la validation.
 - **0.10.6 — 2026-10-21 :** les récits des protocoles sont désormais traduits en fr, it, es, pt, de, hu presque entièrement : environ 11 400 phrases uniques traduites directement, soit environ 91 % des caractères des récits (environ 99 % en comptant les fragments d'ouverture) ; seul un petit reliquat reste en roumain. Les traductions sont automatiques, non vérifiées par des locuteurs natifs, et doivent être relues par un spécialiste (contenu religieux, médical, spéculatif/folklorique/UAP et note juridique).

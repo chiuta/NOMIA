@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 0.10.8 · **Last updated:** 2026-10-22
+**Version:** 0.10.9 · **Last updated:** 2026-10-22
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -71,6 +71,7 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf.
 
 ## History / Changelog
 
+- **0.10.9 — 2026-10-22:** the 1001 entity names (e.g. “Giraffes”, “The Zoo Hypothesis”, “Common Ostriches”) are now translated in fr/it/es/pt/de/hu in the list, search and entity sheets; the UAP case table and detail panel, the channel tooltips and the start-up log no longer show Romanian (or English in Romanian).
 - **0.10.8 — 2026-10-22:** the title, the rights note and the esoteric/religious/modern-hypotheses/cephalopod category names now follow the interface language (no more Romanian/English leftovers).
 - **0.10.7 — 2026-10-22:** the translation validation now accepts the local number format (10.000 / 10,000 / 10 000, 1.2 / 1,2) and numerals rendered as words or ordinals; about 320 previously rejected sentences were reviewed and merged (all correct translations: spelled-out numbers, clock format, Roman-numeral centuries, short/long scale for trillions): about 11,500 unique sentences, about 91% of the narrative characters (about 99.6% counting leading fragments); no sentence is rejected by validation any more.
 - **0.10.6 — 2026-10-21:** the protocol narratives are now translated into fr, it, es, pt, de, hu almost completely: about 11,400 unique sentences translated directly, about 91% of the narrative characters (about 99% counting leading fragments); only a small residue stays in Romanian. Translations are automatic, not verified by native speakers, and need specialist review (religious, medical, speculative/folklore/UAP content and the legal note).

@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 0.10.8 · **Ultima actualizare:** 2026-10-22
+**Versiune:** 0.10.9 · **Ultima actualizare:** 2026-10-22
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -71,6 +71,7 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf.
 
 ## Istoric / Changelog
 
+- **0.10.9 — 2026-10-22:** cele 1001 de nume de entități (ex. „Girafe”, „Ipoteza zoo”, „Struți”) sunt acum traduse în fr/it/es/pt/de/hu în listă, căutare și fișe; tabelul și panoul de detalii UAP, sugestiile canalelor și jurnalul de pornire nu mai afișează română (sau engleză în română).
 - **0.10.8 — 2026-10-22:** titlul, nota despre drepturi și numele categoriilor (tradiții esoterice/religioase, ipoteze moderne, cefalopode) urmează acum limba interfeței (fără rămășițe ro/en).
 - **0.10.7 — 2026-10-22:** validarea traducerilor acceptă acum formatul local al numerelor (10.000 / 10,000 / 10 000, 1.2 / 1,2) și numerele redate în litere sau ordinale; circa 320 de propoziții respinse anterior au fost revizuite și integrate (toate traduceri corecte: numere scrise în litere, format de oră, secole cu cifre romane, scara numerică a trilioanelor): circa 11.500 de propoziții unice, circa 91% din caracterele narațiunilor (circa 99,6% dacă se numără fragmentele de început); nicio propoziție nu mai este respinsă la validare.
 - **0.10.6 — 2026-10-21:** narațiunile protocoalelor sunt acum traduse în fr, it, es, pt, de, hu aproape complet: circa 11.400 de propoziții unice traduse direct, circa 91% din caracterele narațiunilor (circa 99% dacă se numără fragmentele de început); doar un mic reziduu rămâne în română. Traducerile sunt automate, neverificate de vorbitori nativi, și necesită revizie de specialitate (conținut religios, medical, speculativ/folcloric/UAP și nota juridică).
