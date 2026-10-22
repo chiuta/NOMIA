@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 0.10.13 · **Dernière mise à jour :** 2026-10-22
+**Version :** 0.10.14 · **Dernière mise à jour :** 2026-10-22
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -70,6 +70,7 @@ Alexio — Alexandru-Ionuț Chiuță, contact : alexio@trom.tf.
 - Tests : `tests/fff-r8.test.mjs` (Node + Playwright ; réseau bloqué, 1280 et 360 px, axe 0 violation) ; les tests Python existants s'exécutent comme avant.
 
 ## Historique / Changelog
+- **0.10.14 — 2026-10-22:** Poids : la page passe de 18,6 Mo à 3,3 Mo. Le dictionnaire en 8 langues est découpé en packs de langue (`i18n/keys.js` + un fichier par langue, chargé seulement pour la langue choisie) et les variantes de protocole NHI→Humain / IA→NHI / NHI→IA (2,4 Mo) sont dans `data/variants.js`, chargé à la première utilisation ; le service worker les sert en cache d’abord et, quand la page est inactive, télécharge les autres packs en arrière-plan (sauf avec Save-Data / connexion lente), de sorte que l’application reste entièrement hors ligne. Si un pack ne peut pas être chargé (hors ligne avant son téléchargement), le texte d’origine s’affiche avec un avis dans la langue choisie. Plus de clignotement de texte non traduit (la page apparaît à l’arrivée du pack, au plus après 6 s). Nouveau test : `tests/lazy.test.mjs`.
 - **0.10.13 — 2026-10-22 :** fff-kit 1.1.4 : cibles tactiles et taille minimale du texte dans l’interface commune ; cibles tactiles/texte corrigés (boutons de lecture et de défilement auto, enregistrement de la recherche, bandeau de première utilisation, note de droits, libellés des canaux, étiquettes du modèle triadique).
 - **0.10.12 — 2026-10-22:** Sécurité : le message « Aucun NHI pour … » et les boutons de recherches enregistrées n’insèrent plus la requête saisie comme HTML (DOM-XSS latent).
 - **0.10.11 — 2026-10-22 :** fff-kit 1.1.2 : PBKDF2 600 000 itérations, protection anti-clickjacking.

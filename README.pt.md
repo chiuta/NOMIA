@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 0.10.13 · **Última atualização:** 2026-10-22
+**Versão:** 0.10.14 · **Última atualização:** 2026-10-22
 
 Idiomas da interface: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -70,6 +70,7 @@ Alexio — Alexandru-Ionuț Chiuță, contacto: alexio@trom.tf.
 - Testes: `tests/fff-r8.test.mjs` (Node + Playwright; rede bloqueada, 1280 e 360 px, axe 0 violações); os testes Python existentes correm como antes.
 
 ## Histórico / Changelog
+- **0.10.14 — 2026-10-22:** Peso: a página desce de 18,6 MB para 3,3 MB. O dicionário em 8 idiomas é dividido em pacotes de idioma (`i18n/keys.js` + um ficheiro por idioma, carregado só para o idioma escolhido) e as variantes de protocolo NHI→Humano / IA→NHI / NHI→IA (2,4 MB) estão em `data/variants.js`, carregado na primeira utilização; o service worker serve-os primeiro da cache e, quando a página está inativa, descarrega os outros pacotes em segundo plano (não com Save-Data / ligações lentas), pelo que a aplicação continua totalmente offline. Se um pacote não puder ser carregado (offline antes de o descarregar), mostra-se o texto original com um aviso no idioma escolhido. Sem tremeluzir de texto por traduzir (a página aparece quando chega o pacote, no máximo após 6 s). Novo teste: `tests/lazy.test.mjs`.
 - **0.10.13 — 2026-10-22:** fff-kit 1.1.4: áreas de toque e tamanho mínimo do texto na interface comum; áreas de toque/texto corrigidos (botões de leitura e rolagem automática, guardar pesquisa, faixa de primeira utilização, nota de direitos, rótulos dos canais, rótulos do modelo triádico).
 - **0.10.12 — 2026-10-22:** Segurança: a mensagem «Nenhum NHI para …» e os botões das pesquisas guardadas deixaram de inserir a consulta escrita como HTML (DOM-XSS latente).
 - **0.10.11 — 2026-10-22:** fff-kit 1.1.2: PBKDF2 600 000 iterações, proteção anti-clickjacking.

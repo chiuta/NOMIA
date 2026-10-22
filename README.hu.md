@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 0.10.13 · **Utolsó frissítés:** 2026-10-22
+**Verzió:** 0.10.14 · **Utolsó frissítés:** 2026-10-22
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -70,6 +70,7 @@ Alexio — Alexandru-Ionuț Chiuță, kapcsolat: alexio@trom.tf.
 - Tesztek: `tests/fff-r8.test.mjs` (Node + Playwright; hálózat blokkolva, 1280 és 360 px, axe 0 szabálysértés); a meglévő Python-tesztek a korábbiak szerint futnak.
 
 ## Előzmények / Changelog
+- **0.10.14 — 2026-10-22:** Méret: az oldal 18,6 MB-ról 3,3 MB-ra csökken. A 8 nyelvű szótár nyelvi csomagokra oszlik (`i18n/keys.js` + nyelvenként egy fájl, csak a kiválasztott nyelvhez töltődik be), a NHI→Ember / MI→NHI / NHI→MI protokollváltozatok (2,4 MB) pedig a `data/variants.js` fájlban vannak, amely az első használatkor töltődik be; a service worker előbb a gyorsítótárból szolgálja ki őket, tétlen oldalnál pedig a háttérben letölti a többi csomagot (Save-Data / lassú kapcsolat esetén nem), így az alkalmazás teljesen offline marad. Ha egy csomag nem tölthető be (offline, letöltés előtt), az eredeti szöveg jelenik meg a kiválasztott nyelven írt értesítéssel. Nincs lefordítatlan szöveg villanása (az oldal a csomag megérkezésekor jelenik meg, legfeljebb 6 s után). Új teszt: `tests/lazy.test.mjs`.
 - **0.10.13 — 2026-10-22:** fff-kit 1.1.4: érintési célok és minimális szövegméret a közös felületen; javított érintési célok/szöveg (felolvasó és automatikus görgetés gombok, keresés mentése, első használati sáv, jogi megjegyzés, csatornacímkék, a triadikus modell címkéi).
 - **0.10.12 — 2026-10-22:** Biztonság: a „Nincs NHI erre: …” üzenet és a mentett keresések gombjai már nem szúrják be HTML-ként a beírt keresőkifejezést (látens DOM-XSS).
 - **0.10.11 — 2026-10-22:** fff-kit 1.1.2: PBKDF2 600 000 iteráció, clickjacking elleni védelem.

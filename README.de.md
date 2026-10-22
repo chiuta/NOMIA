@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 0.10.13 · **Zuletzt aktualisiert:** 2026-10-22
+**Version:** 0.10.14 · **Zuletzt aktualisiert:** 2026-10-22
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -70,6 +70,7 @@ Alexio — Alexandru-Ionuț Chiuță, Kontakt: alexio@trom.tf.
 - Tests: `tests/fff-r8.test.mjs` (Node + Playwright; Netzwerk blockiert, 1280 und 360 px, axe 0 Verstöße); die vorhandenen Python-Tests laufen wie bisher.
 
 ## Verlauf / Changelog
+- **0.10.14 — 2026-10-22:** Gewicht: die Seite schrumpft von 18,6 MB auf 3,3 MB. Das 8-sprachige Wörterbuch ist in Sprachpakete aufgeteilt (`i18n/keys.js` + eine Datei pro Sprache, nur für die gewählte Sprache geladen), und die Protokollvarianten NHI→Mensch / KI→NHI / NHI→KI (2,4 MB) liegen in `data/variants.js`, das bei der ersten Nutzung geladen wird; der Service Worker liefert sie zuerst aus dem Cache und lädt im Leerlauf die übrigen Pakete im Hintergrund (nicht bei Save-Data / langsamer Verbindung), sodass die App vollständig offline bleibt. Lässt sich ein Paket nicht laden (offline, bevor es heruntergeladen wurde), erscheint der Originaltext mit einem Hinweis in der gewählten Sprache. Kein Aufblitzen unübersetzten Textes (die Seite erscheint, wenn das Paket eintrifft, spätestens nach 6 s). Neuer Test: `tests/lazy.test.mjs`.
 - **0.10.13 — 2026-10-22:** fff-kit 1.1.4: Touch-Ziele und Mindestschriftgröße in der gemeinsamen Oberfläche; Touch-Ziele/Text korrigiert (Vorlese- und Auto-Scroll-Tasten, Suche speichern, Erstnutzungs-Banner, Rechtehinweis, Kanalbeschriftungen, Beschriftungen des triadischen Modells).
 - **0.10.12 — 2026-10-22:** Sicherheit: Die Meldung „Kein NHI für …“ und die Schaltflächen gespeicherter Suchen fügen die eingegebene Anfrage nicht mehr als HTML ein (latentes DOM-XSS).
 - **0.10.11 — 2026-10-22:** fff-kit 1.1.2: PBKDF2 600.000 Iterationen, Schutz vor Clickjacking.
