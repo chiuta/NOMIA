@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 0.10.9 · **Last updated:** 2026-10-22
+**Version:** 0.10.10 · **Last updated:** 2026-10-22
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -70,7 +70,7 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf.
 - Tests: `tests/fff-r8.test.mjs` (Node + Playwright; network blocked, 1280 and 360 px, axe 0 violations); the existing Python tests run as before.
 
 ## History / Changelog
-
+- **0.10.10 (22 October 2026):** Accessibility and mobile: a single H1, accessible names on the 1001 NHI buttons (derived from the entry name) and on the search fields, text of at least 12 px on cards and filters; confirm() replaced by translated inline dialogs; CSV exports neutralise formula prefixes (=, +, -, @).
 - **0.10.9 — 2026-10-22:** the 1001 entity names (e.g. “Giraffes”, “The Zoo Hypothesis”, “Common Ostriches”) are now translated in fr/it/es/pt/de/hu in the list, search and entity sheets; the UAP case table and detail panel, the channel tooltips and the start-up log no longer show Romanian (or English in Romanian).
 - **0.10.8 — 2026-10-22:** the title, the rights note and the esoteric/religious/modern-hypotheses/cephalopod category names now follow the interface language (no more Romanian/English leftovers).
 - **0.10.7 — 2026-10-22:** the translation validation now accepts the local number format (10.000 / 10,000 / 10 000, 1.2 / 1,2) and numerals rendered as words or ordinals; about 320 previously rejected sentences were reviewed and merged (all correct translations: spelled-out numbers, clock format, Roman-numeral centuries, short/long scale for trillions): about 11,500 unique sentences, about 91% of the narrative characters (about 99.6% counting leading fragments); no sentence is rejected by validation any more.

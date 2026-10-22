@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 0.10.9 · **Ultima actualizare:** 2026-10-22
+**Versiune:** 0.10.10 · **Ultima actualizare:** 2026-10-22
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -70,7 +70,7 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf.
 - Teste: `tests/fff-r8.test.mjs` (Node + Playwright; rețea blocată, 1280 și 360 px, axe 0 violări); testele Python existente rulează ca înainte.
 
 ## Istoric / Changelog
-
+- **0.10.10 (22 octombrie 2026):** Accesibilitate și mobil: un singur H1, nume accesibile pe cele 1001 butoane NHI (derivate din numele intrării) și pe câmpurile de căutare, text de minimum 12 px pe carduri și filtre; confirm() înlocuit cu dialoguri inline traduse; exporturile CSV neutralizează prefixele de formulă (=, +, -, @).
 - **0.10.9 — 2026-10-22:** cele 1001 de nume de entități (ex. „Girafe”, „Ipoteza zoo”, „Struți”) sunt acum traduse în fr/it/es/pt/de/hu în listă, căutare și fișe; tabelul și panoul de detalii UAP, sugestiile canalelor și jurnalul de pornire nu mai afișează română (sau engleză în română).
 - **0.10.8 — 2026-10-22:** titlul, nota despre drepturi și numele categoriilor (tradiții esoterice/religioase, ipoteze moderne, cefalopode) urmează acum limba interfeței (fără rămășițe ro/en).
 - **0.10.7 — 2026-10-22:** validarea traducerilor acceptă acum formatul local al numerelor (10.000 / 10,000 / 10 000, 1.2 / 1,2) și numerele redate în litere sau ordinale; circa 320 de propoziții respinse anterior au fost revizuite și integrate (toate traduceri corecte: numere scrise în litere, format de oră, secole cu cifre romane, scara numerică a trilioanelor): circa 11.500 de propoziții unice, circa 91% din caracterele narațiunilor (circa 99,6% dacă se numără fragmentele de început); nicio propoziție nu mai este respinsă la validare.

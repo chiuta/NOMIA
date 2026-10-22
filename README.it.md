@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 0.10.9 · **Ultimo aggiornamento:** 2026-10-22
+**Versione:** 0.10.10 · **Ultimo aggiornamento:** 2026-10-22
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -70,7 +70,7 @@ Alexio — Alexandru-Ionuț Chiuță, contatto: alexio@trom.tf.
 - Test: `tests/fff-r8.test.mjs` (Node + Playwright; rete bloccata, 1280 e 360 px, axe 0 violazioni); i test Python esistenti girano come prima.
 
 ## Storico / Changelog
-
+- **0.10.10 (22 ottobre 2026):** Accessibilità e mobile: un solo H1, nomi accessibili sui 1001 pulsanti NHI (derivati dal nome della voce) e sui campi di ricerca, testo di almeno 12 px su schede e filtri; confirm() sostituito da dialoghi inline tradotti; le esportazioni CSV neutralizzano i prefissi di formula (=, +, -, @).
 - **0.10.9 — 2026-10-22:** i 1001 nomi delle entità (es. «Giraffe», «L'ipotesi dello zoo», «Struzzi comuni») sono ora tradotti in fr/it/es/pt/de/hu nell'elenco, nella ricerca e nelle schede; la tabella e il pannello dei dettagli UAP, i suggerimenti dei canali e il log di avvio non mostrano più il rumeno (né l'inglese in rumeno).
 - **0.10.8 — 2026-10-22:** il titolo, la nota sui diritti e i nomi delle categorie (tradizioni esoteriche/religiose, ipotesi moderne, cefalopodi) seguono ora la lingua dell'interfaccia.
 - **0.10.7 — 2026-10-22:** la validazione delle traduzioni accetta ora il formato numerico locale (10.000 / 10,000 / 10 000, 1.2 / 1,2) e i numeri resi in lettere o ordinali; circa 320 frasi precedentemente scartate sono state riviste e integrate (tutte traduzioni corrette: numeri scritti in lettere, formato orario, secoli in numeri romani, scala dei «trilioni»): circa 11.500 frasi uniche, circa il 91% dei caratteri delle narrazioni (circa il 99,6% contando i frammenti iniziali); nessuna frase viene più scartata in fase di validazione.

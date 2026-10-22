@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 0.10.9 · **Dernière mise à jour :** 2026-10-22
+**Version :** 0.10.10 · **Dernière mise à jour :** 2026-10-22
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -70,7 +70,7 @@ Alexio — Alexandru-Ionuț Chiuță, contact : alexio@trom.tf.
 - Tests : `tests/fff-r8.test.mjs` (Node + Playwright ; réseau bloqué, 1280 et 360 px, axe 0 violation) ; les tests Python existants s'exécutent comme avant.
 
 ## Historique / Changelog
-
+- **0.10.10 (22 octobre 2026) :** Accessibilité et mobile : un seul H1, noms accessibles sur les 1001 boutons NHI (dérivés du nom de l'entrée) et sur les champs de recherche, texte d'au moins 12 px sur les cartes et filtres ; confirm() remplacé par des dialogues intégrés traduits ; les exports CSV neutralisent les préfixes de formule (=, +, -, @).
 - **0.10.9 — 2026-10-22 :** les 1001 noms d'entités (p. ex. « Girafes », « L'hypothèse du zoo », « Autruches d'Afrique ») sont désormais traduits en fr/it/es/pt/de/hu dans la liste, la recherche et les fiches ; le tableau et le panneau de détails des UAP, les infobulles des canaux et le journal de démarrage n'affichent plus de roumain (ni d'anglais en roumain).
 - **0.10.8 — 2026-10-22 :** le titre, la note de droits et les noms de catégories (traditions ésotériques/religieuses, hypothèses modernes, céphalopodes) suivent désormais la langue de l'interface.
 - **0.10.7 — 2026-10-22 :** la validation des traductions accepte désormais le format local des nombres (10.000 / 10,000 / 10 000, 1.2 / 1,2) et les nombres rendus en lettres ou en ordinaux ; environ 320 phrases précédemment rejetées ont été revues et intégrées (toutes des traductions correctes : nombres en toutes lettres, format horaire, siècles en chiffres romains, échelle des « trillions ») : environ 11 500 phrases uniques, environ 91 % des caractères des récits (environ 99,6 % en comptant les fragments d'ouverture) ; plus aucune phrase n'est rejetée à la validation.
