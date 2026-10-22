@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 0.10.7 · **Ultimo aggiornamento:** 2026-10-22
+**Versione:** 0.10.8 · **Ultimo aggiornamento:** 2026-10-22
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -71,6 +71,7 @@ Alexio — Alexandru-Ionuț Chiuță, contatto: alexio@trom.tf.
 
 ## Storico / Changelog
 
+- **0.10.8 — 2026-10-22:** il titolo, la nota sui diritti e i nomi delle categorie (tradizioni esoteriche/religiose, ipotesi moderne, cefalopodi) seguono ora la lingua dell'interfaccia.
 - **0.10.7 — 2026-10-22:** la validazione delle traduzioni accetta ora il formato numerico locale (10.000 / 10,000 / 10 000, 1.2 / 1,2) e i numeri resi in lettere o ordinali; circa 320 frasi precedentemente scartate sono state riviste e integrate (tutte traduzioni corrette: numeri scritti in lettere, formato orario, secoli in numeri romani, scala dei «trilioni»): circa 11.500 frasi uniche, circa il 91% dei caratteri delle narrazioni (circa il 99,6% contando i frammenti iniziali); nessuna frase viene più scartata in fase di validazione.
 - **0.10.6 — 2026-10-21:** le narrazioni dei protocolli sono ora tradotte in fr, it, es, pt, de, hu quasi completamente: circa 11.400 frasi uniche tradotte direttamente, circa il 91% dei caratteri delle narrazioni (circa il 99% contando i frammenti iniziali); solo un piccolo residuo resta in rumeno. Le traduzioni sono automatiche, non verificate da madrelingua, e richiedono la revisione di uno specialista (contenuti religiosi, medici, speculativi/folklorici/UAP e nota legale).
 - **0.10.5 — 2026-10-19:** la nota «Diritti e attribuzione» è tradotta in fr, it, es, pt, de, hu (RO+EN restano la versione di riferimento); divisore di frasi e altri 105 modelli con segnaposto, più 277 frasi tradotte: circa il 59% dei caratteri delle narrazioni dei protocolli è ora tradotto (68% contando i frammenti iniziali). Le traduzioni richiedono la revisione di uno specialista (legale).

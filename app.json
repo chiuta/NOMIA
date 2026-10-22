@@ -2,7 +2,7 @@
   "schema": 1,
   "slug": "nomia",
   "name": "NOMIA — Om·IA·NHI Protocol v0.8",
-  "version": "0.10.7",
+  "version": "0.10.8",
   "updated": "2026-10-22",
   "description": "Protocol de comunicare Om–IA–NHI: explorează 1001 inteligențe non-umane prin sesiuni trilogice imersive.",
   "egress": [],
@@ -37,8 +37,8 @@
     "nomia_tutorial_done",
     "nomia_version"
   ],
-  "sizeBytes": 18378601,
-  "sha256": "5fc5dd6e5376647a8367fd844db0e746301f5a86bbd987d372667cf4c652a2e1",
+  "sizeBytes": 18380469,
+  "sha256": "26545c3bf4d8581a5d89178c489285ea53fcfb6c5df80ef88731ca6ffdee42de",
   "csp": {
     "present": true,
     "directives": {

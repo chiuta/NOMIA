@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 0.10.7 · **Última actualización:** 2026-10-22
+**Versión:** 0.10.8 · **Última actualización:** 2026-10-22
 
 Idiomas de la interfaz: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -71,6 +71,7 @@ Alexio — Alexandru-Ionuț Chiuță, contacto: alexio@trom.tf.
 
 ## Historial / Changelog
 
+- **0.10.8 — 2026-10-22:** el título, la nota de derechos y los nombres de categorías (tradiciones esotéricas/religiosas, hipótesis modernas, cefalópodos) siguen ahora el idioma de la interfaz.
 - **0.10.7 — 2026-10-22:** la validación de las traducciones acepta ahora el formato numérico local (10.000 / 10,000 / 10 000, 1.2 / 1,2) y los números expresados con letras u ordinales; unas 320 frases rechazadas anteriormente se revisaron e integraron (todas traducciones correctas: números escritos con letras, formato horario, siglos en números romanos, escala de los «trillones»): unas 11 500 frases únicas, aproximadamente el 91 % de los caracteres de las narraciones (aproximadamente el 99,6 % contando los fragmentos iniciales); ya no se rechaza ninguna frase en la validación.
 - **0.10.6 — 2026-10-21:** las narraciones de los protocolos están ahora traducidas a fr, it, es, pt, de, hu casi por completo: unas 11 400 frases únicas traducidas directamente, aproximadamente el 91 % de los caracteres de las narraciones (aproximadamente el 99 % contando los fragmentos iniciales); solo un pequeño residuo permanece en rumano. Las traducciones son automáticas, no verificadas por hablantes nativos, y requieren revisión especializada (contenido religioso, médico, especulativo/folclórico/UAP y nota legal).
 - **0.10.5 — 2026-10-19:** la nota «Derechos y atribución» está traducida a fr, it, es, pt, de, hu (RO+EN se mantienen como versión de referencia); divisor de frases y 105 plantillas más con huecos, además de 277 frases traducidas: aproximadamente el 59 % de los caracteres de las narraciones de los protocolos está ahora traducido (68 % contando los fragmentos iniciales). Las traducciones requieren revisión especializada (jurídica).

@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 0.10.7 · **Utolsó frissítés:** 2026-10-22
+**Verzió:** 0.10.8 · **Utolsó frissítés:** 2026-10-22
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -71,6 +71,7 @@ Alexio — Alexandru-Ionuț Chiuță, kapcsolat: alexio@trom.tf.
 
 ## Előzmények / Changelog
 
+- **0.10.8 — 2026-10-22:** a cím, a jogi megjegyzés és a kategórianevek (ezoterikus/vallási hagyományok, modern hipotézisek, fejlábúak) mostantól a felület nyelvét követik.
 - **0.10.7 — 2026-10-22:** a fordítások ellenőrzése mostantól elfogadja a helyi számformátumot (10.000 / 10,000 / 10 000, 1.2 / 1,2) és a betűvel vagy sorszámnévvel kifejezett számokat; kb. 320 korábban elutasított mondatot átnéztünk és beépítettünk (mind helyes fordítás: betűvel írt számok, órabeosztás, római számos századok, a „trillió” számskála): kb. 11 500 egyedi mondat, az elbeszélés-karakterek kb. 91%-a (kb. 99,6%-a a bevezető töredékekkel); az ellenőrzés már egyetlen mondatot sem utasít el.
 - **0.10.6 — 2026-10-21:** a protokollok elbeszélései most már szinte teljesen le vannak fordítva fr, it, es, pt, de, hu nyelvre: kb. 11 400 egyedi, közvetlenül lefordított mondat, az elbeszélés-karakterek kb. 91%-a (kb. 99%-a a bevezető töredékekkel); csak egy kis maradék marad románul. A fordítások automatikusak, anyanyelvi beszélők nem ellenőrizték, és szakmai felülvizsgálatot igényelnek (vallási, orvosi, spekulatív/népi/UAP-tartalom és a jogi megjegyzés).
 - **0.10.5 — 2026-10-19:** a „Jogok és forrásmegjelölés” megjegyzés le van fordítva fr, it, es, pt, de, hu nyelvre (az RO+EN marad a referenciaváltozat); mondatfelosztó és további 105 helyőrzős sablon, valamint 277 lefordított mondat: a protokollok elbeszélés-karaktereinek kb. 59%-a van most lefordítva (68%, ha a bevezető töredékeket is számoljuk). A fordítások szakmai (jogi) felülvizsgálatot igényelnek.

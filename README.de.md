@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 0.10.7 · **Zuletzt aktualisiert:** 2026-10-22
+**Version:** 0.10.8 · **Zuletzt aktualisiert:** 2026-10-22
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -71,6 +71,7 @@ Alexio — Alexandru-Ionuț Chiuță, Kontakt: alexio@trom.tf.
 
 ## Verlauf / Changelog
 
+- **0.10.8 — 2026-10-22:** Titel, Rechtehinweis und Kategorienamen (esoterische/religiöse Traditionen, moderne Hypothesen, Kopffüßer) folgen nun der Oberflächensprache.
 - **0.10.7 — 2026-10-22:** die Validierung der Übersetzungen akzeptiert nun das lokale Zahlenformat (10.000 / 10,000 / 10 000, 1.2 / 1,2) sowie in Worten oder als Ordnungszahl ausgedrückte Zahlen; rund 320 zuvor verworfene Sätze wurden geprüft und übernommen (alles korrekte Übersetzungen: ausgeschriebene Zahlen, Uhrzeitformat, Jahrhunderte in römischen Ziffern, Zahlenskala der „Trillionen“): rund 11.500 einmalige Sätze, etwa 91 % der Erzählzeichen (etwa 99,6 % mit den Einleitungsfragmenten); kein Satz wird bei der Validierung mehr verworfen.
 - **0.10.6 — 2026-10-21:** die Protokollerzählungen sind nun fast vollständig nach fr, it, es, pt, de, hu übersetzt: rund 11.400 einmalige, direkt übersetzte Sätze, etwa 91 % der Erzählzeichen (etwa 99 % mit den Einleitungsfragmenten); nur ein kleiner Rest bleibt auf Rumänisch. Die Übersetzungen sind automatisch, nicht von Muttersprachlern geprüft und müssen fachlich geprüft werden (religiöse, medizinische, spekulative/folkloristische/UAP-Inhalte und der Rechtshinweis).
 - **0.10.5 — 2026-10-19:** der Hinweis „Rechte und Zuschreibung“ ist nach fr, it, es, pt, de, hu übersetzt (RO+EN bleiben die Referenzfassung); Satzteiler und 105 weitere Vorlagen mit Platzhaltern sowie 277 übersetzte Sätze: etwa 59 % der Erzählzeichen der Protokolle sind nun übersetzt (68 % mit den Einleitungsfragmenten). Die Übersetzungen müssen fachlich (juristisch) geprüft werden.
