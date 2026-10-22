@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 0.10.11 · **Ultimo aggiornamento:** 2026-10-22
+**Versione:** 0.10.12 · **Ultimo aggiornamento:** 2026-10-22
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -70,6 +70,7 @@ Alexio — Alexandru-Ionuț Chiuță, contatto: alexio@trom.tf.
 - Test: `tests/fff-r8.test.mjs` (Node + Playwright; rete bloccata, 1280 e 360 px, axe 0 violazioni); i test Python esistenti girano come prima.
 
 ## Storico / Changelog
+- **0.10.12 — 2026-10-22:** Sicurezza: il messaggio «Nessun NHI per …» e i pulsanti delle ricerche salvate non inseriscono più la query digitata come HTML (DOM-XSS latente).
 - **0.10.11 — 2026-10-22:** fff-kit 1.1.2: PBKDF2 600.000 iterazioni, protezione anti-clickjacking.
 - **0.10.10 (22 ottobre 2026):** Accessibilità e mobile: un solo H1, nomi accessibili sui 1001 pulsanti NHI (derivati dal nome della voce) e sui campi di ricerca, testo di almeno 12 px su schede e filtri; confirm() sostituito da dialoghi inline tradotti; le esportazioni CSV neutralizzano i prefissi di formula (=, +, -, @).
 - **0.10.9 — 2026-10-22:** i 1001 nomi delle entità (es. «Giraffe», «L'ipotesi dello zoo», «Struzzi comuni») sono ora tradotti in fr/it/es/pt/de/hu nell'elenco, nella ricerca e nelle schede; la tabella e il pannello dei dettagli UAP, i suggerimenti dei canali e il log di avvio non mostrano più il rumeno (né l'inglese in rumeno).

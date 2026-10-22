@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 0.10.11 · **Last updated:** 2026-10-22
+**Version:** 0.10.12 · **Last updated:** 2026-10-22
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -70,6 +70,7 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf.
 - Tests: `tests/fff-r8.test.mjs` (Node + Playwright; network blocked, 1280 and 360 px, axe 0 violations); the existing Python tests run as before.
 
 ## History / Changelog
+- **0.10.12 — 2026-10-22:** Security: the “No NHI for …” message and the saved-search buttons no longer insert the typed query as HTML (latent DOM-XSS).
 - **0.10.11 — 2026-10-22:** fff-kit 1.1.2: PBKDF2 600,000 iterations, anti-clickjacking protection.
 - **0.10.10 (22 October 2026):** Accessibility and mobile: a single H1, accessible names on the 1001 NHI buttons (derived from the entry name) and on the search fields, text of at least 12 px on cards and filters; confirm() replaced by translated inline dialogs; CSV exports neutralise formula prefixes (=, +, -, @).
 - **0.10.9 — 2026-10-22:** the 1001 entity names (e.g. “Giraffes”, “The Zoo Hypothesis”, “Common Ostriches”) are now translated in fr/it/es/pt/de/hu in the list, search and entity sheets; the UAP case table and detail panel, the channel tooltips and the start-up log no longer show Romanian (or English in Romanian).
