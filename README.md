@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 0.10.16 · **Last updated:** 2026-10-23
+**Version:** 0.10.17 · **Last updated:** 2026-10-23
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -70,6 +70,7 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf.
 - Tests: `tests/fff-r8.test.mjs` (Node + Playwright; network blocked, 1280 and 360 px, axe 0 violations); the existing Python tests run as before.
 
 ## History / Changelog
+- **0.10.17 — 2026-10-23:** Accessibility: on touch screens the 🔊 (read) and auto-scroll buttons were reduced to 24 px by a later CSS rule overriding the touch minimum; they are now 44 px.
 - **0.10.16 — 2026-10-23:** Storage: keys now carry the app prefix (`nomia.a11y`); existing data is migrated automatically at startup from the old key(s) (`a11y`), and older `.fff.json` backups still import (fff-kit 1.2.0).
 - **0.10.14 — 2026-10-22:** Weight: the page falls from 18.6 MB to 3.3 MB. The 8-language dictionary is split into language packs (`i18n/keys.js` + one file per language, loaded only for the chosen language) and the NHI→Om / AI→NHI / NHI→AI protocol variants (2.4 MB) into `data/variants.js`, loaded on first use; the service worker serves them cache-first and, once the page is idle, downloads the other packs in the background (skipped with Save-Data / slow connections), so the app stays fully offline. If a pack cannot be loaded (offline before it was ever downloaded) the original text is shown with a notice in the chosen language. No flash of untranslated text (the page is revealed when the pack arrives, at most after 6 s). New test: `tests/lazy.test.mjs`.
 - **0.10.13 — 2026-10-22:** fff-kit 1.1.4: touch targets and minimum text size in the shared interface; touch targets and text corrected (read and auto-scroll buttons, save search, first-use banner, rights note, channel labels, triadic model labels).

@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 0.10.16 · **Zuletzt aktualisiert:** 2026-10-23
+**Version:** 0.10.17 · **Zuletzt aktualisiert:** 2026-10-23
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -70,6 +70,7 @@ Alexio — Alexandru-Ionuț Chiuță, Kontakt: alexio@trom.tf.
 - Tests: `tests/fff-r8.test.mjs` (Node + Playwright; Netzwerk blockiert, 1280 und 360 px, axe 0 Verstöße); die vorhandenen Python-Tests laufen wie bisher.
 
 ## Verlauf / Changelog
+- **0.10.17 — 2026-10-23:** Barrierefreiheit: auf Touchscreens blieben die Schaltflächen 🔊 (Vorlesen) und Auto-Scroll durch eine spätere CSS-Regel bei 24 px; jetzt sind es 44 px.
 - **0.10.16 — 2026-10-23:** Speicher: Die Schlüssel tragen jetzt das App-Präfix (`nomia.a11y`); vorhandene Daten werden beim Start automatisch von den alten Schlüsseln (`a11y`) übernommen, und ältere `.fff.json`-Sicherungen lassen sich weiterhin importieren (fff-kit 1.2.0).
 - **0.10.14 — 2026-10-22:** Gewicht: die Seite schrumpft von 18,6 MB auf 3,3 MB. Das 8-sprachige Wörterbuch ist in Sprachpakete aufgeteilt (`i18n/keys.js` + eine Datei pro Sprache, nur für die gewählte Sprache geladen), und die Protokollvarianten NHI→Mensch / KI→NHI / NHI→KI (2,4 MB) liegen in `data/variants.js`, das bei der ersten Nutzung geladen wird; der Service Worker liefert sie zuerst aus dem Cache und lädt im Leerlauf die übrigen Pakete im Hintergrund (nicht bei Save-Data / langsamer Verbindung), sodass die App vollständig offline bleibt. Lässt sich ein Paket nicht laden (offline, bevor es heruntergeladen wurde), erscheint der Originaltext mit einem Hinweis in der gewählten Sprache. Kein Aufblitzen unübersetzten Textes (die Seite erscheint, wenn das Paket eintrifft, spätestens nach 6 s). Neuer Test: `tests/lazy.test.mjs`.
 - **0.10.13 — 2026-10-22:** fff-kit 1.1.4: Touch-Ziele und Mindestschriftgröße in der gemeinsamen Oberfläche; Touch-Ziele/Text korrigiert (Vorlese- und Auto-Scroll-Tasten, Suche speichern, Erstnutzungs-Banner, Rechtehinweis, Kanalbeschriftungen, Beschriftungen des triadischen Modells).
