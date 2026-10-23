@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 0.10.16 · **Ultimo aggiornamento:** 2026-10-23
+**Versione:** 0.10.17 · **Ultimo aggiornamento:** 2026-10-23
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -70,6 +70,7 @@ Alexio — Alexandru-Ionuț Chiuță, contatto: alexio@trom.tf.
 - Test: `tests/fff-r8.test.mjs` (Node + Playwright; rete bloccata, 1280 e 360 px, axe 0 violazioni); i test Python esistenti girano come prima.
 
 ## Storico / Changelog
+- **0.10.17 — 2026-10-23:** Accessibilità: su touch screen i pulsanti 🔊 (lettura) e scorrimento automatico restavano a 24 px per una regola CSS successiva; ora sono di 44 px.
 - **0.10.16 — 2026-10-23:** Archiviazione: le chiavi ora hanno il prefisso dell'app (`nomia.a11y`); i dati esistenti vengono migrati automaticamente all'avvio dalle vecchie chiavi (`a11y`) e i vecchi backup `.fff.json` si importano ancora (fff-kit 1.2.0).
 - **0.10.14 — 2026-10-22:** Peso: la pagina scende da 18,6 MB a 3,3 MB. Il dizionario in 8 lingue è diviso in pacchetti linguistici (`i18n/keys.js` + un file per lingua, caricato solo per la lingua scelta) e le varianti di protocollo NHI→Umano / IA→NHI / NHI→IA (2,4 MB) sono in `data/variants.js`, caricato al primo utilizzo; il service worker li serve prima dalla cache e, quando la pagina è inattiva, scarica gli altri pacchetti in background (non con Save-Data / connessioni lente), quindi l’app resta completamente offline. Se un pacchetto non si può caricare (offline prima di averlo scaricato) viene mostrato il testo originale con un avviso nella lingua scelta. Niente lampeggio di testo non tradotto (la pagina appare all’arrivo del pacchetto, al massimo dopo 6 s). Nuovo test: `tests/lazy.test.mjs`.
 - **0.10.13 — 2026-10-22:** fff-kit 1.1.4: aree tattili e dimensione minima del testo nell’interfaccia comune; aree tattili/testo corretti (pulsanti di lettura e scorrimento automatico, salvataggio della ricerca, banner di primo utilizzo, nota sui diritti, etichette dei canali, etichette del modello triadico).
