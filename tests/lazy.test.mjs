@@ -1,4 +1,4 @@
-// NOMIA — pachete de limbă și date la cerere (0.10.17): încărcare lazy, cache în service worker, offline, fallback fără pachet.
+// NOMIA — pachete de limbă și date la cerere (0.10.18): încărcare lazy, cache în service worker, offline, fallback fără pachet.
 // Rulare: node tests/lazy.test.mjs   (PW_ROOT=/home/claude/pw/package.json CHROME=/cale/chrome)
 import {createRequire} from 'module';
 import http from 'node:http';
