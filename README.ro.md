@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 0.10.18 · **Ultima actualizare:** 2026-10-26
+**Versiune:** 1.0.0 · **Ultima actualizare:** 2026-10-26
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -70,6 +70,10 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf.
 - Teste: `tests/fff-r8.test.mjs` (Node + Playwright; rețea blocată, 1280 și 360 px, axe 0 violări); testele Python existente rulează ca înainte.
 
 ## Istoric / Changelog
+
+### 1.0.0 — 2026-10-26
+
+Prima versiune stabilă: schema datelor 1 înghețată (registru NOMIA_SCHEMA, documentat în docs/SCHEMA.md), backup complet format 2 cu validare la import (compatibil cu formatul 1) și export al schemei; teste de stabilitate în tests/schema.test.mjs.
 - **0.10.17 — 2026-10-23:** Accesibilitate: pe ecrane tactile butoanele 🔊 (citire) și derulare automată rămâneau la 24 px, o regulă CSS ulterioară suprascriind minimul tactil; acum au 44 px.
 - **0.10.16 — 2026-10-23:** Stocare: cheile poartă acum prefixul aplicației (`nomia.a11y`); datele existente se mută automat la pornire din cheile vechi (`a11y`), iar copiile `.fff.json` mai vechi se importă în continuare (fff-kit 1.2.0).
 - **0.10.14 — 2026-10-22:** Greutate: pagina scade de la 18,6 MB la 3,3 MB. Dicționarul în 8 limbi e împărțit în pachete de limbă (`i18n/keys.js` + un fișier per limbă, încărcat doar pentru limba aleasă), iar variantele de protocol NHI→Om / IA→NHI / NHI→IA (2,4 MB) sunt în `data/variants.js`, încărcat la prima folosire; service worker-ul le servește cache-first și, când pagina e inactivă, descarcă în fundal celelalte pachete (nu se face cu Save-Data / conexiuni lente), deci aplicația rămâne complet offline. Dacă un pachet nu poate fi încărcat (offline înainte de a fi descărcat) se afișează textul original cu o notificare în limba aleasă. Fără clipire de text netradus (pagina se arată când sosește pachetul, cel mult după 6 s). Test nou: `tests/lazy.test.mjs`.
