@@ -9,7 +9,7 @@ const S = html.match(/"sha256":"([0-9a-f]{64})"/)[1];
 check("app.json: sha256 = hash(index.html cu valoarea golită)", app.sha256 === S && crypto.createHash("sha256").update(html.split(S).join("")).digest("hex") === S);
 check("app.json: sizeBytes și versiune", app.sizeBytes === Buffer.byteLength(html) && html.includes('BUILD = \'' + app.version + '\''), [app.sizeBytes, app.version]);
 check("sw.js și pachetele i18n au aceeași versiune", fs.readFileSync(path.join(HERE, "..", "sw.js"), "utf8").includes("v=" + app.version) && fs.readdirSync(path.join(HERE, "..", "i18n")).every(f => fs.readFileSync(path.join(HERE, "..", "i18n", f), "utf8").slice(0, 80).includes('"' + app.version + '"')));
-const b = await chromium.launch({executablePath: process.env.CHROME || "/opt/pw-browsers/chromium", args: ["--no-sandbox"]});
+const b = await chromium.launch({executablePath: process.env.CHROMIUM_PATH || process.env.CHROME || undefined, args: ["--no-sandbox"]});
 const ctx = await b.newContext({viewport: {width: 360, height: 740}, hasTouch: true, isMobile: true, serviceWorkers: "block"}); await ctx.route(/^https?:/, r => r.abort());
 const p = await ctx.newPage(); await p.goto("file://" + IDX); await p.waitForTimeout(2500);
 check("pointer:coarse activ", await p.evaluate(() => matchMedia("(pointer:coarse)").matches));

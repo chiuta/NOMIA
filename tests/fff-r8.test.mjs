@@ -1,20 +1,24 @@
 // Teste funcții noi (runda 8, 14 octombrie 2026) — Playwright, Chromium headless, rețea blocată.
 // Rulare: node tests/fff-r8.test.mjs   (cere /opt/node-tools cu playwright și /opt/pw-browsers/chromium; axe-core opțional prin AXE_PATH)
+// [fff-portable] axe-core: FFF_AXE / AXE_PATH, apoi pachetul `axe-core` (npm i -D axe-core). Dacă lipsește: undefined (testele cu axe pică cu mesaj clar).
+import {createRequire as __fffCR} from 'node:module';
+const __fffAxe = () => { try { return __fffCR(import.meta.url).resolve('axe-core/axe.min.js'); } catch { return undefined; } };
 import {createRequire} from 'module';
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-const require = createRequire('/opt/node-tools/package.json');
+const require = createRequire(process.env.PW_ROOT || import.meta.url);
 const {chromium} = require('playwright');
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const INDEX = path.join(HERE, '..', 'index.html');
 const URL_APP = 'file://' + INDEX;
-const AXE = process.env.AXE_PATH || '/tmp/claude-0/-home-claude/78529928-3825-51c3-b9bd-0e81655ab6bc/scratchpad/sweep/node_modules/axe-core/axe.min.js';
+const AXE = process.env.AXE_PATH || __fffAxe();
 const sleep = ms => new Promise(r => setTimeout(r, ms));
+const __FFF_APP = JSON.parse(fs.readFileSync(path.join(HERE, '..', 'app.json'), 'utf8'));
 let pass = 0, fail = 0;
 const ok = (cond, name, info) => { if (cond) { pass++; console.log('  ok   ' + name); } else { fail++; console.log('  FAIL ' + name + (info === undefined ? '' : ' ' + JSON.stringify(info).slice(0, 500))); } };
 const FLAGS = ['--no-sandbox', '--allow-loopback-in-peer-connection', '--disable-features=WebRtcHideLocalIpsWithMdns'];
-const browser = await chromium.launch({executablePath: '/opt/pw-browsers/chromium', args: FLAGS});
+const browser = await chromium.launch({executablePath: process.env.CHROMIUM_PATH || undefined, args: FLAGS});
 const net = [], errs = [];
 async function mk(o = {}) {
   const ctx = await browser.newContext({viewport: {width: o.w || 1280, height: o.h || 800}, acceptDownloads: true, colorScheme: o.scheme || 'dark', reducedMotion: o.reduced ? 'reduce' : 'no-preference', locale: o.locale || 'ro-RO', bypassCSP: !!o.bypassCSP});
@@ -74,7 +78,7 @@ ok(errs.length === 0, 'fără pageerror/CSP la pornire', errs); ok(net.length ==
   const b = await page.evaluate(async () => JSON.stringify(await FFF.bundle.build()));
   ok(/"app":"nomia"/.test(b) && /nomia_pins/.test(b), 'copia .fff.json conține datele NOMIA');
   // etichetă: panoul Statistici · Setări conține #app-version
-  ok((await page.evaluate(() => document.getElementById('app-version').textContent)) === 'v ' + (await page.evaluate(() => document.querySelector('meta[name="application-version"]').content)) + ' · 2026-10-23', 'versiune afișată (coerentă cu meta application-version)');
+  ok((await page.evaluate(() => document.getElementById('app-version').textContent)) === 'v ' + (await page.evaluate(() => document.querySelector('meta[name="application-version"]').content)) + ' · ' + __FFF_APP.updated, 'versiune afișată (coerentă cu meta application-version)');
   await ctx.close();
 }
 ok(errs.length === 0, 'fără pageerror/CSP în tot setul', errs); ok(net.length === 0, '0 cereri de rețea în tot setul', net);

@@ -1,11 +1,11 @@
 // NOMIA — interogarea din #np-search-input și căutările salvate nu se inserează ca HTML.
 // Rulare: node tests/search-xss.test.mjs [index.html]
 import {createRequire} from "module"; import path from "path"; import {fileURLToPath} from "url";
-const require = createRequire("/home/claude/pw/package.json"); const {chromium} = require("playwright");
+const require = createRequire(process.env.PW_ROOT || import.meta.url); const {chromium} = require("playwright");
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const FILE = "file://" + path.resolve(process.argv[2] || path.join(HERE, "..", "index.html"));
 let fails = 0, passes = 0; const check = (n, c, x) => { c ? (passes++, console.log("  ok  " + n)) : (fails++, console.log("FAIL  " + n + (x !== undefined ? "  -> " + JSON.stringify(x) : ""))); };
-const b = await chromium.launch({executablePath: "/opt/pw-browsers/chromium-1194/chrome-linux/chrome", args: ["--no-sandbox"]});
+const b = await chromium.launch({executablePath: process.env.CHROMIUM_PATH || undefined, args: ["--no-sandbox"]});
 const EVIL = '<img src=x id=pwn1 onerror="window.__x=1">';
 for (const lang of ["ro", "en"]) {
   const ctx = await b.newContext({viewport: {width: 1280, height: 900}, serviceWorkers: "block", locale: lang === "en" ? "en-US" : "ro-RO"}); await ctx.route(/^https?:/, r => r.abort());

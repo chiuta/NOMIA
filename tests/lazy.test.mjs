@@ -5,7 +5,7 @@ import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-const require = createRequire(process.env.PW_ROOT || '/opt/node-tools/package.json');
+const require = createRequire(process.env.PW_ROOT || import.meta.url);
 const {chromium} = require('playwright');
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 let pass = 0, fail = 0;
@@ -19,7 +19,7 @@ const srv = http.createServer((q, r) => {
 });
 await new Promise(res => srv.listen(0, '127.0.0.1', res));
 const BASE = 'http://127.0.0.1:' + srv.address().port + '/';
-const browser = await chromium.launch({executablePath: process.env.CHROME || '/opt/pw-browsers/chromium', args: ['--no-sandbox']});
+const browser = await chromium.launch({executablePath: process.env.CHROMIUM_PATH || process.env.CHROME || undefined, args: ['--no-sandbox']});
 const errs = [];
 async function mk(ul, extra) {
   const ctx = await browser.newContext({viewport: {width: 1280, height: 800}, locale: 'ro-RO'});
