@@ -1,7 +1,7 @@
 // NOMIA — pe ecrane tactile (pointer:coarse) butoanele 🔊 și derulare automată au ≥44 px (o regulă ulterioară de 24 px le suprascria) + metadate coerente.
 // Rulare: node tests/touch-targets.test.mjs [index.html]   (CHROME=cale/chromium, NODE_PW=cale/package.json)
 import {createRequire} from "module"; import path from "path"; import fs from "fs"; import crypto from "crypto"; import {fileURLToPath} from "url";
-const require = createRequire(process.env.NODE_PW || "/home/claude/pw/package.json"); const {chromium} = require("playwright");
+const require = createRequire(process.env.PW_ROOT || process.env.NODE_PW || import.meta.url); const {chromium} = require("playwright");
 const HERE = path.dirname(fileURLToPath(import.meta.url)); const IDX = path.resolve(process.argv[2] || path.join(HERE, "..", "index.html"));
 let fails = 0, passes = 0; const check = (n, c, x) => { c ? (passes++, console.log("  ok  " + n)) : (fails++, console.log("FAIL  " + n + (x !== undefined ? "  -> " + JSON.stringify(x) : ""))); };
 const html = fs.readFileSync(IDX, "utf8"), app = JSON.parse(fs.readFileSync(path.join(HERE, "..", "app.json"), "utf8"));
