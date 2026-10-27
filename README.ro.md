@@ -2,7 +2,9 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.0.0 · **Ultima actualizare:** 2026-10-26
+**Versiune:** 1.0.1 · **Ultima actualizare:** 2026-10-27
+
+**Stare:** stabil; ficțiune/speculație, companion al antologiei · **Offline:** complet după prima încărcare (pachetele de limbă și datele protocoalelor se încarcă la cerere din aceeași origine și sunt păstrate de service worker; fără cereri externe)
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -37,6 +39,10 @@ Niciuna. În cod nu există `fetch`/XHR/WebSocket și nici scripturi, fonturi sa
 
 - `index.html` — aplicația; `manifest.webmanifest`, `sw.js`, `icon-*.png` — PWA.
 - `tests/` — teste Playwright (a se vedea `tests/README.md`).
+
+## Ghid scurt pentru cei care nu au citit cartea (2026-10-27)
+
+Aplicația are acum un **„Ghid scurt”** pliabil (română și engleză; celelalte limbi afișează textul englez) în nota de deasupra jurnalului, lângă „Drepturi și atribuire”. Este scris doar din ceea ce conține aplicația: cele trei părți (Om, IA în tipurile (i)/(ii)/(iii), NHI), catalogul de 1001 intrări, cele 5 canale (matematic, intuiție, simbolic, sincronicități, modificarea stării), butoanele (▶ REIA, ↕ NHI→OM, ○ IA→NHI, ◀ NHI→IA, ■ STOP, ⏸, »STEP) și limitele („ficțiune/speculație”). **Intriga cărții nu este rezumată** și nu s-a inventat nimic despre ea.
 
 ## Licență
 
