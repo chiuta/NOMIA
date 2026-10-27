@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 1.0.0 · **Última atualização:** 2026-10-26
+**Versão:** 1.0.1 · **Última atualização:** 2026-10-27
+
+**Estado:** estável; ficção/especulação, companheira da antologia · **Offline:** completo após o primeiro carregamento (pacotes de idioma e dados de protocolo carregados a pedido da mesma origem e guardados em cache pelo service worker; sem pedidos externos)
 
 Idiomas da interface: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 

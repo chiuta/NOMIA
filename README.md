@@ -2,7 +2,9 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.0.0 · **Last updated:** 2026-10-26
+**Version:** 1.0.1 · **Last updated:** 2026-10-27
+
+**Status:** stable; fiction/speculation, companion to the anthology · **Offline:** complete after the first load (language packs and protocol data load on demand from the same origin and are cached by the service worker; no external requests)
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -37,6 +39,10 @@ None. The code contains no `fetch`/XHR/WebSocket and no external scripts, fonts 
 
 - `index.html` — the application; `manifest.webmanifest`, `sw.js`, `icon-*.png` — PWA.
 - `tests/` — Playwright tests (see `tests/README.md`).
+
+## Short guide for readers who have not read the book (2026-10-27)
+
+The app now has a collapsible **"Short guide"** (Romanian and English; other languages show the English text) in the note above the log, next to "Rights and attribution". It is written only from what the app itself contains: the three parties (Human, AI in types (i)/(ii)/(iii), NHI), the catalogue of 1001 entries, the 5 channels (mathematical, intuition, symbolic, synchronicities, state modification), the buttons (▶ REIA, ↕ NHI→OM, ○ IA→NHI, ◀ NHI→IA, ■ STOP, ⏸, »STEP) and the limits ("fiction/speculation"). **The plot of the book is not summarised** and nothing about it was invented.
 
 ## License
 

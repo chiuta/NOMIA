@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 1.0.0 · **Ultimo aggiornamento:** 2026-10-26
+**Versione:** 1.0.1 · **Ultimo aggiornamento:** 2026-10-27
+
+**Stato:** stabile; narrativa/speculazione, compagna dell'antologia · **Offline:** completo dopo il primo caricamento (pacchetti lingua e dati dei protocolli caricati su richiesta dalla stessa origine e messi in cache dal service worker; nessuna richiesta esterna)
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
