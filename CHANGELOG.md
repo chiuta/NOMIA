@@ -1,5 +1,11 @@
 # Jurnal de modificări — NOMIA
 
+## 1.0.2 — 2026-10-31
+
+### Accesibilitate
+- Indicatorul de salvare automată (💾) la 12 px în loc de 10 px, prag minim de lizibilitate pe mobil. `NOMIA_VERSION` aliniat cu `app.json`.
+- Rămân circa 135 de declarații `font-size` sub 12 px în CSS; nu le-am schimbat în bloc, fiindcă un efect asupra aranjării nu poate fi verificat pe toate ecranele. Decizia de a le urca e a autorului.
+
 ## 1.0.1 — 2026-10-27 (anterior: 2.0.0)
 
 Doar text (ghid), fără funcții noi de calcul.
