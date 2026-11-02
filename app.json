@@ -37,8 +37,8 @@
     "nomia_tutorial_done",
     "nomia_version"
   ],
-  "sizeBytes": 3317020,
-  "sha256": "33e8ec3bb9229a63f6840926825023db260b633360a3edcf4ae036516c604382",
+  "sizeBytes": 3457454,
+  "sha256": "eae3941227200cce3287a703614bc11d72ea37e4eacbcfd319eb5f26530e1aa8",
   "csp": {
     "present": true,
     "directives": {
@@ -80,6 +80,10 @@
       "dialog",
       "label",
       "bundle",
+      "qr",
+      "p2p",
+      "sync",
+      "history",
       "tts"
     ]
   },
@@ -91,6 +95,10 @@
       "dialog",
       "label",
       "bundle",
+      "qr",
+      "p2p",
+      "sync",
+      "history",
       "tts"
     ]
   },
