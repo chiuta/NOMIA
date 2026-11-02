@@ -27,7 +27,7 @@ const SEED = {
   nomia_protocol_nhi_log: JSON.stringify([{nhi: 'sefirot', ch: 1, tip: 0, ts: '2026-10-01T10:00:00.000Z'}]),
   nomia_favorites: JSON.stringify(['sefirot']), nomia_fav_dates: JSON.stringify({sefirot: '2026-10-01'}),
   nomia_pins: JSON.stringify(['sefirot']), nomia_nhi_notes: JSON.stringify({sefirot: 'notă proprie ăîșț'}),
-  nomia_saved_searches: JSON.stringify(['delfin']), nomia_monthly_snapshots: JSON.stringify([{month: '2026-10', explored: 1, protocols: 3, streak: 2}]),
+  nomia_saved_searches: JSON.stringify(['delfin']), nomia_monthly_snapshots: JSON.stringify([{month: new Date().getFullYear() + '-' + String(new Date().getMonth() + 1).padStart(2, '0'), explored: 1, protocols: 3, streak: 2}]),
   nomia_dark: '1', nomia_font_size: '13', nomia_ms_10: '1'
 };
 await page.evaluate(d => { Object.keys(d).forEach(k => localStorage.setItem(k, d[k])); }, SEED);
