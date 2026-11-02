@@ -3,6 +3,7 @@
 ## 1.0.2 — 2026-10-31
 
 ### Localizare
+- Ghidul ro/en: etichetele butoanelor (↕ NHI inițiază / NHI initiates, ⧡ IA→NHI / AI→NHI, ◄ NHI→IA / NHI→AI, ▶ RERUN) aliniate cu interfața.
 - Ghidul scurt este tradus în fr, de, es, it, pt, hu (înainte afișa engleza); titlul pliantului și `aria-label`-ul urmează limba interfeței (fără „RO · EN” hardcodat).
 - „Drepturi și atribuire”: în fr/it/es/pt/de/hu se afișează acum traducerea (existentă, dar ascunsă), cu versiunea de referință RO/EN într-un bloc pliabil; în ro/en rămân vizibile ambele versiuni de referință, fără mențiunea bilingvă din etichetă.
 - Neschimbate intenționat: „Printre inteligențe”, „Prima Directivă”, P.1–P.7, numerele și formatarea HTML.
