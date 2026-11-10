@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.0.4 · **Utolsó frissítés:** 2026-11-08
+**Verzió:** 1.0.5 · **Utolsó frissítés:** 2026-11-10
 
 **Állapot:** stabil; fikció/spekuláció, az antológia kísérője · **Offline:** az első betöltés után teljes (a nyelvi csomagok és a protokolladatok igény szerint, ugyanabból az eredetből töltődnek be, és a service worker gyorsítótárazza őket; külső kérés nincs)
 
