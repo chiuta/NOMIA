@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.0.6 · **Ultima actualizare:** 2026-11-10
+**Versiune:** 1.0.7 · **Ultima actualizare:** 2026-11-10
 
 **Stare:** stabil; ficțiune/speculație, companion al antologiei · **Offline:** complet după prima încărcare (pachetele de limbă și datele protocoalelor se încarcă la cerere din aceeași origine și sunt păstrate de service worker; fără cereri externe)
 

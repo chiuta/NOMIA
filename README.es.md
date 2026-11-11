@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 1.0.6 · **Última actualización:** 2026-11-10
+**Versión:** 1.0.7 · **Última actualización:** 2026-11-10
 
 **Estado:** estable; ficción/especulación, compañera de la antología · **Sin conexión:** completo tras la primera carga (paquetes de idioma y datos de protocolo se cargan bajo demanda desde el mismo origen y los guarda el service worker; sin peticiones externas)
 

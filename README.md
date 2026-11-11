@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.0.6 · **Last updated:** 2026-11-10
+**Version:** 1.0.7 · **Last updated:** 2026-11-10
 
 **Status:** stable; fiction/speculation, companion to the anthology · **Offline:** complete after the first load (language packs and protocol data load on demand from the same origin and are cached by the service worker; no external requests)
 
