@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.0.7 · **Zuletzt aktualisiert:** 2026-11-10
+**Version:** 1.0.8 · **Zuletzt aktualisiert:** 2026-11-13
 
 **Status:** stabil; Fiktion/Spekulation, Begleiter der Anthologie · **Offline:** vollständig nach dem ersten Laden (Sprachpakete und Protokolldaten werden bei Bedarf vom selben Ursprung geladen und vom Service Worker zwischengespeichert; keine externen Anfragen)
 
