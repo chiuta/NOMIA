@@ -10,7 +10,8 @@
     "navigator.share",
     "clipboard",
     "serviceWorker",
-    "localStorage"
+    "localStorage",
+    "WebGL"
   ],
   "storageKeys": [
     "nomia.a11y",
@@ -37,8 +38,8 @@
     "nomia_tutorial_done",
     "nomia_version"
   ],
-  "sizeBytes": 3511564,
-  "sha256": "049fa6ec4fd0c8751ef34b68064c7fc8efe86934aea6eed27114af7bc40e06a4",
+  "sizeBytes": 3563201,
+  "sha256": "2d63e874bbb0cbebb761ef04262ea9180e7ac4e55b35a9167f2dbcc5e978e0fe",
   "csp": {
     "present": true,
     "directives": {
@@ -51,7 +52,7 @@
       "base-uri": "'self'",
       "form-action": "'self'",
       "worker-src": "'self' blob:",
-      "script-src": "'self' sha256×12",
+      "script-src": "'self' sha256×13",
       "connect-src": "'self'"
     },
     "scriptInline": "hash",
