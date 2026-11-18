@@ -1,5 +1,9 @@
 # Jurnal de modificări — NOMIA
 
+## 1.1.3 — 2026-11-18
+
+- Corectat: pachetele de limbă din `i18n/` (cheile și fr, de, es, hu, it, pt) purtau identificatorul de construcție „1.0.9”, iar pagina cere identificatorul versiunii curente și ignoră pachetele cu alt identificator; textul rămânea în română (verificat în teste pentru fr, de și it). Pachetele poartă acum identificatorul 1.1.3, iar conținutul lor este neschimbat
+
 ## 1.1.2 — 2026-11-17
 
 - Compatibilitate cu browsere mai vechi (Chrome/Edge 55+, Firefox 52+, Safari 10.1+/iOS 10.3+): kitul 1.8.0 aduce stratul de compatibilitate (rezerve pentru API-urile care lipsesc în motoarele vechi), iar sintaxa JavaScript mai nouă decât ES2017 a fost înlocuită cu forme echivalente acolo unde exista; expresiile regulate noi și `import()` trec prin rezerve. Fără modificări de funcționalitate intenționate. Verificat cu parser ES2017 și într-un motor vechi simulat, nu pe dispozitive reale.
