@@ -1,5 +1,11 @@
 # Jurnal de modificări — NOMIA
 
+## 1.1.4 — 2026-11-19
+
+- Detaliul NHI se randează în două containere (desktop și mobil): butonul de favorit, caseta de note și contorul de caractere aveau aceleași id-uri în ambele, iar contorul unei casete se actualiza în cealaltă. Id-urile au acum sufixul containerului, contorul își găsește elementul corect, iar caseta de note are etichetă accesibilă (constatat de bateria adversarială din 19 noiembrie 2026)
+- Pachetele de limbă încărcate la cerere (`i18n/*.js`) poartă ștampila noii versiuni (1.1.4), cum cere pagina; `fff.config.json` le listează acum (`versionFiles`), așa că la următoarele release-uri sunt re-ștampilate automat de kit (fără re-ștampilare, pagina respinge pachetele și fr/it/es/pt/de/hu rămân în textul original)
+- Kit fff 1.8.1: dacă stocarea locală este indisponibilă (mod privat, politică de browser), aplicația pornește cu o stocare temporară în memorie, în loc să se oprească
+
 ## 1.1.3 — 2026-11-18
 
 - Corectat: pachetele de limbă din `i18n/` (cheile și fr, de, es, hu, it, pt) purtau identificatorul de construcție „1.0.9”, iar pagina cere identificatorul versiunii curente și ignoră pachetele cu alt identificator; textul rămânea în română (verificat în teste pentru fr, de și it). Pachetele poartă acum identificatorul 1.1.3, iar conținutul lor este neschimbat
